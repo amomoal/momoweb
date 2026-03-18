@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Collection</title>
+
+  <meta
+    name="description"
+    content="アプリ一覧ページ。Todo Calendar などのアプリ情報・サポートをまとめています。"
+  >
+
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/components/card.css">
+</head>
+
+<body>
+  <div class="site-shell">
+
+    <!-- 🌷 Hero -->
+    <header class="hero">
+      <div class="hero__top">
+        <div class="hero__icon-wrap">
+          <img
+            class="hero__icon"
+            src="./assets/Todo_icon.png"
+            alt="アイコン"
+          >
+        </div>
+
+        <div class="hero__heading">
+          <p class="hero__eyebrow">App Collection</p>
+          <h1 class="hero__title">Task Collection</h1>
+        </div>
+      </div>
+
+      <p class="lead">
+        シンプルで使いやすいアプリをまとめたコレクションです。
+      </p>
+
+      <p class="subtext">
+        日々のタスク管理や習慣づくりをサポートするアプリを公開しています。
+        各アプリの詳細やサポート情報はこちらから確認できます。
+      </p>
+    </header>
+
+    <!-- 🌷 App List -->
+    <main class="section">
+      <div class="section__header">
+        <p class="section__label">Apps</p>
+        <h2 class="section__title">アプリ一覧</h2>
+      </div>
+
+      <div class="app-list">
+
+        <!-- ✅ Todo Calendar -->
+        <a href="./apps/todo-calendar/" class="app-card">
+          <div class="app-card__top">
+            <img
+              class="app-card__icon"
+              src="./assets/Todo_icon.png"
+              alt="Todo Calendar アイコン"
+            >
+            <div class="app-card__heading">
+              <p class="app-card__eyebrow">ToDo / Calendar</p>
+              <h3 class="app-card__title">Todo Calendar</h3>
+            </div>
+          </div>
+
+          <p class="app-card__description">
+            予定・単発タスク・日課をひとつにまとめて管理できるアプリです。
+          </p>
+        </a>
+
+        <!-- 🧪 追加アプリ用テンプレ -->
+        <!--
+        <a href="./apps/another-app/" class="app-card">
+          <div class="app-card__top">
+            <img class="app-card__icon" src="./assets/icon.png">
+            <div class="app-card__heading">
+              <p class="app-card__eyebrow">Category</p>
+              <h3 class="app-card__title">App Name</h3>
+            </div>
+          </div>
+
+          <p class="app-card__description">
+            アプリの説明をここに書く
+          </p>
+        </a>
+        -->
+
+      </div>
+    </main>
+
+    <!-- 🌷 Links -->
+    <section class="section">
+      <div class="section__header">
+        <p class="section__label">Links</p>
+        <h2 class="section__title">ご案内</h2>
+      </div>
+
+      <div class="link-grid">
+        <a class="info-link" href="./pages/privacy.html">
+          <span class="info-link__title">プライバシーポリシー</span>
+          <span class="info-link__text">取得情報や利用目的について確認できます。</span>
+        </a>
+
+        <a class="info-link" href="./pages/support.html">
+          <span class="info-link__title">サポート</span>
+          <span class="info-link__text">使い方やお問い合わせはこちら。</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 🌷 Footer -->
+    <footer class="footer">
+      <p class="footer__title">Task Collection</p>
+      <div class="footer__links">
+        <a href="./pages/privacy.html">Privacy</a>
+        <a href="./pages/support.html">Support</a>
+      </div>
+      <p class="footer__copy">© Task Collection</p>
+    </footer>
+
+  </div>
+</body>
+</html>
