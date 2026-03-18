@@ -1,0 +1,68 @@
+<!-- 📌 web_support/pages/privacy.html -->
+<!-- 📄 プライバシーポリシーの仮ページ。App Store 提出時のリンク先としても使えるよう、最低限の章立てを先に用意したベータ版。 -->
+<!-- ⚠️ 未実装・修正予定の記述あり -->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- 🌷 #10 Head -->
+  <!-- 🍀 タイトルと共通CSSを読み込み、トップページと同じ世界観で表示できるようにする。 -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー | Task Collection</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- 🌷 #20 Wrapper -->
+  <!-- 🍀 本文を中央寄せのシェルに収め、読みやすい1カラム文書として表示する。 -->
+  <div class="site-shell">
+
+    <!-- 🌷 #30 Header -->
+    <!-- 🍀 ページタイトルと戻り導線を表示する。独立ページとして読めるが、トップにも戻りやすくする。 -->
+    <header class="hero">
+      <p class="hero__eyebrow">Privacy Policy</p>
+      <h1 class="hero__title">プライバシーポリシー</h1>
+      <p class="hero__lead">
+        本ページはベータ版です。実際の公開時には、アプリで取得する情報や利用目的に合わせて正式な内容へ更新します。
+      </p>
+      <div class="hero__actions">
+        <a class="button button--secondary" href="../index.html">トップへ戻る</a>
+      </div>
+    </header>
+
+    <!-- 🌷 #40 Content -->
+    <!-- 🍀 最低限の章立てのみ配置する。内容はまだ仮置きで、後から正式文面に差し替える前提。 -->
+    <section class="section">
+      <div class="panel">
+        <p class="body-text"><strong>1. 取得する情報</strong></p>
+        <p class="body-text">ベータ版のため、現在は正式文面を準備中です。</p>
+        <br>
+
+        <p class="body-text"><strong>2. 利用目的</strong></p>
+        <p class="body-text">アプリ提供、改善、不具合対応のために必要な範囲で利用します。</p>
+        <br>
+
+        <p class="body-text"><strong>3. 第三者提供</strong></p>
+        <p class="body-text">正式公開前に、利用する外部サービスの有無を確認して記載します。</p>
+        <br>
+
+        <p class="body-text"><strong>4. お問い合わせ</strong></p>
+        <p class="body-text">お問い合わせはサポートページからご確認ください。</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__links">
+        <a href="../index.html">Home</a>
+        <a href="./support.html">Support</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ⚠️ 未実装・修正予定一覧 -->
+  <!-- - 正式な取得情報の記載 -->
+  <!-- - 外部サービス利用有無の明記 -->
+  <!-- - 事業者情報または連絡先表記の確定 -->
+</body>
+</html>

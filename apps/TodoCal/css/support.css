@@ -1,0 +1,38 @@
+/* 📌 web_support/css/support.css */
+/* 📄 サポートページ専用CSS。使い方セクションのカード表示と、問い合わせ・更新案内ブロックの余白など、support.html のみに必要な見た目を定義する。 */
+
+/* 🌷 #10 Guide Layout */
+/* 🍀 使い方セクションのカード群を1カラムで整列し、あとから説明文が増えても崩れにくい構造にする。 */
+.guide-grid {
+  display: grid;
+  gap: var(--space-16);
+}
+
+.guide-card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-20);
+  padding: var(--space-16);
+  box-shadow: var(--shadow-soft);
+}
+
+.guide-card__title {
+  margin: 0 0 var(--space-8);
+  font-size: var(--font-sub);
+  line-height: 1.5;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.guide-card__text {
+  margin: 0;
+  font-size: var(--font-body);
+  line-height: 1.8;
+  color: rgba(43, 36, 31, 0.78);
+}
+
+/* 🌷 #20 Support Blocks */
+/* 🍀 お問い合わせ・対応内容・更新予定などの説明ブロック同士に一定の間隔を設け、読みやすさを保つ。 */
+.support-block + .support-block {
+  margin-top: 24px;
+}

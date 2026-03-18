@@ -1,0 +1,47 @@
+/* 📌 web_support/css/reset.css */
+/* 📄 ブラウザ差分を減らすための最小リセット。過剰に触らず、今回の静的紹介ページに必要な範囲に絞って整える。 */
+
+/* 🌷 #10 Global Reset */
+/* 🍀 margin / padding / box-sizing を初期化し、余白の暴れを防ぐ。 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🌷 #20 Base Element Reset */
+/* 🍀 画像、リンク、リスト、ボタンなどの基本要素を扱いやすい状態にする。 */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 🌷 #30 Body Setup */
+/* 🍀 iOS 系端末でも文字が暴れにくいようにし、基本の描画を安定させる。 */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+}
