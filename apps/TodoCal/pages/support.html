@@ -1,6 +1,6 @@
 <!-- 📌 web_support/pages/support.html -->
-<!-- 📄 サポート案内ページ。問い合わせ先、基本の使い方、更新予定などをまとめて掲載する。今回の修正では、あとから説明文を差し替えやすい「#35 使い方」セクションを追加し、アイコン説明・単発タスク・スケジュール・日課の箱を先に用意する。 -->
-<!-- ⚠️ 未実装・修正予定の記述あり -->
+<!-- 📄 サポート案内ページ。問い合わせ先、基本の使い方、更新予定などをまとめて掲載する。今回の修正では、あとから説明文を差し替えやすい「#35 使い方」セクションを残しつつ、現時点でそのまま公開できる本文へ更新する。 -->
+<!-- ⚠️ 未実装・修正予定の記述あり（メールアドレスやアプリ仕様変更時は適宜更新） -->
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -12,7 +12,7 @@
   <title>サポート | Task Collection</title>
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/style.css">
-   <link rel="stylesheet" href="../css/support.css">
+  <link rel="stylesheet" href="../css/support.css">
 </head>
 <body>
   <!-- 🌷 #20 Wrapper -->
@@ -25,8 +25,8 @@
       <p class="hero__eyebrow">Support</p>
       <h1 class="hero__title">サポート</h1>
       <p class="hero__lead">
-        アプリの使い方、お問い合わせ、今後の更新に関する案内をまとめるページです。
-        現在はベータ版のため、内容は仮置きです。
+        Todo Calendar の基本的な使い方、お問い合わせ方法、公開情報をまとめたページです。
+        ご利用前の確認や、不具合・ご意見の送信先としてご利用ください。
       </p>
       <div class="hero__actions">
         <a class="button button--secondary" href="../index.html">トップへ戻る</a>
@@ -34,7 +34,7 @@
     </header>
 
     <!-- 🌷 #35 使い方 -->
-    <!-- 🍀 あとから詳細説明を追加しやすいように、使い方を項目別カードで先に分割して配置する。今回はアイコン説明・単発タスク・スケジュール・日課の4項目を仮箱として用意する。 -->
+    <!-- 🍀 あとから詳細説明を追加しやすいように、使い方を項目別カードで分割して配置する。アイコン説明・単発タスク・スケジュール・日課の4項目を先に整理する。 -->
     <section class="section">
       <div class="section__header">
         <p class="section__label">Guide</p>
@@ -45,50 +45,72 @@
         <article class="guide-card">
           <h3 class="guide-card__title">アイコン説明</h3>
           <p class="guide-card__text">
-            画面内の各アイコンや表示の意味を、あとからここにまとめて掲載予定です。
+            画面内のアイコンや表示は、タスクの種類や状態を見分けやすくするために使われています。
+            今後の更新で、各アイコンの意味や色分けについても順次追記していきます。
           </p>
         </article>
 
         <article class="guide-card">
           <h3 class="guide-card__title">単発タスク</h3>
           <p class="guide-card__text">
-            その日だけ使うタスクの考え方や、追加・確認の流れをここに記載予定です。
+            単発タスクは、その日だけ使う「一回限りのやること」を管理するための項目です。
+            例として、買い物・支払い・通院・電話など、1回だけ発生する予定に向いています。
           </p>
         </article>
 
         <article class="guide-card">
           <h3 class="guide-card__title">スケジュール</h3>
           <p class="guide-card__text">
-            予定の確認方法や、カレンダー上での扱い方について後から追記予定です。
+            スケジュールは、日付や時間に紐づく予定を整理するための項目です。
+            カレンダーとあわせて確認しやすく、予定の見落としを減らしたい場合に便利です。
           </p>
         </article>
 
         <article class="guide-card">
           <h3 class="guide-card__title">日課</h3>
           <p class="guide-card__text">
-            毎日くり返す項目の使い方や、日課として管理する考え方をここにまとめる予定です。
+            日課は、毎日または継続的に行う習慣をまとめて管理するための項目です。
+            毎日の確認を簡単にしたい内容や、繰り返し行う行動の記録に向いています。
           </p>
         </article>
       </div>
     </section>
 
     <!-- 🌷 #40 Content -->
-    <!-- 🍀 問い合わせ方法と更新案内のプレースホルダを用意する。あとでメールアドレスやフォームURLへ差し替えやすくする。 -->
+    <!-- 🍀 問い合わせ方法と更新案内を掲載する。あとでメールアドレスやフォームURLへ差し替えやすい構造にしておく。 -->
     <section class="section">
       <div class="panel support-panel">
         <div class="support-block">
           <p class="body-text"><strong>お問い合わせ</strong></p>
-          <p class="body-text">現在、連絡先情報を準備中です。正式公開時に更新します。</p>
+          <p class="body-text">
+            不具合報告、ご意見、ご要望などがありましたら、下記の連絡先までお願いいたします。
+          </p>
+          <p class="body-text">
+            連絡先：your-email@example.com
+          </p>
         </div>
 
         <div class="support-block">
           <p class="body-text"><strong>対応内容</strong></p>
-          <p class="body-text">不具合報告、改善要望、公開情報に関する問い合わせを受け付け予定です。</p>
+          <p class="body-text">
+            アプリの不具合報告、改善要望、公開情報に関するお問い合わせを受け付けています。
+            内容によっては返信までお時間をいただく場合があります。
+          </p>
+        </div>
+
+        <div class="support-block">
+          <p class="body-text"><strong>ご利用にあたって</strong></p>
+          <p class="body-text">
+            本アプリは、タスク管理や予定整理を補助するためのアプリです。
+            記録内容の消失防止や重要情報の保管については、必要に応じて別途バックアップ等もご検討ください。
+          </p>
         </div>
 
         <div class="support-block">
           <p class="body-text"><strong>更新予定</strong></p>
-          <p class="body-text">今後、公開アプリの追加に合わせて本ページも拡張予定です。</p>
+          <p class="body-text">
+            今後のアップデートにあわせて、本ページにもFAQや各機能の詳しい説明を追加していく予定です。
+          </p>
         </div>
       </div>
     </section>
@@ -97,14 +119,15 @@
       <div class="footer__links">
         <a href="../index.html">Home</a>
         <a href="./privacy.html">Privacy</a>
+        <a href="./terms.html">Terms</a>
       </div>
     </footer>
   </div>
 
   <!-- ⚠️ 未実装・修正予定一覧 -->
-  <!-- - 正式な問い合わせ先の記載 -->
-  <!-- - FAQ 追加 -->
+  <!-- - 正式なメールアドレスへの差し替え -->
+  <!-- - FAQ の追加 -->
+  <!-- - アイコン説明の詳細化 -->
   <!-- - 公開アプリ別サポート導線の追加 -->
-  <!-- - 使い方セクションの本文詳細化 -->
 </body>
 </html>
