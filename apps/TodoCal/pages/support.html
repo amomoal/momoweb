@@ -1,18 +1,20 @@
-<!-- 📌 web_support/pages/support.html -->
-<!-- 📄 サポート案内ページ。問い合わせ先、基本の使い方、更新予定などをまとめて掲載する。今回の修正では、あとから説明文を差し替えやすい「#35 使い方」セクションを残しつつ、現時点でそのまま公開できる本文へ更新する。 -->
+<!-- 📌 apps/TodoCal/pages/support.html -->
+<!-- 📄 サポート案内ページ。問い合わせ先、基本の使い方、更新予定などをまとめて掲載する。今回の修正では、あとから説明文を差し替えやすい「#35 使い方」セクションを残しつつ、ガイド画像を index 風カルーセルで見せる構成に更新する。 -->
 <!-- ⚠️ 未実装・修正予定の記述あり（メールアドレスやアプリ仕様変更時は適宜更新） -->
 
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <!-- 🌷 #10 Head -->
-  <!-- 🍀 共通CSSを読み込み、トップページやプライバシーポリシーと見た目を統一する。 -->
+  <!-- 🍀 共通CSSを読み込み、トップページやプライバシーポリシーと見た目を統一する。使い方ガイド画像用にカルーセルCSSも追加する。 -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>サポート | Task Collection</title>
+
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/support.css">
+  <link rel="stylesheet" href="../css/components/carousel/carousel.css">
 </head>
 <body>
   <!-- 🌷 #20 Wrapper -->
@@ -28,31 +30,61 @@
         Todo Calendar の基本的な使い方、お問い合わせ方法、公開情報をまとめたページです。
         ご利用前の確認や、不具合・ご意見の送信先としてご利用ください。
       </p>
+
       <div class="hero__actions">
         <a class="button button--secondary" href="../index.html">トップへ戻る</a>
       </div>
     </header>
 
     <!-- 🌷 #35 使い方 -->
-    <!-- 🍀 あとから詳細説明を追加しやすいように、使い方を項目別カードで分割して配置する。アイコン説明・単発タスク・スケジュール・日課の4項目を先に整理する。 -->
+    <!-- 🍀 あとから詳細説明を追加しやすいように、使い方を項目別カードで分割して配置する。今回は index 風のカルーセルを先頭に置き、アイコン説明・単発タスク・スケジュール・日課の4項目を整理する。 -->
     <section class="section">
       <div class="section__header">
         <p class="section__label">Guide</p>
         <h2 class="section__title">使い方</h2>
       </div>
 
-      <!-- 🌷 #36 Guide Visual -->
-      <!-- 🍀 使い方セクションの導入画像。Todo説明カードの上に置いて、画面イメージを先に見せる。 -->
-      <figure class="guide-visual">
-        <img
-          class="guide-visual__image"
-          src="../assets/support/guide-01.PNG"
-          alt="Todo Calendar の使い方ガイド画像"
-        >
-        <figcaption class="guide-visual__caption">
-          画面の見方や使い方を、画像つきで順次案内していきます。
-        </figcaption>
-      </figure>
+      <!-- 🌷 #36 Guide Carousel -->
+      <!-- 🍀 indexページ風に、使い方ガイド画像をカルーセルで見せる。カード説明の前に画面イメージを先に伝える。 -->
+      <div class="guide-carousel-wrap">
+        <div class="carousel" aria-label="Todo Calendar 使い方ガイド画像">
+          <div class="carousel__track">
+            <figure class="carousel__item">
+              <img
+                src="../assets/support/guide-01.PNG"
+                alt="Todo Calendar 使い方ガイド 1"
+              >
+            </figure>
+
+            <figure class="carousel__item">
+              <img
+                src="../assets/support/guide-02.PNG"
+                alt="Todo Calendar 使い方ガイド 2"
+              >
+            </figure>
+          </div>
+
+          <div class="carousel__controls">
+            <button
+              class="carousel__button carousel__button--prev"
+              type="button"
+              aria-label="前の画像へ"
+            >
+              ‹
+            </button>
+
+            <div class="carousel__dots" aria-label="スライド選択"></div>
+
+            <button
+              class="carousel__button carousel__button--next"
+              type="button"
+              aria-label="次の画像へ"
+            >
+              ›
+            </button>
+          </div>
+        </div>
+      </div>
 
       <div class="guide-grid">
         <article class="guide-card">
@@ -136,6 +168,8 @@
       </div>
     </footer>
   </div>
+
+  <script src="../css/components/carousel/carousel.js" defer></script>
 
   <!-- ⚠️ 未実装・修正予定一覧 -->
   <!-- - 正式なメールアドレスへの差し替え -->
