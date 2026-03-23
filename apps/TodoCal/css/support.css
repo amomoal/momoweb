@@ -36,3 +36,27 @@
 .support-block + .support-block {
   margin-top: 24px;
 }
+
+/* 🌷 #30 Guide Visual */
+.guide-visual {
+  margin: 0 0 24px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--surface);
+}
+
+.guide-visual__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.guide-visual__caption {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--muted, #6b625d);
+}
