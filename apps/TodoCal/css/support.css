@@ -31,13 +31,22 @@
   color: rgba(43, 36, 31, 0.78);
 }
 
+
 /* 🌷 #20 Support Blocks */
 /* 🍀 お問い合わせ・対応内容・更新予定などの説明ブロック同士に一定の間隔を設け、読みやすさを保つ。 */
 .support-block + .support-block {
   margin-top: 24px;
 }
 
+.support-block--contact {
+  padding: 16px;
+  border: 1px solid rgba(110, 106, 154, 0.18);
+  border-radius: 16px;
+  background: rgba(110, 106, 154, 0.08);
+}
+
 /* 🌷 #30 Guide Visual */
+/* 🍀 ガイド画像まわりの余白・枠・キャプション表示を整える。 */
 .guide-visual {
   margin: 0 0 24px;
   padding: 14px;
@@ -67,4 +76,34 @@
 
 .guide-grid {
   margin-top: 24px;
+}
+
+/* 🌷 #40 Form Link */
+/* 🍀 お問い合わせフォームへの導線を、サイト全体のアクセント色に合わせた全幅ボタンとして表示する。 */
+.support-form-link {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  margin-top: 12px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(110, 106, 154, 0.18);
+  box-sizing: border-box;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.support-form-link:hover {
+  opacity: 0.94;
+  transform: translateY(-1px);
+}
+
+.support-form-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
