@@ -79,29 +79,19 @@
 }
 
 /* 🌷 #40 Form Link */
-/* 🍀 お問い合わせフォーム導線は、二重の箱を作らず、リンク自体を濃いラベンダーのボタンとして見せる。 */
+/* 🍀 お問い合わせフォーム導線は、背景や影を使わず、文字色と太さだけで自然に目立たせる。 */
 .support-form-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 44px;
-  margin-top: 10px;
-  padding: 10px 16px;
-  border-radius: 12px;
-  background: var(--accent);
-  color: #ffffff;
+  color: var(--accent);
   font-weight: 700;
   text-decoration: none;
-  box-shadow: 0 4px 10px rgba(110, 106, 154, 0.12);
-  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .support-form-link:hover {
-  opacity: 0.94;
-  transform: translateY(-1px);
+  opacity: 0.88;
 }
 
 .support-form-link:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
+  border-radius: 4px;
 }
