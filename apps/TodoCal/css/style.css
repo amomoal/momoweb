@@ -156,6 +156,17 @@ body {
   margin-top: var(--space-20);
 }
 
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-12);
+  margin-top: var(--space-20);
+}
+
+.hero__actions .button:last-child {
+  margin-left:80px;
+}
+
 /* 🌷 #50 Sections / Panels */
 /* 🍀 セクション単位の余白と、説明用パネルの表現を定義する。情報の塊が見やすく分かれるようにする。 */
 .section {

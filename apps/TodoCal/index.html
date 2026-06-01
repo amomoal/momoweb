@@ -5,10 +5,10 @@
   <!-- 🍀 文字コード、viewport、タイトル、共通CSSの読み込みを定義する。スマホ優先表示のため viewport を設定し、reset → base → component の順で読み込む。 -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Task Collection</title>
+  <title>Shift Calendar</title>
   <meta
     name="description"
-    content="Todo Calendar をはじめとしたアプリの紹介、サポート、プライバシーポリシーをまとめた案内ページ。"
+    content="Shift Calendar の紹介、サポート、プライバシーポリシーをまとめた案内ページ。"
   >
 
   <link rel="stylesheet" href="./css/reset.css">
@@ -27,29 +27,31 @@
           <img
             class="hero__icon"
             src="./assets/Todo_icon.png"
-            alt="Todo Calendar アイコン"
+            alt="Shift Calendar アイコン"
           >
         </div>
 
         <div class="hero__heading">
           <p class="hero__eyebrow">App Guide &amp; Support</p>
-          <h1 class="hero__title">Todo Calendar</h1>
+          <h1 class="hero__title">Shift Calendar</h1>
         </div>
       </div>
 
       <p class="lead">
-        　ー・ー   考えなくても整理できる   ー・ー<br><br>
-        カレンダーとToDoをひとつにまとめ、毎日の予定管理をわかりやすくするアプリです。
+        　ー・ー   シフトを見やすく、予定もまとめて   ー・ー<br><br>
+        勤務シフトや予定を、シンプルに整理できるカレンダーアプリです。
       </p>
 
       <p class="subtext">
-        予定、単発タスク、日課を一画面で整理しやすく、日々の確認や記録をスムーズに行えます。
+        シフト、予定、メモを見やすく整理し、
+        日々の確認や管理をスムーズに行えます。
         本ページでは、アプリ情報、サポート案内、プライバシーポリシーを掲載しています。
       </p>
 
       <div class="hero__actions">
         <a class="button button--primary" href="#apps">アプリを見る</a>
         <a class="button button--secondary" href="./pages/support.html">サポート</a>
+        <a class="button button--secondary" href="../../index.html">トップへ戻る</a>
       </div>
     </header>
 
@@ -71,7 +73,7 @@
     </section>
 
     <!-- 🌷 #50 App List -->
-    <!-- 🍀 アプリ一覧セクション。今は Todo Calendar のみを掲載し、カード単位で今後増やせる構成にしている。 -->
+    <!-- 🍀 アプリ一覧セクション。今は Shift Calendar のみを掲載し、カード単位で今後増やせる構成にしている。 -->
     <main id="apps" class="section">
       <div class="section__header">
         <p class="section__label">Apps</p>
@@ -84,59 +86,58 @@
             <img
               class="app-card__icon"
               src="./assets/Todo_icon.png"
-              alt="Todo Calendar アイコン"
+              alt="Shift Calendar アイコン"
             >
             <div class="app-card__heading">
-              <p class="app-card__eyebrow">ToDo / Calendar</p>
-              <h3 class="app-card__title">Todo Calendar</h3>
+              <p class="app-card__eyebrow">Shift / Calendar</p>
+              <h3 class="app-card__title">Shift Calendar</h3>
             </div>
           </div>
 
           <p class="lead">
-            　ー・ー   考えなくても整理できる   ー・ー<br>
+            　ー・ー   シフトを見やすく、予定もまとめて   ー・ー<br>
           </p>
 
           <p class="app-card__description">
-            予定・単発タスク・日課をひとつにまとめて管理できるアプリです。
-            カレンダー表示とToDo表示を切り替えながら、その日の流れをやさしく整理できます。<br>
-            保存について,
-            本アプリでは、データを直近3か月分保存できます。3か月を超えた古いデータは順次更新されます。
+            勤務シフト・予定・メモを、ひとつのカレンダーでまとめて管理できるアプリです。
+            シフトは連続で入力でき、色分け表示にも対応。
+            夜勤・日勤・休みなどの勤務予定を、見やすく整理できます。<br>
+            ホームウィジェットにも対応しているため、アプリを開かなくても予定をすぐ確認できます。
           </p>
 
           <ul class="app-card__features">
-            <li>カレンダーとToDoを1つの流れで確認</li>
-            <li>日課・単発・予定を見やすく整理</li>
-            <li>落ち着いた配色で毎日使いやすい設計</li>
+            <li>勤務シフトと予定をまとめて確認</li>
+            <li>シフトの連続入力・色分け表示に対応</li>
+            <li>ホームウィジェットで予定をすぐ確認</li>
           </ul>
 
-          <div class="carousel" aria-label="Todo Calendar スクリーンショット">
+          <div class="carousel" aria-label="Shift Calendar スクリーンショット">
 
-              <div class="carousel__track">
-                <figure class="carousel__item">
-                  <img src="./assets/main/shot-01.PNG" alt="Todo Calendar スクリーンショット 1">
-                </figure>
+            <div class="carousel__track">
+              <figure class="carousel__item">
+                <img src="./assets/main/shot-01.PNG" alt="Shift Calendar スクリーンショット 1">
+              </figure>
 
-                <figure class="carousel__item">
-                  <img src="./assets/main/shot-02.PNG" alt="Todo Calendar スクリーンショット 2">
-                </figure>
+              <figure class="carousel__item">
+                <img src="./assets/main/shot-02.PNG" alt="Shift Calendar スクリーンショット 2">
+              </figure>
 
-                <figure class="carousel__item">
-                  <img src="./assets/main/shot-03.PNG" alt="Todo Calendar スクリーンショット 3">
-                </figure>
+              <figure class="carousel__item">
+                <img src="./assets/main/shot-03.PNG" alt="Shift Calendar スクリーンショット 3">
+              </figure>
 
-                <figure class="carousel__item">
-                  <img src="./assets/main/shot-04.PNG" alt="Todo Calendar スクリーンショット 4">
-                </figure>
+              <figure class="carousel__item">
+                <img src="./assets/main/shot-04.PNG" alt="Shift Calendar スクリーンショット 4">
+              </figure>
 
-                <figure class="carousel__item">
-                  <img src="./assets/support/guide-05.png" alt="Todo Calendar スクリーンショット 4">
-                </figure>
+              <figure class="carousel__item">
+                <img src="./assets/support/guide-05.png" alt="Shift Calendar スクリーンショット 5">
+              </figure>
 
-                <figure class="carousel__item">
-                  <img src="./assets/main/shot-05.PNG" alt="Todo Calendar スクリーンショット 5">
-                </figure>
-              </div>
-
+              <figure class="carousel__item">
+                <img src="./assets/main/shot-05.PNG" alt="Shift Calendar スクリーンショット 6">
+              </figure>
+            </div>
 
             <div class="carousel__controls">
               <button
@@ -161,10 +162,10 @@
 
           <div class="app-card__actions">
             <a class="button button--primary"
-   href="https://apps.apple.com/jp/app/todo-calendar/id6761034961"
-   target="_blank" rel="noopener noreferrer">
-  App Storeで見る
-</a>
+              href="https://apps.apple.com/jp/app/todo-calendar/id6761034961"
+              target="_blank" rel="noopener noreferrer">
+              App Storeで見る
+            </a>
             <a class="button button--secondary" href="./pages/support.html">使い方とサポートを見る</a>
           </div>
         </article>
@@ -172,43 +173,43 @@
     </main>
 
     <!-- 🌷 #60 Policy Links -->
-  <!-- 🍀 プライバシーポリシー・利用規約・サポートをまとめて案内する導線。フッター直前に置いて、必要な情報へ迷わず辿れるようにする。 -->
-  <section class="section">
-    <div class="section__header">
-      <p class="section__label">Links</p>
-      <h2 class="section__title">ご案内</h2>
-    </div>
+    <!-- 🍀 プライバシーポリシー・利用規約・サポートをまとめて案内する導線。フッター直前に置いて、必要な情報へ迷わず辿れるようにする。 -->
+    <section class="section">
+      <div class="section__header">
+        <p class="section__label">Links</p>
+        <h2 class="section__title">ご案内</h2>
+      </div>
 
-    <div class="link-grid">
+      <div class="link-grid">
 
-      <a class="info-link" href="./pages/support.html">
-        <span class="info-link__title">使い方とサポート</span>
-        <span class="info-link__text">基本の使い方やお問い合わせ方法をまとめています。</span>
-      </a>
+        <a class="info-link" href="./pages/support.html">
+          <span class="info-link__title">使い方とサポート</span>
+          <span class="info-link__text">基本の使い方やお問い合わせ方法をまとめています。</span>
+        </a>
 
-      <a class="info-link" href="./pages/privacy.html">
-        <span class="info-link__title">プライバシーポリシー</span>
-        <span class="info-link__text">取得する情報や利用目的について確認できます。</span>
-      </a>
+        <a class="info-link" href="./pages/privacy.html">
+          <span class="info-link__title">プライバシーポリシー</span>
+          <span class="info-link__text">取得する情報や利用目的について確認できます。</span>
+        </a>
 
-      <a class="info-link" href="./pages/terms.html">
-        <span class="info-link__title">利用規約・免責事項</span>
-        <span class="info-link__text">ご利用条件や免責事項について確認できます。</span>
-      </a>
+        <a class="info-link" href="./pages/terms.html">
+          <span class="info-link__title">利用規約・免責事項</span>
+          <span class="info-link__text">ご利用条件や免責事項について確認できます。</span>
+        </a>
 
-
-    </div>
-  </section>
+      </div>
+    </section>
 
     <!-- 🌷 #70 Footer -->
     <!-- 🍀 サイト末尾の簡易フッター。公開名と補助リンクを配置し、ページ全体を締める。 -->
     <footer class="footer">
-      <p class="footer__title">Task Collection</p>
+      <p class="footer__title">Shift Calendar</p>
       <div class="footer__links">
         <a href="./pages/privacy.html">Privacy</a>
         <a href="./pages/support.html">Support</a>
+        <a href="../../index.html">top</a>
       </div>
-      <p class="footer__copy">© Task Collection</p>
+      <p class="footer__copy">© Shift Calendar</p>
     </footer>
   </div>
 
