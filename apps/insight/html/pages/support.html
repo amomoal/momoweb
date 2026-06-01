@@ -1,0 +1,209 @@
+<!-- 📌 apps/TodoCal/pages/support.html -->
+<!-- 📄 サポート案内ページ。問い合わせ先、基本の使い方、更新予定などをまとめて掲載する。今回の修正では、あとから説明文を差し替えやすい「#35 使い方」セクションを残しつつ、ガイド画像を index 風カルーセルで見せる構成に更新する。 -->
+<!-- ⚠️ 未実装・修正予定の記述あり（メールアドレスやアプリ仕様変更時は適宜更新） -->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- 🌷 #10 Head -->
+  <!-- 🍀 共通CSSを読み込み、トップページやプライバシーポリシーと見た目を統一する。使い方ガイド画像用にカルーセルCSSも追加する。 -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サポート | Task Collection</title>
+
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/support.css">
+  <link rel="stylesheet" href="../css/components/carousel/carousel.css">
+</head>
+<body>
+  <!-- 🌷 #20 Wrapper -->
+  <!-- 🍀 サポート情報を読みやすい1カラムに配置するための外枠。 -->
+  <div class="site-shell">
+
+    <!-- 🌷 #30 Header -->
+    <!-- 🍀 ページタイトル、案内文、トップへの戻り導線を表示する。 -->
+    <header class="hero">
+      <p class="hero__eyebrow">Support</p>
+      <h1 class="hero__title">サポート</h1>
+      <p class="hero__lead">
+        Todo Calendar の基本的な使い方、お問い合わせ方法、公開情報をまとめたページです。
+        ご利用前の確認や、不具合・ご意見の送信先としてご利用ください。
+      </p>
+
+      <div class="hero__actions">
+        <a class="button button--secondary" href="../index.html">トップへ戻る</a>
+      </div>
+    </header>
+
+    <!-- 🌷 #35 使い方 -->
+    <!-- 🍀 あとから詳細説明を追加しやすいように、使い方を項目別カードで分割して配置する。今回は index 風のカルーセルを先頭に置き、アイコン説明・単発タスク・スケジュール・日課の4項目を整理する。 -->
+    <section class="section">
+      <div class="section__header">
+        <p class="section__label">Guide</p>
+        <h2 class="section__title">使い方</h2>
+      </div>
+
+      <!-- 🌷 #36 Guide Carousel -->
+      <!-- 🍀 indexページ風に、使い方ガイド画像をカルーセルで見せる。カード説明の前に画面イメージを先に伝える。 -->
+      <div class="guide-carousel-wrap">
+        <div class="carousel" aria-label="Todo Calendar 使い方ガイド画像">
+          <div class="carousel__track">
+            <figure class="carousel__item">
+              <img
+                src="../assets/support/guide-01.PNG"
+                alt="Todo Calendar 使い方ガイド 1"
+              >
+            </figure>
+
+            <figure class="carousel__item">
+              <img
+                src="../assets/support/guide-02.PNG"
+                alt="Todo Calendar 使い方ガイド 2"
+              >
+            </figure>
+
+           <figure class="carousel__item">
+              <img
+                src="../assets/support/guide-05.png"
+                alt="Todo Calendar 使い方ガイド 5"
+              >
+            </figure>            
+
+            <figure class="carousel__item">
+              <img
+                src="../assets/support/guide-03.png"
+                alt="Todo Calendar 使い方ガイド 3"
+              >
+            </figure>
+
+            <figure class="carousel__item">
+              <img
+                src="../assets/support/guide-04.png"
+                alt="Todo Calendar 使い方ガイド 4"
+              >
+            </figure>
+          </div>
+
+          <div class="carousel__controls">
+            <button
+              class="carousel__button carousel__button--prev"
+              type="button"
+              aria-label="前の画像へ"
+            >
+              ‹
+            </button>
+
+            <div class="carousel__dots" aria-label="スライド選択"></div>
+
+            <button
+              class="carousel__button carousel__button--next"
+              type="button"
+              aria-label="次の画像へ"
+            >
+              ›
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- 🌷 #38 Guidetext -->
+
+      <div class="guide-grid">
+        
+
+        <article class="guide-card">
+          <h3 class="guide-card__title">単発タスク</h3>
+          <p class="guide-card__text">
+            チェックがなければ翌日も表示されます。
+            単発タスクは、その日だけ使う「一回限りのやること」を管理するための項目です。
+            例として、買い物・支払い・通院・電話など、1回だけ発生する予定に向いています。
+          </p>
+        </article>
+
+        <article class="guide-card">
+          <h3 class="guide-card__title">スケジュール</h3>
+          <p class="guide-card__text">
+            決められた日のみ表示されます。
+            ホームウィジェット、通知やバッジの表示はこれを指しています。
+            スケジュールは、日付や時間に紐づく予定を整理するための項目です。
+            カレンダーとあわせて確認しやすく、予定の見落としを減らしたい場合に便利です。
+          </p>
+        </article>
+
+           <article class="guide-card">
+          <h3 class="guide-card__title">保存について</h3>
+          <p class="guide-card__text">
+            入力したデータは端末内に保存されます。
+            アプリを消すとアプリ内のデータも一緒に消えます。
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 🌷 #40 Content -->
+    <!-- 🍀 問い合わせ方法と更新案内を掲載する。あとでメールアドレスやフォームURLへ差し替えやすい構造にしておく。 -->
+    <section class="section">
+      <div class="panel support-panel">
+<!-- 🌷 #40 Content -->
+<!-- 🍀 お問い合わせ文の中にフォームリンクを自然につなげ、ラベンダーカラー文字で視認性だけを少し上げる。 -->
+<div class="support-block">
+  <p class="body-text"><strong>お問い合わせフォーム</strong></p>
+  <p class="body-text">
+    不具合報告、ご意見、ご要望、ご質問などがありましたら、
+    <a
+      class="support-form-link"
+      href="https://forms.gle/vmekyAqwYA2vh1pw7"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      フォームはこちら
+    </a>
+    よりお願いいたします。
+  </p>
+  <p class="body-text">
+    ※ 内容確認後、必要に応じて追加情報をお願いする場合があります。
+  </p>
+</div>
+
+        <div class="support-block">
+          <p class="body-text"><strong>対応内容</strong></p>
+          <p class="body-text">
+            アプリの不具合報告、改善要望、公開情報に関するお問い合わせを受け付けています。
+            内容によっては返信までお時間をいただく場合があります。
+          </p>
+        </div>
+
+        <div class="support-block">
+          <p class="body-text"><strong>ご利用にあたって</strong></p>
+          <p class="body-text">
+            本アプリは、タスク管理や予定整理を補助するためのアプリです。
+            記録内容の消失防止や重要情報の保管については、必要に応じて別途バックアップ等もご検討ください。
+          </p>
+        </div>
+
+        <div class="support-block">
+          <p class="body-text"><strong>更新予定</strong></p>
+          <p class="body-text">
+            今後のアップデートにあわせて、本ページにもFAQや各機能の詳しい説明を追加していく予定です。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__links">
+        <a href="../index.html">Home</a>
+        <a href="./privacy.html">Privacy</a>
+        <a href="./terms.html">Terms</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../css/components/carousel/carousel.js" defer></script>
+
+
+</body>
+</html>
