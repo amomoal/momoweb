@@ -164,7 +164,14 @@ body {
 }
 
 .hero__actions .button:last-child {
-  margin-left:80px;
+  margin-left: 32px;
+}
+
+@media (max-width: 480px) {
+  .hero__actions .button:last-child {
+    margin-left: 0;
+    width: 100%;
+  }
 }
 
 /* 🌷 #50 Sections / Panels */
