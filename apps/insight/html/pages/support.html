@@ -1,6 +1,5 @@
-<!-- 📌 apps/TodoCal/pages/support.html -->
-<!-- 📄 サポート案内ページ。問い合わせ先、基本の使い方、更新予定などをまとめて掲載する。今回の修正では、あとから説明文を差し替えやすい「#35 使い方」セクションを残しつつ、ガイド画像を index 風カルーセルで見せる構成に更新する。 -->
-<!-- ⚠️ 未実装・修正予定の記述あり（メールアドレスやアプリ仕様変更時は適宜更新） -->
+<!-- 📌 web_support/pages/support.html -->
+<!-- 📄 INSIGHT用サポート案内ページ。問い合わせ先、基本の使い方、保存仕様、診断コンテンツの注意点をまとめて掲載する。 -->
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -9,7 +8,7 @@
   <!-- 🍀 共通CSSを読み込み、トップページやプライバシーポリシーと見た目を統一する。使い方ガイド画像用にカルーセルCSSも追加する。 -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>サポート | Task Collection</title>
+  <title>サポート | INSIGHT</title>
 
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/style.css">
@@ -18,16 +17,14 @@
 </head>
 <body>
   <!-- 🌷 #20 Wrapper -->
-  <!-- 🍀 サポート情報を読みやすい1カラムに配置するための外枠。 -->
   <div class="site-shell">
 
     <!-- 🌷 #30 Header -->
-    <!-- 🍀 ページタイトル、案内文、トップへの戻り導線を表示する。 -->
     <header class="hero">
       <p class="hero__eyebrow">Support</p>
       <h1 class="hero__title">サポート</h1>
       <p class="hero__lead">
-        Todo Calendar の基本的な使い方、お問い合わせ方法、公開情報をまとめたページです。
+        INSIGHT の基本的な使い方、お問い合わせ方法、公開情報をまとめたページです。
         ご利用前の確認や、不具合・ご意見の送信先としてご利用ください。
       </p>
 
@@ -36,8 +33,7 @@
       </div>
     </header>
 
-    <!-- 🌷 #35 使い方 -->
-    <!-- 🍀 あとから詳細説明を追加しやすいように、使い方を項目別カードで分割して配置する。今回は index 風のカルーセルを先頭に置き、アイコン説明・単発タスク・スケジュール・日課の4項目を整理する。 -->
+    <!-- 🌷 #35 Guide -->
     <section class="section">
       <div class="section__header">
         <p class="section__label">Guide</p>
@@ -45,42 +41,41 @@
       </div>
 
       <!-- 🌷 #36 Guide Carousel -->
-      <!-- 🍀 indexページ風に、使い方ガイド画像をカルーセルで見せる。カード説明の前に画面イメージを先に伝える。 -->
       <div class="guide-carousel-wrap">
-        <div class="carousel" aria-label="Todo Calendar 使い方ガイド画像">
+        <div class="carousel" aria-label="INSIGHT 使い方ガイド画像">
           <div class="carousel__track">
             <figure class="carousel__item">
               <img
-                src="../assets/support/guide-01.PNG"
-                alt="Todo Calendar 使い方ガイド 1"
+                src="../assets/support/insight-guide-01.png"
+                alt="INSIGHT 使い方ガイド 1"
               >
             </figure>
 
             <figure class="carousel__item">
               <img
-                src="../assets/support/guide-02.PNG"
-                alt="Todo Calendar 使い方ガイド 2"
-              >
-            </figure>
-
-           <figure class="carousel__item">
-              <img
-                src="../assets/support/guide-05.png"
-                alt="Todo Calendar 使い方ガイド 5"
-              >
-            </figure>            
-
-            <figure class="carousel__item">
-              <img
-                src="../assets/support/guide-03.png"
-                alt="Todo Calendar 使い方ガイド 3"
+                src="../assets/support/insight-guide-02.png"
+                alt="INSIGHT 使い方ガイド 2"
               >
             </figure>
 
             <figure class="carousel__item">
               <img
-                src="../assets/support/guide-04.png"
-                alt="Todo Calendar 使い方ガイド 4"
+                src="../assets/support/insight-guide-03.png"
+                alt="INSIGHT 使い方ガイド 3"
+              >
+            </figure>
+
+            <figure class="carousel__item">
+              <img
+                src="../assets/support/insight-guide-04.png"
+                alt="INSIGHT 使い方ガイド 4"
+              >
+            </figure>
+
+            <figure class="carousel__item">
+              <img
+                src="../assets/support/insight-guide-05.png"
+                alt="INSIGHT 使い方ガイド 5"
               >
             </figure>
           </div>
@@ -107,67 +102,67 @@
         </div>
       </div>
 
-
-      <!-- 🌷 #38 Guidetext -->
-
+      <!-- 🌷 #38 Guide Text -->
       <div class="guide-grid">
-        
-
         <article class="guide-card">
-          <h3 class="guide-card__title">単発タスク</h3>
+          <h3 class="guide-card__title">診断する</h3>
           <p class="guide-card__text">
-            チェックがなければ翌日も表示されます。
-            単発タスクは、その日だけ使う「一回限りのやること」を管理するための項目です。
-            例として、買い物・支払い・通院・電話など、1回だけ発生する予定に向いています。
+            質問に答えることで、性格傾向や考え方のクセを確認できます。
+            診断結果は、自己理解のきっかけとしてご利用ください。
           </p>
         </article>
 
         <article class="guide-card">
-          <h3 class="guide-card__title">スケジュール</h3>
+          <h3 class="guide-card__title">結果を見る</h3>
           <p class="guide-card__text">
-            決められた日のみ表示されます。
-            ホームウィジェット、通知やバッジの表示はこれを指しています。
-            スケジュールは、日付や時間に紐づく予定を整理するための項目です。
-            カレンダーとあわせて確認しやすく、予定の見落としを減らしたい場合に便利です。
+            診断後は、タイプごとの特徴、傾向、付き合い方、注意点などを確認できます。
+            結果は固定的な判定ではなく、現在の自分を見つめるための参考情報です。
           </p>
         </article>
 
-           <article class="guide-card">
+        <article class="guide-card">
           <h3 class="guide-card__title">保存について</h3>
           <p class="guide-card__text">
-            入力したデータは端末内に保存されます。
-            アプリを消すとアプリ内のデータも一緒に消えます。
+            診断結果やアプリ内の保存データは、主に端末内に保存されます。
+            アプリを削除すると、アプリ内のデータも消える場合があります。
           </p>
         </article>
 
+        <article class="guide-card">
+          <h3 class="guide-card__title">診断結果について</h3>
+          <p class="guide-card__text">
+            INSIGHT の診断・分析コンテンツは、医療診断や専門的な評価を目的としたものではありません。
+            自己理解や振り返りのための参考情報としてご利用ください。
+          </p>
+        </article>
       </div>
     </section>
 
     <!-- 🌷 #40 Content -->
-    <!-- 🍀 問い合わせ方法と更新案内を掲載する。あとでメールアドレスやフォームURLへ差し替えやすい構造にしておく。 -->
     <section class="section">
       <div class="panel support-panel">
-<!-- 🌷 #40 Content -->
-<!-- 🍀 お問い合わせ文の中にフォームリンクを自然につなげ、ラベンダーカラー文字で視認性だけを少し上げる。 -->
-<div class="support-block">
-  <p class="body-text"><strong>お問い合わせフォーム</strong></p>
-  <p class="body-text">
-    不具合報告、ご意見、ご要望、ご質問などがありましたら、
-    <a
-      class="support-form-link"
-      href="https://forms.gle/vmekyAqwYA2vh1pw7"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      フォームはこちら
-    </a>
-    よりお願いいたします。
-  </p>
-  <p class="body-text">
-    ※ 内容確認後、必要に応じて追加情報をお願いする場合があります。
-  </p>
-</div>
 
+        <!-- 🌷 #41 Contact Form -->
+        <div class="support-block">
+          <p class="body-text"><strong>お問い合わせフォーム</strong></p>
+          <p class="body-text">
+            不具合報告、ご意見、ご要望、ご質問などがありましたら、
+            <a
+              class="support-form-link"
+              href="https://forms.gle/vmekyAqwYA2vh1pw7"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              フォームはこちら
+            </a>
+            よりお願いいたします。
+          </p>
+          <p class="body-text">
+            ※ 内容確認後、必要に応じて追加情報をお願いする場合があります。
+          </p>
+        </div>
+
+        <!-- 🌷 #42 Support Scope -->
         <div class="support-block">
           <p class="body-text"><strong>対応内容</strong></p>
           <p class="body-text">
@@ -176,14 +171,26 @@
           </p>
         </div>
 
+        <!-- 🌷 #43 Usage Notes -->
         <div class="support-block">
           <p class="body-text"><strong>ご利用にあたって</strong></p>
           <p class="body-text">
-            本アプリは、タスク管理や予定整理を補助するためのアプリです。
-            記録内容の消失防止や重要情報の保管については、必要に応じて別途バックアップ等もご検討ください。
+            本アプリは、自己理解や記録を補助するためのアプリです。
+            診断結果や分析内容は参考情報であり、医療診断、心理学的診断、専門的評価を行うものではありません。
           </p>
         </div>
 
+        <!-- 🌷 #44 Backup Notes -->
+        <div class="support-block">
+          <p class="body-text"><strong>データの保存について</strong></p>
+          <p class="body-text">
+            保存データは主に端末内に保存されます。
+            端末の故障、アプリの削除、OSの不具合、仕様変更等によりデータが失われる場合があります。
+            重要な内容は、必要に応じて別途控えを残してください。
+          </p>
+        </div>
+
+        <!-- 🌷 #45 Future Updates -->
         <div class="support-block">
           <p class="body-text"><strong>更新予定</strong></p>
           <p class="body-text">
@@ -193,6 +200,7 @@
       </div>
     </section>
 
+    <!-- 🌷 #50 Footer -->
     <footer class="footer">
       <div class="footer__links">
         <a href="../index.html">Home</a>
@@ -203,7 +211,5 @@
   </div>
 
   <script src="../css/components/carousel/carousel.js" defer></script>
-
-
 </body>
 </html>
