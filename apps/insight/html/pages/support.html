@@ -1,20 +1,19 @@
-<!-- 📌 web_support/pages/support.html -->
+<!-- 🐈‍⬛ PATH: apps/insight/html/pages/support.html -->
 <!-- 📄 INSIGHT用サポート案内ページ。問い合わせ先、基本の使い方、保存仕様、診断コンテンツの注意点をまとめて掲載する。 -->
 
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <!-- 🌷 #10 Head -->
-  <!-- 🍀 共通CSSを読み込み、トップページやプライバシーポリシーと見た目を統一する。使い方ガイド画像用にカルーセルCSSも追加する。 -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>サポート | INSIGHT</title>
 
-  <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/support.css">
-  <link rel="stylesheet" href="../css/components/carousel/carousel.css">
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/support.css">
 </head>
+
 <body>
   <!-- 🌷 #20 Wrapper -->
   <div class="site-shell">
@@ -40,69 +39,6 @@
         <h2 class="section__title">使い方</h2>
       </div>
 
-      <!-- 🌷 #36 Guide Carousel -->
-      <div class="guide-carousel-wrap">
-        <div class="carousel" aria-label="INSIGHT 使い方ガイド画像">
-          <div class="carousel__track">
-            <figure class="carousel__item">
-              <img
-                src="../assets/support/insight-guide-01.png"
-                alt="INSIGHT 使い方ガイド 1"
-              >
-            </figure>
-
-            <figure class="carousel__item">
-              <img
-                src="../assets/support/insight-guide-02.png"
-                alt="INSIGHT 使い方ガイド 2"
-              >
-            </figure>
-
-            <figure class="carousel__item">
-              <img
-                src="../assets/support/insight-guide-03.png"
-                alt="INSIGHT 使い方ガイド 3"
-              >
-            </figure>
-
-            <figure class="carousel__item">
-              <img
-                src="../assets/support/insight-guide-04.png"
-                alt="INSIGHT 使い方ガイド 4"
-              >
-            </figure>
-
-            <figure class="carousel__item">
-              <img
-                src="../assets/support/insight-guide-05.png"
-                alt="INSIGHT 使い方ガイド 5"
-              >
-            </figure>
-          </div>
-
-          <div class="carousel__controls">
-            <button
-              class="carousel__button carousel__button--prev"
-              type="button"
-              aria-label="前の画像へ"
-            >
-              ‹
-            </button>
-
-            <div class="carousel__dots" aria-label="スライド選択"></div>
-
-            <button
-              class="carousel__button carousel__button--next"
-              type="button"
-              aria-label="次の画像へ"
-            >
-              ›
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- 🌷 #38 Guide Text -->
       <div class="guide-grid">
         <article class="guide-card">
           <h3 class="guide-card__title">診断する</h3>
@@ -209,7 +145,5 @@
       </div>
     </footer>
   </div>
-
-  <script src="../css/components/carousel/carousel.js" defer></script>
 </body>
 </html>

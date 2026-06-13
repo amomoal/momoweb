@@ -1,10 +1,11 @@
 <!-- 🐈‍⬛ PATH: apps/insight/html/index.html -->
-<!-- 📄 INSIGHT -自己理解ログ- の紹介・サポート導線トップページ。 -->
+<!-- 📄 INSIGHT -自己理解ログ- の紹介、サポート、プライバシーポリシーをまとめた案内ページ。 -->
 
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <!-- 🌷 #10 Head -->
+  <!-- 🍀 文字コード、viewport、タイトル、共通CSSの読み込みを定義する。reset → base → component の順で読み込む。 -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -16,6 +17,8 @@
 
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/components/card.css">
+  <link rel="stylesheet" href="../css/components/carousel/carousel.css">
 </head>
 
 <body>
@@ -73,11 +76,11 @@
       </div>
     </section>
 
-    <!-- 🌷 #50 App Section -->
+    <!-- 🌷 #50 App List -->
     <main id="apps" class="section">
       <div class="section__header">
-        <p class="section__label">App</p>
-        <h2 class="section__title">INSIGHT -自己理解ログ-</h2>
+        <p class="section__label">Apps</p>
+        <h2 class="section__title">公開中のアプリ</h2>
       </div>
 
       <div class="app-list">
@@ -85,7 +88,7 @@
           <div class="app-card__top">
             <img
               class="app-card__icon"
-              src="../assets/Insight_icon.png"
+              src="../assets/icon.png"
               alt="INSIGHT アイコン"
             >
 
@@ -112,10 +115,51 @@
             <li>過去の結果を見返して、自分の変化を整理</li>
           </ul>
 
+          <div class="carousel" aria-label="INSIGHT スクリーンショット">
+            <div class="carousel__track">
+              <figure class="carousel__item">
+                <img src="../assets/main/insight01.PNG" alt="INSIGHT スクリーンショット 1">
+              </figure>
+
+              <figure class="carousel__item">
+                <img src="../assets/main/insight02.PNG" alt="INSIGHT スクリーンショット 2">
+              </figure>
+
+              <figure class="carousel__item">
+                <img src="../assets/main/insight03.PNG" alt="INSIGHT スクリーンショット 3">
+              </figure>
+
+              <figure class="carousel__item">
+                <img src="../assets/main/insight04.PNG" alt="INSIGHT スクリーンショット 4">
+              </figure>
+            </div>
+
+            <div class="carousel__controls">
+              <button
+                class="carousel__button carousel__button--prev"
+                type="button"
+                aria-label="前の画像へ"
+              >
+                ‹
+              </button>
+
+              <div class="carousel__dots" aria-label="スライド選択"></div>
+
+              <button
+                class="carousel__button carousel__button--next"
+                type="button"
+                aria-label="次の画像へ"
+              >
+                ›
+              </button>
+            </div>
+          </div>
+
           <div class="app-card__actions">
             <a class="button button--primary" href="#" aria-disabled="true">
               App Storeで見る
             </a>
+
             <a class="button button--secondary" href="./pages/support.html">
               使い方とサポートを見る
             </a>
@@ -162,5 +206,7 @@
       <p class="footer__copy">© INSIGHT</p>
     </footer>
   </div>
+
+  <script src="../css/components/carousel/carousel.js" defer></script>
 </body>
 </html>
