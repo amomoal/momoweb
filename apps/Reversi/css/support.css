@@ -95,3 +95,59 @@
   outline-offset: 3px;
   border-radius: 4px;
 }
+
+/* 🌷 #50 Tips */
+.tip-list {
+  display: grid;
+  gap: var(--space-16);
+}
+
+.tip-card {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: var(--space-12);
+  padding: var(--space-16);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-20);
+  background: #ffffff;
+  box-shadow: var(--shadow-soft);
+}
+
+.tip-card__step {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  margin: 0;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.tip-card--intermediate .tip-card__step {
+  background: #2a6f8f;
+}
+
+.tip-card--advanced .tip-card__step {
+  background: #57428f;
+}
+
+.tip-card--special .tip-card__step {
+  background: #8f5a24;
+}
+
+.tip-card__title {
+  margin: 0 0 var(--space-8);
+  font-size: var(--font-sub);
+  line-height: 1.45;
+  font-weight: 700;
+}
+
+.tip-card__text {
+  margin: 0;
+  font-size: var(--font-body);
+  line-height: 1.8;
+  color: rgba(32, 37, 31, 0.78);
+}

@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>遊び方とコツ | リバーシ</title>
+
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/support.css">
+
+  <style>
+    .board-guide {
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.06);
+      overflow-x: auto;
+    }
+
+    .board-guide__title {
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .board-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 48px);
+      width: max-content;
+      border: 2px solid rgba(255, 255, 255, 0.38);
+    }
+
+    .board-cell {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      border-right: 1px solid rgba(255, 255, 255, 0.28);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
+
+    .board-cell:nth-child(4n) {
+      border-right: 0;
+    }
+
+    .board-cell:nth-last-child(-n + 4) {
+      border-bottom: 0;
+    }
+
+    .board-cell--corner {
+      background: rgba(255, 206, 84, 0.24);
+      color: #ffe49a;
+    }
+
+    .board-cell--x {
+      background: rgba(255, 104, 104, 0.24);
+      color: #ffb0b0;
+    }
+
+    .board-cell--c {
+      background: rgba(255, 170, 89, 0.22);
+      color: #ffd09d;
+    }
+
+    .board-cell--safe {
+      background: rgba(107, 207, 157, 0.2);
+      color: #b9f3d4;
+    }
+
+    .board-guide__legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      margin-top: 14px;
+      font-size: 0.9rem;
+    }
+
+    .board-guide__legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .legend-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      display: inline-block;
+    }
+
+    .legend-dot--corner {
+      background: #ffe49a;
+    }
+
+    .legend-dot--x {
+      background: #ff8c8c;
+    }
+
+    .legend-dot--c {
+      background: #ffbc77;
+    }
+
+    .legend-dot--safe {
+      background: #86e6b2;
+    }
+
+    .detail-box {
+      margin-top: 18px;
+      padding: 18px;
+      border-left: 4px solid rgba(255, 255, 255, 0.42);
+      border-radius: 0 12px 12px 0;
+      background: rgba(255, 255, 255, 0.045);
+    }
+
+    .detail-box__title {
+      margin-bottom: 8px;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .detail-box__list {
+      display: grid;
+      gap: 8px;
+      padding-left: 1.25em;
+      line-height: 1.7;
+    }
+
+    .check-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .check-list__item {
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.055);
+      line-height: 1.7;
+    }
+
+    .check-list__item strong {
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .guide-note {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: rgba(255, 215, 125, 0.1);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 560px) {
+      .board-cell {
+        width: 42px;
+        height: 42px;
+        font-size: 0.82rem;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="site-shell">
+
+
+<header class="hero">
+  <p class="hero__eyebrow">How to Play</p>
+  <h1 class="hero__title">遊び方とコツ</h1>
+  <p class="hero__lead">
+    リバーシの基本ルールから、中級・上級の考え方、少し変わった戦略までまとめたページです。
+    はじめて遊ぶ人も、CPU戦で少し強くなりたい人も、ここから確認できます。
+  </p>
+
+  <div class="hero__actions">
+    <a class="button button--primary" href="../index.html">アプリTopに戻る</a>
+    <a class="button button--secondary" href="./support.html">サポートへ</a>
+    <a class="button button--secondary" href="../../../../index.html">Topに戻る</a>
+    <a class="button button--secondary" href="#beginner">初級編</a>
+    <a class="button button--secondary" href="#intermediate">中級編</a>
+    <a class="button button--secondary" href="#advanced">上級編</a>
+    <a class="button button--secondary" href="#special">特別編</a>
+  </div>
+</header>
+
+<section class="section">
+  <div class="section__header">
+    <p class="section__label">Rules</p>
+    <h2 class="section__title">基本ルール</h2>
+  </div>
+
+  <div class="guide-grid">
+    <article class="guide-card">
+      <h3 class="guide-card__title">石を挟んでひっくり返す</h3>
+      <p class="guide-card__text">
+        自分の石で相手の石を縦・横・斜めに挟むと、挟まれた石が自分の石に変わります。
+        石をひっくり返せる場所にだけ置くことができます。
+      </p>
+    </article>
+
+    <article class="guide-card">
+      <h3 class="guide-card__title">置けない時はパス</h3>
+      <p class="guide-card__text">
+        置ける場所がない場合は手番をパスします。
+        どちらのプレイヤーも置けなくなるとゲーム終了です。
+      </p>
+    </article>
+
+    <article class="guide-card">
+      <h3 class="guide-card__title">最後に石が多い方が勝ち</h3>
+      <p class="guide-card__text">
+        盤面が埋まるか、両者が置けなくなった時点で石の数を比べます。
+        自分の石が相手より多ければ勝利です。
+      </p>
+    </article>
+  </div>
+</section>
+
+<section id="beginner" class="section">
+  <div class="section__header">
+    <p class="section__label">Beginner</p>
+    <h2 class="section__title">初級編</h2>
+  </div>
+
+  <div class="tip-list">
+    <article class="tip-card">
+      <p class="tip-card__step">1</p>
+      <div>
+        <h3 class="tip-card__title">角を大事にする</h3>
+        <p class="tip-card__text">
+          角に置いた石は、ゲーム終了までひっくり返されません。
+          角を取れる形を作ること、相手に角を渡さないことが大切です。
+        </p>
+      </div>
+    </article>
+
+    <article class="tip-card">
+      <p class="tip-card__step">2</p>
+      <div>
+        <h3 class="tip-card__title">角のとなりは慎重に置く</h3>
+        <p class="tip-card__text">
+          空いている角のすぐ横や斜めのマスに不用意に置くと、相手が角を取りやすくなります。
+          特に序盤から中盤は、角の近くへ置く前に一度立ち止まりましょう。
+        </p>
+      </div>
+    </article>
+
+    <article class="tip-card">
+      <p class="tip-card__step">3</p>
+      <div>
+        <h3 class="tip-card__title">序盤は取りすぎない</h3>
+        <p class="tip-card__text">
+          序盤に石をたくさん取るほど有利とは限りません。
+          大量にひっくり返すと、相手が置ける場所まで増やしてしまうことがあります。
+        </p>
+      </div>
+    </article>
+
+    <article class="tip-card">
+      <p class="tip-card__step">4</p>
+      <div>
+        <h3 class="tip-card__title">相手の置ける場所を見る</h3>
+        <p class="tip-card__text">
+          自分がどこへ置けるかだけでなく、次に相手がどこへ置けるかを見ます。
+          相手の選択肢を少なくすると、悪い場所へ追い込みやすくなります。
+        </p>
+      </div>
+    </article>
+
+    <article class="tip-card">
+      <p class="tip-card__step">5</p>
+      <div>
+        <h3 class="tip-card__title">終盤は数手先を読む</h3>
+        <p class="tip-card__text">
+          空きマスが少なくなるほど、先の展開を読みやすくなります。
+          どの順番で置けば最後に多く残せるか、少しずつ数えてみましょう。
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="intermediate" class="section">
+  <div class="section__header">
+    <p class="section__label">Intermediate</p>
+    <h2 class="section__title">中級編</h2>
+  </div>
+
+  <div class="tip-list">
+    <article class="tip-card tip-card--intermediate">
+      <p class="tip-card__step">中</p>
+      <div>
+        <h3 class="tip-card__title">X打ち・C打ちを知る</h3>
+        <p class="tip-card__text">
+          空いている角の周辺には、相手へ角を渡しやすい危険マスがあります。
+          角の斜め隣がX打ち、横または縦の隣がC打ちです。
+        </p>
+
+        <div class="board-guide">
+          <p class="board-guide__title">左上の角を例にした危険マス</p>
+
+          <div class="board-grid" aria-label="X打ちとC打ちの例">
+            <div class="board-cell board-cell--corner">角</div>
+            <div class="board-cell board-cell--c">C</div>
+            <div class="board-cell">・</div>
+            <div class="board-cell">・</div>
+
+            <div class="board-cell board-cell--c">C</div>
+            <div class="board-cell board-cell--x">X</div>
+            <div class="board-cell">・</div>
+            <div class="board-cell">・</div>
+
+            <div class="board-cell">・</div>
+            <div class="board-cell">・</div>
+            <div class="board-cell board-cell--safe">比較的安全</div>
+            <div class="board-cell">・</div>
+
+            <div class="board-cell">・</div>
+            <div class="board-cell">・</div>
+            <div class="board-cell">・</div>
+            <div class="board-cell">・</div>
+          </div>
+
+          <div class="board-guide__legend">
+            <span><i class="legend-dot legend-dot--corner"></i>角</span>
+            <span><i class="legend-dot legend-dot--x"></i>X打ち</span>
+            <span><i class="legend-dot legend-dot--c"></i>C打ち</span>
+            <span><i class="legend-dot legend-dot--safe"></i>比較的安全な内側</span>
+          </div>
+        </div>
+
+        <div class="detail-box">
+          <p class="detail-box__title">X打ちとは</p>
+          <ul class="detail-box__list">
+            <li>空いている角の斜め隣に置くことです。</li>
+            <li>左上なら、角の右下にあたるマスです。</li>
+            <li>相手が角へ置くための足場を作りやすく、特に危険です。</li>
+          </ul>
+        </div>
+
+        <div class="detail-box">
+          <p class="detail-box__title">C打ちとは</p>
+          <ul class="detail-box__list">
+            <li>空いている角の横隣・縦隣に置くことです。</li>
+            <li>X打ちよりは少しマシに見えても、角を取られる準備になりやすい手です。</li>
+            <li>「辺に置けるから安全」と思って打つと、そのまま角を取られることがあります。</li>
+          </ul>
+        </div>
+
+        <p class="guide-note">
+          X打ち・C打ちは常に悪い手ではありません。自分がすでにその角を取っている時や、
+          終盤で相手をパスさせられる時などは、むしろ有効になることがあります。
+          ただし、空いている角の近くでは基本的に慎重に考えるのが安全です。
+        </p>
+      </div>
+    </article>
+
+    <article class="tip-card tip-card--intermediate">
+      <p class="tip-card__step">中</p>
+      <div>
+        <h3 class="tip-card__title">自分の石を内側にまとめる</h3>
+        <p class="tip-card__text">
+          序盤から外側へ広がりすぎると、相手に角や辺を利用されやすくなります。
+          まずは内側で小さく打ち、相手に良い場所を渡さない形を意識しましょう。
+        </p>
+      </div>
+    </article>
+
+    <article class="tip-card tip-card--intermediate">
+      <p class="tip-card__step">中</p>
+      <div>
+        <h3 class="tip-card__title">相手に悪い手を打たせる</h3>
+        <p class="tip-card__text">
+          自分が良い場所に置くことだけでなく、相手が置きたくない場所しか選べない形を作るのも大切です。
+          相手の候補手を減らすと、X打ち・C打ちや悪い辺へ誘導しやすくなります。
+        </p>
+      </div>
+    </article>
+
+    <article class="tip-card tip-card--intermediate">
+      <p class="tip-card__step">中</p>
+      <div>
+        <h3 class="tip-card__title">辺はすぐ取ればいいわけではない</h3>
+        <p class="tip-card__text">
+          辺の石は強そうに見えますが、角を持っていない辺はまだ安定していません。
+          辺を取る時は、その後に角を守れるか、相手に角への入口を作らないかも確認しましょう。
+        </p>
+      </div>
+    </article>
+
+    <article class="tip-card tip-card--intermediate">
+      <p class="tip-card__step">中</p>
+      <div>
+        <h3 class="tip-card__title">パスを狙う</h3>
+        <p class="tip-card__text">
+          相手が置ける場所をなくすと、相手はパスになります。
+          連続で自分の手番が来ると、角や良い辺を取りやすくなるため、中盤以降の強い狙いになります。
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="advanced" class="section">
+  <div class="section__header">
+    <p class="section__label">Advanced</p>
+    <h2 class="section__title">上級編</h2>
+  </div>
+
+  <div class="tip-list">
+    <article class="tip-card tip-card--advanced">
+      <p class="tip-card__step">上</p>
+      <div>
+        <h3 class="tip-card__title">確定石を増やす</h3>
+        <p class="tip-card__text">
+          角そのものや、角からつながって絶対にひっくり返らない石を確定石と考えます。
+          終盤は目先の枚数より、確定石をどれだけ作れるかが勝敗に直結します。
+        </p>
+      </div>
+    </article>
+
+    <article class="tip-card tip-card--advanced">
+      <p class="tip-card__step">上</p>
+      <div>
+        <h3 class="tip-card__title">偶数理論を意識する</h3>
+        <p class="tip-card__text">
+          終盤では、空きマスがつながったまとまりごとに数を見ます。
+          偶数個のまとまりなら相手に先に入らせる、奇数個なら自分が先に入る、といった考え方が終盤の読みを助けます。
+        </p>
+      </div>
+    </article>
+
+    <article class="tip-card tip-card--advanced">
+      <p class="tip-card__step">上</p>
+      <div>
+        <h3 class="tip-card__title">手筋より手順を見る</h3>
+        <p class="tip-card__text">
+          一見良さそうな一手でも、その後に相手へ角や連続手番を渡すなら危険です。
+          上級では「この手が強いか」より、「この順番で進むと最後に何枚残るか」を考えます。
+        </p>
+      </div>
+    </article>
+
+    <article class="tip-card tip-card--advanced">
+      <p class="tip-card__step">上</p>
+      <div>
+        <h3 class="tip-card__title">終盤は読み切る場所を決める</h3>
+        <p class="tip-card__text">
+          盤面全体を一度に読むのが難しい時は、角まわりや空きマスの少ない場所から考えます。
+          小さな範囲でも確実に読み切ることで、終盤の大きなミスを減らせます。
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="special" class="section">
+  <div class="section__header">
+    <p class="section__label">Special</p>
+    <h2 class="section__title">特別編・変わった戦略</h2>
+  </div>
+
+  <div class="tip-list">
+    <article class="tip-card tip-card--special">
+      <p class="tip-card__step">特</p>
+      <div>
+        <h3 class="tip-card__title">わざと少なく取る</h3>
+        <p class="tip-card__text">
+          リバーシは、途中で石が多いほど勝ちではありません。
+          あえて少なく取って相手の選択肢を減らすと、後半に相手を動けなくできることがあります。
+        </p>
+
+        <div class="detail-box">
+          <p class="detail-box__title">狙い</p>
+          <ul class="detail-box__list">
+            <li>自分の石を増やしすぎず、相手が返せる線を残す。</li>
+            <li>相手の置ける場所を少しずつ減らす。</li>
+            <li>終盤前に相手の候補手を1〜2個まで絞る。</li>
+            <li>最後に角・辺・パスを使って一気に形勢を変える。</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <article class="tip-card tip-card--special">
+      <p class="tip-card__step">特</p>
+      <div>
+        <h3 class="tip-card__title">わざと大量にひっくり返す</h3>
+        <p class="tip-card__text">
+          序盤の大量返しは危険になりやすいですが、終盤前なら逆に強い手になることがあります。
+          目的は石を増やすことではなく、相手が置くために必要な石を消して、相手の合法手をなくすことです。
+        </p>
+
+        <div class="detail-box">
+          <p class="detail-box__title">強い大量返しの条件</p>
+          <ul class="detail-box__list">
+            <li>打った後、相手の置ける場所が1〜3か所まで減る。</li>
+            <li>相手の残った候補がX打ち・C打ち・悪い辺などになっている。</li>
+            <li>相手がパスした後、自分が角や辺を取れる。</li>
+            <li>返した石が、相手の次の手を作る石ではなく「壁」になっている。</li>
+          </ul>
+        </div>
+
+        <p class="guide-note">
+          大量に返せる手を見つけたら、まず返す枚数ではなく、
+          「この後、相手は何か所に置ける？」を確認しましょう。
+          相手の候補が少ないほど、その大量返しは価値があります。
+        </p>
+      </div>
+    </article>
+
+    <article class="tip-card tip-card--special">
+      <p class="tip-card__step">特</p>
+      <div>
+        <h3 class="tip-card__title">辺を捨てて角を釣る</h3>
+        <p class="tip-card__text">
+          角のない辺を、あえて相手に取らせる戦術です。
+          相手に「辺を取れて得した」と思わせながら、角の近くへ石を置かせたり、X打ち・C打ちを強要したりします。
+        </p>
+
+        <div class="detail-box">
+          <p class="detail-box__title">この戦術の考え方</p>
+          <ul class="detail-box__list">
+            <li>角のない辺は、見た目ほど安全ではありません。</li>
+            <li>相手が辺を広げるほど、角の近くへ逃げ道がなくなることがあります。</li>
+            <li>相手にX打ち・C打ちをさせられれば、こちらが角を取るチャンスが生まれます。</li>
+            <li>角を取れた後は、その辺をまとめて自分の確定石にできる場合があります。</li>
+          </ul>
+        </div>
+
+        <p class="guide-note">
+          ただ辺を渡すだけでは危険です。
+          「相手が辺を取った後、どこへしか置けなくなるか」と
+          「自分が角を取った後、どの石まで安定するか」をセットで読みましょう。
+        </p>
+      </div>
+    </article>
+
+    <article class="tip-card tip-card--special">
+      <p class="tip-card__step">特</p>
+      <div>
+        <h3 class="tip-card__title">毒まんじゅうを置く</h3>
+        <p class="tip-card__text">
+          相手から見るとたくさん取れておいしそうなのに、取った後で苦しくなる手を残す戦術です。
+          大量に取れる場所、辺、角の近くなどをエサにして、相手の次の候補手を悪くします。
+        </p>
+
+        <div class="detail-box">
+          <p class="detail-box__title">相手が飛びつきやすい場面</p>
+          <ul class="detail-box__list">
+            <li>一気にたくさんの石をひっくり返せる。</li>
+            <li>辺に置けるように見える。</li>
+            <li>角の近くなのに、すぐ角を取られる形には見えない。</li>
+            <li>他の候補手より明らかに得に見える。</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <article class="tip-card tip-card--special">
+      <p class="tip-card__step">特</p>
+      <div>
+        <h3 class="tip-card__title">片側を捨てる</h3>
+        <p class="tip-card__text">
+          すべての辺や角を守ろうとせず、片側を相手に渡して反対側で大きく得をする考え方です。
+          一時的に不利に見えても、終盤の手番や確定石で逆転できることがあります。
+        </p>
+      </div>
+    </article>
+
+    <article class="tip-card tip-card--special">
+      <p class="tip-card__step">特</p>
+      <div>
+        <h3 class="tip-card__title">相手のクセを読む</h3>
+        <p class="tip-card__text">
+          たくさん取る手が好き、角を急ぐ、辺をすぐ取りたがるなど、相手のクセを見るのも戦略です。
+          ローカル2人対戦では、盤面だけでなく相手の選び方もヒントになります。
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section__header">
+    <p class="section__label">Checklist</p>
+    <h2 class="section__title">迷った時の確認ポイント</h2>
+  </div>
+
+  <div class="panel">
+    <p class="body-text">
+      手を選ぶ時は、返せる枚数だけで決めずに、次の順番で確認してみてください。
+    </p>
+
+    <div class="check-list">
+      <div class="check-list__item">
+        <strong>1. この手で相手は角を取れる？</strong>
+        空いている角の近くへ置く時は、まずここを確認します。
+      </div>
+
+      <div class="check-list__item">
+        <strong>2. 相手の置ける場所はいくつになる？</strong>
+        相手の候補が少ないほど、こちらが展開を作りやすくなります。
+      </div>
+
+      <div class="check-list__item">
+        <strong>3. 相手の候補にX打ち・C打ちはある？</strong>
+        相手を危険マスへ追い込めているなら、かなり良い流れです。
+      </div>
+
+      <div class="check-list__item">
+        <strong>4. 辺を取った後、相手に角を渡さない？</strong>
+        角のない辺はまだ仮の石です。次の数手まで見ます。
+      </div>
+
+      <div class="check-list__item">
+        <strong>5. 終盤なら、最後にどちらが打つ？</strong>
+        空きマスの数と順番を意識すると、終盤の逆転が増えます。
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section__header">
+    <p class="section__label">Practice</p>
+    <h2 class="section__title">練習のおすすめ</h2>
+  </div>
+
+  <div class="panel">
+    <p class="body-text">
+      まずはCPU対戦で、「角を取る」「角を渡さない」「X打ち・C打ちを避ける」の3つを意識して遊んでみてください。
+      慣れてきたら、次は相手の置ける場所を数えます。
+      最終的には、目先でたくさん取れる手よりも、相手の候補を減らせる手を選べるようになると、
+      リバーシらしい読み合いを楽しめます。
+    </p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__links">
+    <a href="../index.html">Home</a>
+    <a href="./support.html">Support</a>
+    <a href="../../../../index.html">Top</a>
+    <a href="./privacy.html">Privacy</a>
+  </div>
+</footer>
+
+  </div>
+</body>
+</html>
