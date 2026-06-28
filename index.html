@@ -43,7 +43,7 @@
 
       <div class="hero__actions">
         <a class="button button--primary" href="#apps">アプリを見る</a>
-        <a class="button button--secondary" href="./apps/TodoCal/pages/support.html">サポート</a>
+        <a class="button button--secondary" href="#links">サポート</a>
       </div>
     </header>
 
@@ -122,6 +122,31 @@
           </div>
         </article>
 
+        <!-- 🌷 Reversi -->
+        <article class="app-card">
+          <div class="app-card__top">
+            <img
+              class="app-card__icon"
+              src="./apps/Reversi/assets/icon.png"
+              alt="リバーシ アプリアイコン"
+            >
+
+            <div class="app-card__heading">
+              <p class="app-card__eyebrow">Offline Board Game</p>
+              <h3 class="app-card__title">リバーシ</h3>
+            </div>
+          </div>
+
+          <p class="app-card__description">
+            CPU対戦と1台での2人対戦に対応した、オフラインで遊べるシンプルなリバーシアプリです。
+          </p>
+
+          <div class="hero__actions">
+            <a class="button button--primary" href="./apps/Reversi/html/">アプリ詳細を見る</a>
+            <a class="button button--secondary" href="./apps/Reversi/html/pages/support.html">サポート</a>
+          </div>
+        </article>
+
         <!-- 追加アプリ用テンプレ
         <article class="app-card">
           <div class="app-card__top">
@@ -152,21 +177,41 @@
     </main>
 
     <!-- 🌷 Links -->
-    <section class="section">
+    <section id="links" class="section">
       <div class="section__header">
         <p class="section__label">Links</p>
         <h2 class="section__title">ご案内</h2>
       </div>
 
       <div class="link-grid">
+        <a class="info-link" href="./apps/TodoCal/pages/support.html">
+          <span class="info-link__title">Shift Calendar サポート</span>
+          <span class="info-link__text">使い方やお問い合わせ方法を確認できます。</span>
+        </a>
+
+        <a class="info-link" href="./apps/insight/html/pages/support.html">
+          <span class="info-link__title">INSIGHT サポート</span>
+          <span class="info-link__text">使い方やお問い合わせ方法を確認できます。</span>
+        </a>
+
+        <a class="info-link" href="./apps/Reversi/html/pages/support.html">
+          <span class="info-link__title">リバーシ サポート</span>
+          <span class="info-link__text">遊び方やお問い合わせ方法を確認できます。</span>
+        </a>
+
         <a class="info-link" href="./apps/TodoCal/pages/privacy.html">
-          <span class="info-link__title">プライバシーポリシー</span>
+          <span class="info-link__title">Shift Calendar プライバシーポリシー</span>
           <span class="info-link__text">取得情報や利用目的について確認できます。</span>
         </a>
 
-        <a class="info-link" href="./apps/TodoCal/pages/support.html">
-          <span class="info-link__title">使い方とサポート</span>
-          <span class="info-link__text">基本の使い方やお問い合わせ方法をまとめています。</span>
+        <a class="info-link" href="./apps/insight/html/pages/privacy.html">
+          <span class="info-link__title">INSIGHT プライバシーポリシー</span>
+          <span class="info-link__text">取得情報や利用目的について確認できます。</span>
+        </a>
+
+        <a class="info-link" href="./apps/Reversi/html/pages/privacy.html">
+          <span class="info-link__title">リバーシ プライバシーポリシー</span>
+          <span class="info-link__text">取得情報や利用目的について確認できます。</span>
         </a>
       </div>
     </section>
@@ -176,8 +221,9 @@
       <p class="footer__title">momo web</p>
 
       <div class="footer__links">
-        <a href="./apps/TodoCal/pages/privacy.html">Privacy</a>
-        <a href="./apps/TodoCal/pages/support.html">Support</a>
+        <a href="#apps">Apps</a>
+        <a href="#links">Support</a>
+        <a href="./apps/Reversi/html/pages/privacy.html">Privacy</a>
       </div>
 
       <p class="footer__copy">© momo web</p>

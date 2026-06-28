@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>リバーシ - ローカル対戦OK</title>
+  <meta
+    name="description"
+    content="CPU対戦と1台での2人対戦に対応した、オフラインで遊べるシンプルなリバーシアプリの案内ページです。"
+  >
+
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/components/card.css">
+  <link rel="stylesheet" href="../css/components/carousel/carousel.css">
+</head>
+
+<body>
+  <div class="site-shell">
+
+    <header class="hero">
+      <div class="hero__top">
+        <div class="hero__icon-wrap hero__icon-wrap--board" aria-hidden="true">
+          <img
+            class="hero__icon"
+            src="../assets/icon.png"
+            alt=""
+          >
+        </div>
+
+        <div class="hero__heading">
+          <p class="hero__eyebrow">Board Game</p>
+          <h1 class="hero__title">リバーシ</h1>
+        </div>
+      </div>
+
+      <p class="lead">
+        CPU対戦＆1台2人対戦対応。<br>
+        オフラインで気軽に遊べるリバーシアプリです。
+      </p>
+
+      <p class="subtext">
+        ひとりでCPU戦を楽しむときも、友達や家族と同じ端末で対戦するときも。
+        複雑な機能はできるだけ省き、すぐに遊び始められるシンプルさを大切にしています。
+      </p>
+
+      <div class="hero__actions">
+        <a class="button button--primary" href="#apps">アプリを見る</a>
+        <a class="button button--secondary" href="./pages/support.html">サポート</a>
+        <a class="button button--secondary" href="../../../index.html">トップへ戻る</a>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="section__header">
+        <p class="section__label">About</p>
+        <h2 class="section__title">このアプリについて</h2>
+      </div>
+
+      <div class="panel">
+        <p class="body-text">
+          このアプリは、ひとりでもふたりでも遊べるシンプルなリバーシゲームです。
+          CPUとの対戦はもちろん、1台の端末を使ったローカル2人対戦にも対応しています。
+          通信環境を気にせず、ちょっとした空き時間にもじっくり考える対戦にも使えます。
+        </p>
+      </div>
+    </section>
+
+    <main id="apps" class="section">
+      <div class="section__header">
+        <p class="section__label">App</p>
+        <h2 class="section__title">リバーシ - ローカル対戦OK</h2>
+      </div>
+
+      <div class="app-list">
+        <article class="app-card">
+          <div class="app-card__top">
+            <div class="app-card__icon app-card__icon--board" aria-hidden="true">
+              <img
+                class="app-card__icon-image"
+                src="../assets/icon.png"
+                alt=""
+              >
+            </div>
+
+            <div class="app-card__heading">
+              <p class="app-card__eyebrow">Offline Reversi</p>
+              <h3 class="app-card__title">リバーシ - ローカル対戦OK</h3>
+            </div>
+          </div>
+
+          <p class="lead">
+            ひとりでCPU対戦、ふたりでローカル対戦。
+          </p>
+
+          <p class="app-card__description">
+            オフラインで遊べる、シンプルで使いやすいリバーシアプリです。
+            盤面を見やすく、操作をわかりやすくまとめているため、起動後すぐにプレイできます。
+          </p>
+
+          <ul class="app-card__features">
+            <li>CPUとのひとり対戦</li>
+            <li>1台での2人対戦（ローカル対戦）</li>
+            <li>オフラインでプレイ可能</li>
+            <li>シンプルで見やすい盤面</li>
+            <li>すぐに始められる簡単操作</li>
+          </ul>
+
+          <div class="board-preview" aria-label="リバーシの盤面イメージ">
+            <div class="board-preview__grid">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span class="piece piece--dark"></span><span class="piece piece--light"></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span class="piece piece--light"></span><span class="piece piece--dark"></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <div class="carousel" aria-label="リバーシ スクリーンショット">
+            <div class="carousel__track">
+              <figure class="carousel__item">
+                <img src="../assets/main/Reversi01.PNG" alt="リバーシ スクリーンショット 1">
+              </figure>
+
+              <figure class="carousel__item">
+                <img src="../assets/main/Reversi02.PNG" alt="リバーシ スクリーンショット 2">
+              </figure>
+
+              <figure class="carousel__item">
+                <img src="../assets/main/Reversi03.PNG" alt="リバーシ スクリーンショット 3">
+              </figure>
+            </div>
+
+            <div class="carousel__controls">
+              <button
+                class="carousel__button carousel__button--prev"
+                type="button"
+                aria-label="前の画像へ"
+              >
+                ‹
+              </button>
+
+              <div class="carousel__dots" aria-label="スライド選択"></div>
+
+              <button
+                class="carousel__button carousel__button--next"
+                type="button"
+                aria-label="次の画像へ"
+              >
+                ›
+              </button>
+            </div>
+          </div>
+
+          <div class="app-card__actions">
+            <a class="button button--primary" href="./pages/support.html">
+              使い方とサポートを見る
+            </a>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <section class="section">
+      <div class="section__header">
+        <p class="section__label">Recommended</p>
+        <h2 class="section__title">こんな人におすすめ</h2>
+      </div>
+
+      <div class="panel">
+        <ul class="body-text">
+          <li>気軽にリバーシを遊びたい</li>
+          <li>1人でCPU戦を楽しみたい</li>
+          <li>友達や家族と1台で対戦したい</li>
+          <li>通信なしで遊べるゲームを探している</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section__header">
+        <p class="section__label">Links</p>
+        <h2 class="section__title">ご案内</h2>
+      </div>
+
+      <div class="link-grid">
+        <a class="info-link" href="./pages/support.html">
+          <span class="info-link__title">使い方とサポート</span>
+          <span class="info-link__text">基本の遊び方やお問い合わせ方法をまとめています。</span>
+        </a>
+
+        <a class="info-link" href="./pages/privacy.html">
+          <span class="info-link__title">プライバシーポリシー</span>
+          <span class="info-link__text">取得する情報や利用目的について確認できます。</span>
+        </a>
+
+        <a class="info-link" href="./pages/terms.html">
+          <span class="info-link__title">利用規約・免責事項</span>
+          <span class="info-link__text">ご利用条件や免責事項について確認できます。</span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="footer__title">リバーシ - ローカル対戦OK</p>
+
+      <div class="footer__links">
+        <a href="./pages/privacy.html">Privacy</a>
+        <a href="./pages/support.html">Support</a>
+        <a href="../../../index.html">Top</a>
+      </div>
+
+      <p class="footer__copy">© Reversi</p>
+    </footer>
+  </div>
+
+  <script src="../css/components/carousel/carousel.js" defer></script>
+</body>
+</html>
