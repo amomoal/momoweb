@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const dotsWrap = carousel.querySelector(".carousel__dots");
     const prevBtn = carousel.querySelector(".carousel__button--prev");
     const nextBtn = carousel.querySelector(".carousel__button--next");
+    const dotLabel = carousel.dataset.dotLabel || "枚目";
 
     if (!track || items.length === 0 || !dotsWrap) return;
 
@@ -16,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const dot = document.createElement("button");
       dot.type = "button";
       dot.className = "carousel__dot";
-      dot.setAttribute("aria-label", `${index + 1}枚目へ`);
+      dot.setAttribute("aria-label", `${index + 1}${dotLabel}へ`);
       dot.addEventListener("click", () => scrollToIndex(index));
       dotsWrap.appendChild(dot);
       return dot;

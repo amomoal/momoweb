@@ -11,6 +11,7 @@
 
   <link rel="stylesheet" href="../../css/reset.css">
   <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/components/carousel/carousel.css">
   <link rel="stylesheet" href="../../css/support.css">
 </head>
 
@@ -23,8 +24,8 @@
       <p class="hero__eyebrow">Support</p>
       <h1 class="hero__title">サポート</h1>
       <p class="hero__lead">
-        INSIGHT の基本的な使い方、お問い合わせ方法、公開情報をまとめたページです。
-        ご利用前の確認や、不具合・ご意見の送信先としてご利用ください。
+        INSIGHT の使い方、診断結果との向き合い方、お問い合わせ方法をまとめたページです。
+        はじめて使う前の確認や、不具合・ご意見の送信先としてご利用ください。
       </p>
 
       <div class="hero__actions">
@@ -36,41 +37,176 @@
     <section class="section">
       <div class="section__header">
         <p class="section__label">Guide</p>
-        <h2 class="section__title">使い方</h2>
+        <h2 class="section__title">使い方ガイド</h2>
       </div>
 
-      <div class="guide-grid">
-        <article class="guide-card">
-          <h3 class="guide-card__title">診断する</h3>
-          <p class="guide-card__text">
-            質問に答えることで、性格傾向や考え方のクセを確認できます。
-            診断結果は、自己理解のきっかけとしてご利用ください。
-          </p>
-        </article>
+      <div
+        class="carousel guide-carousel"
+        aria-label="INSIGHT 使い方ガイド"
+        data-dot-label="番目のガイド"
+      >
+        <div class="carousel__track guide-carousel__track">
+          <article class="carousel__item guide-card guide-card--long">
+            <p class="guide-card__step">Page 1</p>
+            <h3 class="guide-card__title">INSIGHTの診断について</h3>
 
-        <article class="guide-card">
-          <h3 class="guide-card__title">結果を見る</h3>
-          <p class="guide-card__text">
-            診断後は、タイプごとの特徴、傾向、付き合い方、注意点などを確認できます。
-            結果は固定的な判定ではなく、現在の自分を見つめるための参考情報です。
-          </p>
-        </article>
+            <section class="guide-card__section">
+              <p class="guide-card__number">01</p>
+              <h4 class="guide-card__section-title">INSIGHTの診断について</h4>
+              <p class="guide-card__text">
+                MBTIもエニアグラムもBig5も、一見すると同じ「性格診断」に見えるかもしれません。
+                しかし実際には、それぞれ異なる角度から人を見ています。
+                INSIGHTでは複数の診断を通して、自分をさまざまな視点から理解することを目的としています。
+                同じ人でも診断によって結果が異なるのは自然なことであり、どれか一つだけが「本当の自分」というわけではありません。
+                それぞれの結果を組み合わせながら、自分を理解するヒントとして活用してみてください。
+              </p>
+            </section>
 
-        <article class="guide-card">
-          <h3 class="guide-card__title">保存について</h3>
-          <p class="guide-card__text">
-            診断結果やアプリ内の保存データは、主に端末内に保存されます。
-            アプリを削除すると、アプリ内のデータも消える場合があります。
-          </p>
-        </article>
+            <section class="guide-card__section">
+              <p class="guide-card__number">02</p>
+              <h4 class="guide-card__section-title">MBTI</h4>
+              <p class="guide-card__text">
+                MBTIは、<strong>「どのように物事を認識し、判断するか」</strong>という思考や行動の傾向を見るモデルです。
+                16タイプで表現されるため分かりやすく、多くの人に親しまれています。
+                ただし、人の状態や環境、経験によって結果が変化することもあります。
+                特に I / E などは、その時の生活環境によって変化しやすい傾向があります。
+              </p>
+            </section>
 
-        <article class="guide-card">
-          <h3 class="guide-card__title">診断結果について</h3>
-          <p class="guide-card__text">
-            INSIGHT の診断・分析コンテンツは、医療診断や専門的な評価を目的としたものではありません。
-            自己理解や振り返りのための参考情報としてご利用ください。
-          </p>
-        </article>
+            <section class="guide-card__section">
+              <p class="guide-card__number">03</p>
+              <h4 class="guide-card__section-title">エニアグラム</h4>
+              <p class="guide-card__text">
+                エニアグラムは、<strong>「何を求め、何を恐れているのか」</strong>という内面的な動機に注目する性格論です。
+                MBTIが思考や行動パターンを見るのに対し、
+                エニアグラムはその行動の背景にある理由や価値観を探ることを重視します。
+                同じMBTIでも異なるエニアグラムタイプになることがあり、その逆もあります。
+              </p>
+            </section>
+
+            <section class="guide-card__section">
+              <p class="guide-card__number">04</p>
+              <h4 class="guide-card__section-title">Big5</h4>
+              <p class="guide-card__text">
+                Big5は心理学研究で広く使われている性格モデルです。
+                人をタイプではなく、外向性、協調性、誠実性、開放性、神経症傾向といった特徴の強弱で表現します。
+                「あなたは〇〇タイプです」と分類するのではなく、<strong>「どの特徴がどの程度強いか」</strong>を見る診断です。
+              </p>
+            </section>
+
+            <section class="guide-card__section">
+              <p class="guide-card__number">05</p>
+              <h4 class="guide-card__section-title">HEXACO</h4>
+              <p class="guide-card__text">
+                HEXACOはBig5を発展させた性格モデルです。
+                Big5に加えて、<strong>誠実さ・謙虚さ（Honesty-Humility）</strong>という要素を含みます。
+                人の価値観や対人関係の傾向を、より細かく見ることができます。
+              </p>
+            </section>
+          </article>
+
+          <article class="carousel__item guide-card guide-card--long">
+            <p class="guide-card__step">Page 2</p>
+            <h3 class="guide-card__title">数値で見る診断と、タイプで見る診断</h3>
+
+            <section class="guide-card__section">
+              <p class="guide-card__number">06</p>
+              <h4 class="guide-card__section-title">数値で見る診断と、タイプで見る診断</h4>
+              <p class="guide-card__text">
+                性格診断には、大きく分けて<strong>「数値で見る診断」</strong>と<strong>「タイプで見る診断」</strong>があります。
+                Big5やHEXACOは、「外向性が高い」「誠実性がやや低い」といったように、人の特徴を数値として表現します。
+                そのため、<strong>どの特徴がどのくらい強いのか</strong>を細かく把握しやすい特徴があります。
+              </p>
+              <p class="guide-card__text">
+                MBTIやエニアグラムは、「INTP」「タイプ5」のように、人の傾向を分かりやすいタイプとして表現します。
+                数値モデルほど細かな分析には向きませんが、
+                <strong>どんな考え方をしやすいのか</strong>、<strong>何を大切にしているのか</strong>をイメージしやすい特徴があります。
+              </p>
+              <p class="guide-card__text">
+                数値モデルは、<strong>「どの特徴がどれくらい強いか」</strong>を理解するのに向いています。
+                タイプモデルは、<strong>「どんな人なのか」</strong>を理解するきっかけを作るのに向いています。
+              </p>
+              <p class="guide-card__text">
+                例えば、「この人は安心感を大切にする傾向があるかもしれない」と考えた場合、
+                事前に予定を共有する、急な変更を減らす、理由や根拠を説明するといった配慮につながることがあります。
+                また、「この人は自由度を大切にする傾向があるかもしれない」と考えた場合、
+                細かく管理しすぎない、選択肢を残しておく、自分で決められる余地を作るといった関わり方が合うこともあります。
+              </p>
+              <p class="guide-card__text">
+                もちろん人は診断結果だけで説明できるほど単純ではありません。
+                しかし、<strong>「何を尊重すると、その人と関わりやすくなるだろう？」</strong>と考えるきっかけとして、診断は役立つことがあります。
+              </p>
+            </section>
+          </article>
+
+          <article class="carousel__item guide-card guide-card--long">
+            <p class="guide-card__step">Page 3</p>
+            <h3 class="guide-card__title">注意事項と活用方法</h3>
+
+            <section class="guide-card__section">
+              <p class="guide-card__number">07</p>
+              <h4 class="guide-card__section-title">ASD傾向・ADHD傾向・HSP傾向について</h4>
+              <p class="guide-card__text">
+                INSIGHT内のASD傾向・ADHD傾向・HSP傾向は、医療診断や専門的な判定を目的としたものではありません。
+                あくまで、<strong>「そうした特性に近い傾向があるかもしれない」</strong>という参考情報として提供されています。
+                診断結果だけで、その特性の有無や程度を判断することはできません。
+                また、人の性格や行動は環境や体調、経験など様々な要因の影響を受けます。
+                結果はあくまで自己理解のヒントとして活用してください。
+              </p>
+            </section>
+
+            <section class="guide-card__section">
+              <p class="guide-card__number">08</p>
+              <h4 class="guide-card__section-title">診断結果との向き合い方</h4>
+              <p class="guide-card__text">
+                診断結果は、あなたを決めつけるものではなく、<strong>自分を理解するためのヒント</strong>です。
+                結果に当てはまる部分もあれば、そうでない部分もあります。
+                「当てはまっている・当てはまっていない」だけでなく、
+                <strong>「なぜそう感じたのか」</strong>を考える材料として活用してみてください。
+              </p>
+            </section>
+
+            <section class="guide-card__section">
+              <p class="guide-card__number">09</p>
+              <h4 class="guide-card__section-title">大切なお知らせ</h4>
+              <p class="guide-card__text">
+                INSIGHTに含まれる診断は、自己理解や娯楽を目的として作成されています。
+                医療診断、心理評価、専門的な判定を行うものではありません。
+                もし日常生活や仕事、人間関係などで強い困りごとや生きづらさを感じている場合は、
+                Webサイトやアプリの診断結果だけで判断せず、専門機関や医療機関へ相談することをおすすめします。
+              </p>
+            </section>
+
+            <section class="guide-card__section">
+              <p class="guide-card__number">10</p>
+              <h4 class="guide-card__section-title">INSIGHTの使い方まとめ</h4>
+              <p class="guide-card__text">
+                INSIGHTでは、<strong>『人を決めつけるためではなく、自分を理解するための道具』</strong>
+                そして<strong>『人を決めつけるためではなく、人を理解するためのヒント』</strong>として診断を活用することをおすすめしています。
+              </p>
+            </section>
+          </article>
+        </div>
+
+        <div class="carousel__controls guide-carousel__controls">
+          <button
+            class="carousel__button carousel__button--prev"
+            type="button"
+            aria-label="前のガイドへ"
+          >
+            ‹
+          </button>
+
+          <div class="carousel__dots" aria-label="ガイド選択"></div>
+
+          <button
+            class="carousel__button carousel__button--next"
+            type="button"
+            aria-label="次のガイドへ"
+          >
+            ›
+          </button>
+        </div>
       </div>
     </section>
 
@@ -145,5 +281,6 @@
       </div>
     </footer>
   </div>
+  <script src="../../css/components/carousel/carousel.js" defer></script>
 </body>
 </html>

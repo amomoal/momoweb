@@ -1,19 +1,49 @@
 /* 📌 web_support/css/support.css */
 /* 📄 サポートページ専用CSS。使い方セクションのカード表示と、問い合わせ・更新案内ブロックの余白など、support.html のみに必要な見た目を定義する。 */
 
-/* 🌷 #10 Guide Layout */
-/* 🍀 使い方セクションのカード群を1カラムで整列し、あとから説明文が増えても崩れにくい構造にする。 */
-.guide-grid {
-  display: grid;
+/* 🌷 #10 Guide Carousel */
+/* 🍀 使い方ガイドを横スクロールカードで表示し、次のカードが少し見える状態にする。 */
+.guide-carousel {
+  margin-top: 0;
+}
+
+.guide-carousel__track {
   gap: var(--space-16);
+  padding: 2px 26px 8px 2px;
+  scroll-padding-left: 2px;
 }
 
 .guide-card {
+  flex: 0 0 86%;
+  max-width: none;
+  min-height: 286px;
   background: #ffffff;
   border: 1px solid var(--line);
   border-radius: var(--radius-20);
   padding: var(--space-16);
   box-shadow: var(--shadow-soft);
+  box-sizing: border-box;
+  scroll-snap-align: start;
+}
+
+.guide-card--long {
+  flex-basis: 94%;
+  min-height: auto;
+}
+
+.guide-card__step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  height: 28px;
+  margin: 0 0 var(--space-12);
+  border-radius: var(--radius-pill);
+  background: rgba(110, 106, 154, 0.1);
+  color: var(--accent);
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 800;
 }
 
 .guide-card__title {
@@ -24,11 +54,63 @@
   color: var(--text);
 }
 
+.guide-card__section {
+  margin-top: var(--space-16);
+  padding-top: var(--space-16);
+  border-top: 1px solid var(--line);
+}
+
+.guide-card__number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  height: 24px;
+  margin: 0 0 var(--space-8);
+  border-radius: var(--radius-pill);
+  background: rgba(110, 106, 154, 0.08);
+  color: var(--accent);
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.guide-card__section-title {
+  margin: 0 0 var(--space-8);
+  font-size: 16px;
+  line-height: 1.55;
+  font-weight: 700;
+  color: var(--text);
+}
+
 .guide-card__text {
   margin: 0;
-  font-size: var(--font-body);
+  font-size: var(--font-note);
   line-height: 1.8;
   color: rgba(43, 36, 31, 0.78);
+}
+
+.guide-card__text + .guide-card__text {
+  margin-top: var(--space-12);
+}
+
+.guide-card__text strong {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.guide-carousel__controls {
+  margin-top: var(--space-16);
+}
+
+.guide-carousel .carousel__button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.guide-carousel .carousel__dot {
+  width: 8px;
+  height: 8px;
 }
 
 
@@ -70,14 +152,6 @@
   color: var(--muted, #6b625d);
 }
 
-.guide-carousel-wrap {
-  margin-bottom: 24px;
-}
-
-.guide-grid {
-  margin-top: 24px;
-}
-
 /* 🌷 #40 Form Link */
 /* 🍀 お問い合わせフォーム導線は、背景や影を使わず、文字色と太さだけで自然に目立たせる。 */
 .support-form-link {
@@ -94,4 +168,26 @@
   outline: 2px solid var(--accent);
   outline-offset: 3px;
   border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+  .guide-card {
+    flex-basis: 72%;
+  }
+
+  .guide-card--long {
+    flex-basis: 86%;
+  }
+}
+
+@media (max-width: 450px) {
+  .guide-card {
+    flex-basis: 90%;
+    min-height: 320px;
+  }
+
+  .guide-card--long {
+    flex-basis: 94%;
+    min-height: auto;
+  }
 }
