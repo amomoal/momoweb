@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ローカル保存と安全性について | local memo</title>
+  <meta name="description" content="local memo のローカル保存と安全性について。端末内管理の特徴、通信しない設計、利用時の注意点をまとめています。">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/components/card.css">
+  <link rel="stylesheet" href="../css/support.css">
+  <link rel="stylesheet" href="../css/localmemo.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <div class="site-shell">
+    <header class="hero">
+      <div class="hero__top">
+        <div class="hero__icon-wrap">
+          <img class="hero__icon" src="../assets/icon.png" alt="local memo アイコン">
+        </div>
+        <div class="hero__heading">
+          <p class="hero__eyebrow">Local First</p>
+          <h1 class="hero__title">ローカル保存と安全性について</h1>
+        </div>
+      </div>
+      <p class="subtext">
+        local memo は、情報をクラウドへ預けず、端末内で管理することを重視したアプリです。
+      </p>
+      <div class="hero__actions">
+        <a class="button button--secondary" href="../index.html">アプリ説明に戻る</a>
+        <a class="button button--secondary" href="../../../index.html">Topに戻る</a>
+      </div>
+    </header>
+
+    <main id="main" class="section">
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h2 class="feature-card__title">開発者サーバーへ送信しない設計</h2>
+          <p class="feature-card__text">
+            入力したメモ、サブスクリプション情報、パスワード情報は、開発者が運用するサーバーへ送信することを目的としていません。
+            アカウント作成やクラウド同期を前提にせず、利用者自身の端末内で管理します。
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <h2 class="feature-card__title">ローカル保存の特徴</h2>
+          <ul class="note-list">
+            <li>端末を失うと、データを失う可能性があります。</li>
+            <li>端末が故障した場合、データを復旧できない場合があります。</li>
+            <li>端末が第三者に不正利用された場合、保存情報を見られる可能性があります。</li>
+            <li>OS、端末設定、バックアップ状況によって、安全性や移行可否が変わる場合があります。</li>
+          </ul>
+        </article>
+
+        <article class="feature-card">
+          <h2 class="feature-card__title">おすすめの安全対策</h2>
+          <ul class="note-list">
+            <li>端末の画面ロックを設定する</li>
+            <li>生体認証を有効にする</li>
+            <li>OSを最新の状態に保つ</li>
+            <li>端末を第三者と共有しない</li>
+            <li>必要に応じて端末のバックアップ設定を確認する</li>
+            <li>特に重要な情報は、保存方法を慎重に検討する</li>
+          </ul>
+        </article>
+
+        <article class="feature-card">
+          <h2 class="feature-card__title">完全な安全性を保証するものではありません</h2>
+          <p class="feature-card__text">
+            local memo は、安全性を高めるための設定や機能を提供しますが、情報漏えいまたはデータ消失を完全に防止するものではありません。
+            大切な情報を扱う場合は、アプリの機能だけでなく、端末側の設定やバックアップ状況も確認してください。
+          </p>
+        </article>
+      </div>
+    </main>
+
+    <section class="section">
+      <div class="link-grid">
+        <a class="info-link" href="./privacy.html">
+          <span class="info-link__title">プライバシーポリシー</span>
+          <span class="info-link__text">外部通信や取り扱う情報について確認できます。</span>
+        </a>
+        <a class="info-link" href="./terms.html">
+          <span class="info-link__title">利用規約・免責事項</span>
+          <span class="info-link__text">データ消失や外部サービスに関する注意点を確認できます。</span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="footer__title">local memo</p>
+      <div class="footer__links">
+        <a href="../index.html">App</a>
+        <a href="./privacy.html">Privacy</a>
+        <a href="./support.html">Support</a>
+        <a href="../../../index.html">Top</a>
+      </div>
+      <p class="footer__copy">© local memo</p>
+    </footer>
+  </div>
+</body>
+</html>
