@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>momo web</title>
+  <title>momo web | Web制作・iOSアプリ・ゲーム</title>
   <meta
     name="description"
-    content="公開中のアプリ一覧と案内をまとめたポータルページです。"
+    content="Webサイト制作をはじめ、iOSアプリやゲームなどの制作物を紹介しています。"
   >
 
   <link rel="stylesheet" href="./reset.css">
@@ -27,23 +27,28 @@
         </div>
 
         <div class="hero__heading">
-          <p class="hero__eyebrow">App Collection</p>
+          <p class="hero__eyebrow">Web / iOS App / Game</p>
           <h1 class="hero__title">momo web</h1>
         </div>
       </div>
 
       <p class="lead">
-        使いやすさを大切にしたアプリや案内ページをまとめています。
+        Webサイト制作と、アプリ・ゲーム開発。
       </p>
 
       <p class="subtext">
-        公開中のアプリ紹介、サポート、プライバシーポリシーなどを
-        ひとつの場所から確認できるポータルページです。
+        Webサイト制作をはじめ、iOSアプリやゲームなどの制作物を紹介しています。
       </p>
 
+      <div class="hero__price-panel">
+        <p class="hero__price">Webサイト制作 <strong>20,000円〜</strong></p>
+        <p class="hero__price-note">月額費用なし・買い切り</p>
+      </div>
+
       <div class="hero__actions">
-        <a class="button button--primary" href="#apps">アプリを見る</a>
-        <a class="button button--secondary" href="#links">サポート</a>
+        <!-- 🌱 将来: Web制作の詳細ページが完成したら href を "./web/" などへ変更 -->
+        <a class="button button--primary" href="#webdev">Web制作について</a>
+        <a class="button button--secondary" href="#apps">公開中のアプリを見る</a>
       </div>
     </header>
 
@@ -56,9 +61,35 @@
 
       <div class="panel">
         <p class="body-text">
-          このページでは、公開中のアプリ一覧と各アプリの詳細ページへの導線をまとめています。
-          今後アプリが増えても、この一覧からまとめて確認できるようにする予定です。
+          Web制作のご案内と、公開中のiOSアプリ・ゲームの一覧をまとめています。
+          今後、Web制作の詳細ページや制作事例なども順次追加していく予定です。
         </p>
+      </div>
+    </section>
+
+    <!-- 🌷 Web Development -->
+    <section id="webdev" class="section">
+      <div class="section__header">
+        <p class="section__label">Web Development</p>
+        <h2 class="section__title">Web制作</h2>
+      </div>
+
+      <div class="panel webdev-panel">
+        <!-- 🌱 詳細ページ・サンプルページ・問い合わせページが完成したらこのバッジを削除 -->
+        <p class="notice-badge">只今準備中…</p>
+
+        <p class="webdev-panel__price">Webサイト制作 <strong>20,000円〜</strong></p>
+        <p class="webdev-panel__note">月額費用なし・買い切り</p>
+
+        <ul class="webdev-features">
+          <li>スマホ対応</li>
+          <li>小規模店舗・個人事業・サービス紹介サイトなどを想定</li>
+          <li>Web公開まで対応</li>
+        </ul>
+
+        <!-- 🌱 将来: 詳細ページが完成したら以下のリンクを追加
+        <a class="button button--primary" href="./web/">Web制作の詳細を見る</a>
+        -->
       </div>
     </section>
 
@@ -82,7 +113,10 @@
 
             <div class="app-card__heading">
               <p class="app-card__eyebrow">Shift Calendar</p>
-              <h3 class="app-card__title">Shift Calendar</h3>
+              <div class="app-card__title-row">
+                <h3 class="app-card__title">Shift Calendar</h3>
+                <span class="platform-badge platform-badge--ios">iOS</span>
+              </div>
             </div>
           </div>
 
@@ -108,7 +142,10 @@
 
             <div class="app-card__heading">
               <p class="app-card__eyebrow">Self Understanding</p>
-              <h3 class="app-card__title">INSIGHT</h3>
+              <div class="app-card__title-row">
+                <h3 class="app-card__title">INSIGHT</h3>
+                <span class="platform-badge platform-badge--ios">iOS</span>
+              </div>
             </div>
           </div>
 
@@ -133,7 +170,10 @@
 
             <div class="app-card__heading">
               <p class="app-card__eyebrow">Offline Board Game</p>
-              <h3 class="app-card__title">リバーシ</h3>
+              <div class="app-card__title-row">
+                <h3 class="app-card__title">リバーシ</h3>
+                <span class="platform-badge platform-badge--ios">iOS</span>
+              </div>
             </div>
           </div>
 
@@ -158,7 +198,10 @@
 
             <div class="app-card__heading">
               <p class="app-card__eyebrow">Local Memo</p>
-              <h3 class="app-card__title">local memo</h3>
+              <div class="app-card__title-row">
+                <h3 class="app-card__title">local memo</h3>
+                <span class="platform-badge platform-badge--ios">iOS</span>
+              </div>
             </div>
           </div>
 
@@ -183,7 +226,10 @@
 
             <div class="app-card__heading">
               <p class="app-card__eyebrow">Water Sort Puzzle</p>
-              <h3 class="app-card__title">Iromizu</h3>
+              <div class="app-card__title-row">
+                <h3 class="app-card__title">Iromizu</h3>
+                <span class="platform-badge platform-badge--ios">iOS</span>
+              </div>
             </div>
           </div>
 
@@ -238,31 +284,6 @@
         <a class="info-link" href="./apps/Reversi/html/pages/strategy.html">
           <span class="info-link__title">リバーシ 遊び方とコツ</span>
           <span class="info-link__text">基本ルールや勝ちやすくなる考え方を確認できます。</span>
-        </a>
-        
-        <a class="info-link" href="./apps/TodoCal/pages/support.html">
-          <span class="info-link__title">Shift Calendar サポート</span>
-          <span class="info-link__text">使い方やお問い合わせ方法を確認できます。</span>
-        </a>
-
-        <a class="info-link" href="./apps/insight/html/pages/support.html">
-          <span class="info-link__title">INSIGHT サポート</span>
-          <span class="info-link__text">使い方やお問い合わせ方法を確認できます。</span>
-        </a>
-
-        <a class="info-link" href="./apps/Reversi/html/pages/support.html">
-          <span class="info-link__title">リバーシ サポート</span>
-          <span class="info-link__text">遊び方やお問い合わせ方法を確認できます。</span>
-        </a>
-
-        <a class="info-link" href="./apps/localmemo/pages/support.html">
-          <span class="info-link__title">local memo サポート</span>
-          <span class="info-link__text">使い方やローカル保存に関する注意点を確認できます。</span>
-        </a>
-
-        <a class="info-link" href="./apps/iromizu/pages/support.html">
-          <span class="info-link__title">Iromizu サポート</span>
-          <span class="info-link__text">基本の遊び方やお問い合わせ方法を確認できます。</span>
         </a>
 
         <a class="info-link" href="./apps/TodoCal/pages/privacy.html">

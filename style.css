@@ -292,6 +292,92 @@ body {
     font-size: 17px;
   }
 }
+/* 🌷 #95 Hero Price Panel */
+.hero__price-panel {
+  margin-top: var(--space-20);
+  padding: var(--space-16);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-16);
+}
+
+.hero__price {
+  margin: 0;
+  font-size: var(--font-sub);
+  font-weight: 700;
+}
+
+.hero__price strong {
+  color: var(--accent);
+  font-size: 20px;
+}
+
+.hero__price-note {
+  margin: 4px 0 0;
+  font-size: var(--font-note);
+  color: rgba(43, 36, 31, 0.78);
+}
+
+/* 🌷 #96 Web Development Section */
+.webdev-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.webdev-panel__price {
+  margin: 0;
+  font-size: var(--font-sub);
+  font-weight: 700;
+}
+
+.webdev-panel__price strong {
+  color: var(--accent);
+}
+
+.webdev-panel__note {
+  margin: 0;
+  font-size: var(--font-note);
+  color: rgba(43, 36, 31, 0.78);
+}
+
+.webdev-features {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.webdev-features li {
+  position: relative;
+  padding-left: 18px;
+  font-size: var(--font-note);
+  line-height: 1.7;
+  color: rgba(43, 36, 31, 0.85);
+}
+
+.webdev-features li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* 🍀 詳細ページ公開までの仮表示。正式公開時にHTML側の該当要素ごと削除する。 */
+.notice-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-size: var(--font-note);
+  font-weight: 700;
+  background: #FBE8D3;
+  color: #8A5A1F;
+  border: 1px solid #ECC894;
+}
+
 /* 🌷 #100 App Card */
 .app-card {
   background: #ffffff;
@@ -331,6 +417,29 @@ body {
   line-height: 1.4;
 }
 
+.app-card__title-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+}
+
 .app-card__description {
   margin: var(--space-16) 0 0;
+}
+
+/* 🌷 #110 Platform Badge */
+/* 🍀 iOS / Android / Web / Game など対応プラットフォームを示す小さなタグ。modifierを追加して種類を増やせる構造にする。 */
+.platform-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+  background: rgba(110, 106, 154, 0.12);
+  color: var(--accent);
+  border: 1px solid rgba(110, 106, 154, 0.35);
 }
