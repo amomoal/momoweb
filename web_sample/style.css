@@ -1,0 +1,104 @@
+/* 📌 web_sample/style.css */
+/* 🍀 サンプル入り口ページ専用の追加スタイル。既存の reset.css / style.css を前提に、カード一覧表示のみを補う。 */
+
+.back-link {
+  display: inline-block;
+  margin: var(--space-20) 0 0;
+  font-size: var(--font-note);
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.sample-list {
+  display: grid;
+  gap: var(--space-16);
+}
+
+.sample-card {
+  display: block;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-20);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sample-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(43, 36, 31, 0.12);
+}
+
+.sample-card__thumb {
+  aspect-ratio: 16 / 9;
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.sample-card__thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sample-card__body {
+  padding: var(--space-16);
+}
+
+.sample-card__eyebrow {
+  margin: 0 0 6px;
+  font-size: var(--font-note);
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+
+.sample-card__title-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+}
+
+.sample-card__title {
+  margin: 0;
+  font-size: var(--font-sub);
+  font-weight: 700;
+}
+
+.sample-card__desc {
+  margin: 10px 0 0;
+  font-size: var(--font-note);
+  line-height: 1.7;
+  color: rgba(43, 36, 31, 0.78);
+}
+
+/* 🍀 未公開サンプルの仮表示。公開時はこのモディファイアとプレースホルダーを外して通常のサンプルカードにする。 */
+.sample-card--soon {
+  opacity: 0.68;
+}
+
+.sample-card__thumb--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-note);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgba(43, 36, 31, 0.5);
+  background: repeating-linear-gradient(
+    45deg,
+    var(--surface),
+    var(--surface) 12px,
+    var(--card) 12px,
+    var(--card) 24px
+  );
+}

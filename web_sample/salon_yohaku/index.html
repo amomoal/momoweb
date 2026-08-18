@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YOHAKU | hair &amp; lifestyle ― Web制作デザインサンプル</title>
+<meta name="description" content="架空のヘアサロン「YOHAKU（ヨハク）」をテーマにしたWeb制作デザインサンプルです。ナチュラルで上質な小規模サロンサイトの構成例をご覧いただけます。">
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="YOHAKU | hair &amp; lifestyle ― Web制作デザインサンプル">
+<meta property="og:description" content="架空のヘアサロン「YOHAKU」をテーマにしたWeb制作デザインサンプルです。">
+<meta property="og:image" content="./assets/image/salon-interior.png">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="stylesheet" href="./style.css">
+</head>
+<body class="yh">
+
+<a class="yh-visually-hidden" href="#yh-main">本文へスキップ</a>
+
+<header class="yh-header" id="yh-header">
+  <div class="yh-header__inner">
+    <a class="yh-brand" href="#top">
+      <span class="yh-brand__name">YOHAKU</span>
+      <span class="yh-brand__sub">hair &amp; lifestyle</span>
+    </a>
+
+    <nav class="yh-nav" aria-label="サイト内ナビゲーション">
+      <ul class="yh-nav__list">
+        <li><a href="#concept">CONCEPT</a></li>
+        <li><a href="#style">STYLE</a></li>
+        <li><a href="#menu">MENU</a></li>
+        <li><a href="#staff">STAFF</a></li>
+        <li><a href="#salon">SALON</a></li>
+        <li><a href="#access">ACCESS</a></li>
+      </ul>
+      <a class="yh-nav__reserve" href="#reservation">RESERVE</a>
+    </nav>
+
+    <button
+      class="yh-menu-toggle"
+      id="yh-menu-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="yh-mobile-nav"
+      aria-label="メニューを開く"
+    >
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="yh-mobile-nav" id="yh-mobile-nav" aria-label="モバイルナビゲーション">
+  <ul class="yh-mobile-nav__list">
+    <li><a href="#concept">CONCEPT</a></li>
+    <li><a href="#style">STYLE</a></li>
+    <li><a href="#menu">MENU</a></li>
+    <li><a href="#staff">STAFF</a></li>
+    <li><a href="#salon">SALON</a></li>
+    <li><a href="#access">ACCESS</a></li>
+  </ul>
+  <a class="yh-mobile-nav__reserve" href="#reservation">RESERVE</a>
+</nav>
+
+<main id="yh-main">
+
+  <!-- HERO -->
+  <section class="yh-hero" id="top" aria-label="YOHAKU hair & lifestyle">
+    <div class="yh-hero__media">
+      <img
+        src="./assets/image/salon-interior.png"
+        alt="木と自然光にあふれた、落ち着いたYOHAKU店内の様子"
+        width="1536" height="1024"
+        fetchpriority="high"
+      >
+      <div class="yh-hero__scrim"></div>
+    </div>
+    <div class="yh-hero__content">
+      <p class="yh-hero__sub">hair &amp; lifestyle</p>
+      <h1 class="yh-hero__title">YOHAKU</h1>
+      <p class="yh-hero__copy">髪に、暮らしに、余白を。</p>
+    </div>
+  </section>
+
+  <!-- CONCEPT -->
+  <section class="yh-section" id="concept" aria-labelledby="concept-title">
+    <div class="yh-inner">
+      <figure class="yh-concept__media yh-reveal">
+        <img
+          src="./assets/image/salon-work.png"
+          alt="スタイリストが施術をしているYOHAKUの店内風景"
+          loading="lazy" width="1536" height="1024"
+        >
+      </figure>
+      <div class="yh-concept__body yh-reveal">
+        <p class="yh-eyebrow">CONCEPT</p>
+        <h2 id="concept-title">その人らしさを、<br>自然に。</h2>
+        <p>
+          髪を整えることは、<br>
+          毎日の気分を少し整えること。<br><br>
+          YOHAKUでは、一人ひとりの髪質や暮らしに寄り添い、
+          無理なく続けられるスタイルをご提案します。<br><br>
+          慌ただしい日常から少し離れて、<br>
+          ゆっくりと自分に戻れる時間を。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STYLE -->
+  <section class="yh-section yh-section--alt" id="style" aria-labelledby="style-title">
+    <div class="yh-inner">
+      <div class="yh-section__head yh-reveal">
+        <p class="yh-eyebrow">STYLE</p>
+        <h2 id="style-title">STYLE</h2>
+        <p class="yh-style__sub">Natural styles for everyday life.</p>
+      </div>
+
+      <ul class="yh-style__grid">
+        <li class="yh-style__item yh-reveal">
+          <figure class="yh-style__frame">
+            <img
+              src="./assets/image/cut-model-short.png"
+              alt="軽やかで扱いやすい、自然なショートスタイルのモデル"
+              loading="lazy" width="509" height="1022"
+            >
+          </figure>
+          <span class="yh-style__tag">SHORT</span>
+          <p>軽やかで扱いやすい、自然なショートスタイル。</p>
+        </li>
+        <li class="yh-style__item yh-reveal">
+          <figure class="yh-style__frame">
+            <img
+              src="./assets/image/cut-model-medium.png"
+              alt="柔らかな動きと抜け感のあるミディアムスタイルのモデル"
+              loading="lazy" width="508" height="1022"
+            >
+          </figure>
+          <span class="yh-style__tag">MEDIUM</span>
+          <p>柔らかな動きと抜け感を楽しむミディアム。</p>
+        </li>
+        <li class="yh-style__item yh-reveal">
+          <figure class="yh-style__frame">
+            <img
+              src="./assets/image/cut-model-long.png"
+              alt="髪本来の質感を活かしたナチュラルロングスタイルのモデル"
+              loading="lazy" width="499" height="1023"
+            >
+          </figure>
+          <span class="yh-style__tag">LONG</span>
+          <p>髪本来の質感を活かしたナチュラルロング。</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="yh-section" id="menu" aria-labelledby="menu-title">
+    <div class="yh-inner">
+      <div class="yh-section__head yh-reveal">
+        <p class="yh-eyebrow">MENU</p>
+        <h2 id="menu-title">MENU</h2>
+      </div>
+
+      <div class="yh-menu__groups yh-reveal">
+        <div class="yh-menu__group">
+          <h3>CUT <span>カット</span></h3>
+          <dl>
+            <div class="yh-menu__row"><dt>カット</dt><dd>¥5,500</dd></div>
+            <div class="yh-menu__row"><dt>前髪カット</dt><dd>¥1,650</dd></div>
+          </dl>
+        </div>
+
+        <div class="yh-menu__group">
+          <h3>COLOR <span>カラー</span></h3>
+          <dl>
+            <div class="yh-menu__row"><dt>カラー</dt><dd>¥7,700〜</dd></div>
+            <div class="yh-menu__row"><dt>カット＋カラー</dt><dd>¥11,000〜</dd></div>
+          </dl>
+        </div>
+
+        <div class="yh-menu__group">
+          <h3>PERM <span>パーマ</span></h3>
+          <dl>
+            <div class="yh-menu__row"><dt>パーマ</dt><dd>¥7,700〜</dd></div>
+            <div class="yh-menu__row"><dt>カット＋パーマ</dt><dd>¥12,000〜</dd></div>
+          </dl>
+        </div>
+
+        <div class="yh-menu__group">
+          <h3>TREATMENT <span>トリートメント</span></h3>
+          <dl>
+            <div class="yh-menu__row"><dt>トリートメント</dt><dd>¥3,300〜</dd></div>
+          </dl>
+        </div>
+
+        <div class="yh-menu__group">
+          <h3>HEAD SPA <span>ヘッドスパ</span></h3>
+          <dl>
+            <div class="yh-menu__row"><dt>ヘッドスパ</dt><dd>¥4,400〜</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <p class="yh-menu__note yh-reveal">
+        ※表示価格はすべて税込です。<br>
+        ※髪の長さ・施術内容により料金が異なる場合があります。
+      </p>
+    </div>
+  </section>
+
+  <!-- STAFF -->
+  <section class="yh-section yh-section--alt" id="staff" aria-labelledby="staff-title">
+    <div class="yh-inner">
+      <div class="yh-section__head yh-reveal">
+        <p class="yh-eyebrow">STAFF</p>
+        <h2 id="staff-title">STAFF</h2>
+      </div>
+
+      <div class="yh-staff__list">
+        <article class="yh-staff__member yh-reveal">
+          <figure class="yh-staff__photo">
+            <img
+              src="./assets/image/manager.png"
+              alt="店長 REN TAKAGIの写真"
+              loading="lazy" width="1022" height="1022"
+            >
+          </figure>
+          <div class="yh-staff__info">
+            <p class="yh-staff__role">Owner / Stylist</p>
+            <h3 class="yh-staff__name">REN TAKAGI</h3>
+            <p class="yh-staff__desc">
+              髪質や骨格だけでなく、毎日の扱いやすさを大切にしています。
+              自然に馴染むスタイルをご提案します。
+            </p>
+          </div>
+        </article>
+
+        <article class="yh-staff__member yh-staff__member--reverse yh-reveal">
+          <figure class="yh-staff__photo">
+            <img
+              src="./assets/image/assistant-manager.png"
+              alt="副店長 MIO KURATAの写真"
+              loading="lazy" width="1048" height="1022"
+            >
+          </figure>
+          <div class="yh-staff__info">
+            <p class="yh-staff__role">Stylist</p>
+            <h3 class="yh-staff__name">MIO KURATA</h3>
+            <p class="yh-staff__desc">
+              柔らかな質感のカットやカラーが得意です。
+              気負わず楽しめるヘアスタイルを一緒に見つけます。
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SALON -->
+  <section class="yh-section" id="salon" aria-labelledby="salon-title">
+    <div class="yh-inner">
+      <div class="yh-section__head yh-reveal">
+        <p class="yh-eyebrow">SALON</p>
+        <h2 id="salon-title">SALON</h2>
+      </div>
+
+      <div class="yh-salon__content">
+        <div class="yh-salon__media yh-reveal">
+          <img
+            class="yh-salon__img--main"
+            src="./assets/image/cutting-area.png"
+            alt="ゆったりとした席間のセット面"
+            loading="lazy" width="760" height="1020"
+          >
+          <img
+            class="yh-salon__img--sub"
+            src="./assets/image/shampoo-area.png"
+            alt="落ち着いた雰囲気のシャンプースペース"
+            loading="lazy" width="765" height="1023"
+          >
+        </div>
+
+        <div class="yh-salon__info yh-reveal">
+          <p class="yh-salon__text">
+            光と木の温もりを感じる、静かな空間。<br>
+            ゆったりとした席間と、落ち着いたシャンプースペース。<br>
+            施術中もリラックスして過ごしていただける空間づくりを大切にしています。
+          </p>
+          <dl class="yh-salon__facts">
+            <div><dt>セット面</dt><dd>4席</dd></div>
+            <div><dt>シャンプー台</dt><dd>2台</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCESS -->
+  <section class="yh-section yh-section--alt" id="access" aria-labelledby="access-title">
+    <div class="yh-inner">
+      <div class="yh-section__head yh-reveal">
+        <p class="yh-eyebrow">ACCESS</p>
+        <h2 id="access-title">ACCESS</h2>
+      </div>
+
+      <div class="yh-access__content">
+        <div class="yh-access__info yh-reveal">
+          <p class="yh-access__brand">
+            YOHAKU
+            <span>hair &amp; lifestyle</span>
+          </p>
+          <dl class="yh-access__list">
+            <div>
+              <dt>住所</dt>
+              <dd>〒943-0000<br>新潟県上越市本町 2-8-14</dd>
+            </div>
+            <div>
+              <dt>TEL</dt>
+              <dd>025-000-0000</dd>
+            </div>
+            <div>
+              <dt>OPEN</dt>
+              <dd>10:00 – 19:00</dd>
+            </div>
+            <div>
+              <dt>CLOSED</dt>
+              <dd>Tuesday</dd>
+            </div>
+            <div>
+              <dt>PARKING</dt>
+              <dd>3 spaces</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="yh-access__map yh-reveal" role="img" aria-label="架空のイメージマップ（実在の地図ではありません）">
+          <div class="yh-access__road yh-access__road--h"></div>
+          <div class="yh-access__road yh-access__road--v"></div>
+          <div class="yh-access__map-inner">
+            <span class="yh-access__map-pin">YOHAKU</span>
+          </div>
+          <p class="yh-access__map-caption">MAP（イメージ）</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESERVATION -->
+  <section class="yh-section yh-reservation" id="reservation" aria-labelledby="reservation-title">
+    <div class="yh-inner">
+      <div class="yh-reservation__inner">
+        <p class="yh-eyebrow">RESERVATION</p>
+        <h2 id="reservation-title">RESERVATION</h2>
+        <p class="yh-reservation__text">
+          ご予約・ご相談は、<br>
+          お電話またはLINEからお気軽にお問い合わせください。
+        </p>
+        <div class="yh-reservation__actions">
+          <button type="button" class="yh-button yh-button--line" data-yh-demo>LINEで予約</button>
+          <button type="button" class="yh-button yh-button--tel" data-yh-demo>電話で予約</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="yh-footer">
+  <div class="yh-inner yh-footer__inner">
+    <div>
+      <p class="yh-footer__brand">
+        YOHAKU
+        <span>hair &amp; lifestyle</span>
+      </p>
+    </div>
+
+    <div class="yh-footer__sns" aria-label="SNS表記（サンプルのためリンクなし）">
+      <span>Instagram</span>
+      <span>LINE</span>
+    </div>
+
+    <div class="yh-footer__bottom">
+      <p class="yh-footer__copy">© YOHAKU hair &amp; lifestyle</p>
+      <p class="yh-footer__disclaimer">
+        ※このWebサイトはWeb制作サービスのデザインサンプルです。掲載されている店舗・人物・住所・料金等は架空のものです。
+      </p>
+      <a class="yh-footer__back" href="../index.html">← Webサンプル一覧へ戻る</a>
+    </div>
+  </div>
+</footer>
+
+<div class="yh-toast" id="yh-toast" role="status" aria-live="polite"></div>
+
+<script src="./script.js"></script>
+</body>
+</html>
