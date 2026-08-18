@@ -34,3 +34,185 @@
   font-weight: 700;
   letter-spacing: 0.08em;
 }
+
+/* 🌷 #10 Shared small heading used inside panels on this page */
+.body-sub-title {
+  font-size: var(--font-sub);
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0 0 var(--space-8);
+}
+
+/* 🌷 #20 基本料金 price card */
+.price-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.price-card__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+  padding: var(--space-8) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.price-card__row:last-of-type {
+  border-bottom: none;
+}
+
+.price-card__label {
+  font-size: var(--font-body);
+  font-weight: 600;
+}
+
+.price-card__value {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.price-card__value small {
+  font-size: var(--font-note);
+  font-weight: 600;
+  margin-left: 2px;
+}
+
+.price-card__value--flat {
+  color: var(--text);
+}
+
+.price-card__note {
+  margin-top: var(--space-8);
+  font-size: var(--font-note);
+  line-height: 1.7;
+  color: rgba(43, 36, 31, 0.72);
+}
+
+/* 🌷 #30 含まれるもの チェックリスト（webdev-features のドット装飾を踏襲） */
+.check-list {
+  margin-top: var(--space-8);
+}
+
+/* 🌷 #40 なぜこの価格で作れるのか */
+.why-list {
+  display: grid;
+  gap: var(--space-16);
+  margin-top: var(--space-16);
+}
+
+.why-item {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🌷 #50 追加料金 テーブル */
+.addon-table {
+  display: flex;
+  flex-direction: column;
+}
+
+.addon-table__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-8) var(--space-16);
+  padding: var(--space-12) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.addon-table__label {
+  font-size: var(--font-body);
+  color: var(--text);
+}
+
+.addon-table__value {
+  font-size: var(--font-body);
+  font-weight: 700;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.addon-table__value small {
+  font-size: var(--font-note);
+  font-weight: 600;
+  color: rgba(43, 36, 31, 0.72);
+  margin-left: 2px;
+}
+
+.addon-table__note {
+  margin-top: var(--space-12);
+  padding-top: var(--space-12);
+  font-size: var(--font-note);
+  line-height: 1.7;
+  color: rgba(43, 36, 31, 0.68);
+}
+
+/* 🌷 #60 ご依頼から公開まで フロー */
+.flow-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.flow-step {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-16);
+  padding: var(--space-16) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.flow-step:last-child {
+  border-bottom: none;
+}
+
+.flow-step__num {
+  position: relative;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--card);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-note);
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.flow-step:not(:last-child) .flow-step__num::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 1px;
+  height: calc(var(--space-16) * 2);
+  background: var(--line);
+  transform: translateX(-50%);
+}
+
+.flow-step__body {
+  min-width: 0;
+  padding-top: 8px;
+}
+
+.flow-step__title {
+  margin: 0 0 4px;
+  font-size: var(--font-sub);
+  font-weight: 700;
+}
+
+.flow-step__desc {
+  margin: 0;
+  font-size: var(--font-note);
+  line-height: 1.7;
+  color: rgba(43, 36, 31, 0.78);
+}
