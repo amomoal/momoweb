@@ -1,0 +1,36 @@
+/* 📌 web/style.css */
+/* 📄 Web制作についてページ専用のスタイル。準備中表示と戻るリンクのみを定義する。 */
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--font-note);
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.back-link:hover {
+  opacity: 0.85;
+}
+
+.prep-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-16);
+  text-align: center;
+  padding: var(--space-32) var(--space-16);
+}
+
+.prep-box {
+  margin: 0;
+  padding: var(--space-12) var(--space-32);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-16);
+  background: var(--card);
+  color: var(--text);
+  font-size: var(--font-sub);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
