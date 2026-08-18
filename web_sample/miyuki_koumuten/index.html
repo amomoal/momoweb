@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>深雪工務店 | 住まいの困ったに、まっすぐ応える。― Web制作デザインサンプル</title>
+<meta name="description" content="架空の地域密着型工務店「深雪工務店」をテーマにしたWeb制作デザインサンプルです。リフォーム・修繕から草刈り、除雪まで、地域の暮らしを支える工務店サイトの構成例をご覧いただけます。">
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="深雪工務店 | 住まいの困ったに、まっすぐ応える。― Web制作デザインサンプル">
+<meta property="og:description" content="架空の地域密着型工務店「深雪工務店」をテーマにしたWeb制作デザインサンプルです。リフォーム・修繕から草刈り、除雪まで対応します。">
+<meta property="og:image" content="./assets/image/hero-repair-work.png">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="stylesheet" href="./style.css">
+</head>
+<body class="mk">
+
+<a class="mk-visually-hidden" href="#mk-main">本文へスキップ</a>
+
+<header class="mk-header" id="mk-header">
+  <div class="mk-header__inner">
+    <a class="mk-brand" href="#top">
+      <span class="mk-brand__name">深雪工務店</span>
+      <span class="mk-brand__sub">MIYUKI KOMUTEN</span>
+    </a>
+
+    <nav class="mk-nav" aria-label="サイト内ナビゲーション">
+      <ul class="mk-nav__list">
+        <li><a href="#service">私たちの仕事</a></li>
+        <li><a href="#works">施工事例</a></li>
+        <li><a href="#small-jobs">小さな修繕</a></li>
+        <li><a href="#garden-snow">庭・除雪</a></li>
+        <li><a href="#about">私たちについて</a></li>
+      </ul>
+      <div class="mk-nav__contact">
+        <button type="button" class="mk-nav__tel" data-mk-demo aria-label="電話番号 025-000-0000（デモ・発信されません）">
+          <svg class="mk-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5h3.1l1.4 4-2 1.6a12 12 0 0 0 5.8 5.8l1.6-2 4 1.4v3.1c0 1-.9 1.8-1.9 1.6C11.7 18.2 5.8 12.3 5 5.4 4.8 4.4 5.6 3.5 6.6 3.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          <span>
+            <em>025-000-0000</em>
+            8:00〜18:00・日曜定休
+          </span>
+        </button>
+        <a class="mk-nav__cta" href="#contact">お問い合わせ</a>
+      </div>
+    </nav>
+
+    <button
+      class="mk-menu-toggle"
+      id="mk-menu-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mk-mobile-nav"
+      aria-label="メニューを開く"
+    >
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mk-mobile-nav" id="mk-mobile-nav" aria-label="モバイルナビゲーション">
+  <ul class="mk-mobile-nav__list">
+    <li><a href="#service">私たちの仕事</a></li>
+    <li><a href="#works">施工事例</a></li>
+    <li><a href="#small-jobs">小さな修繕</a></li>
+    <li><a href="#garden-snow">庭・除雪</a></li>
+    <li><a href="#about">私たちについて</a></li>
+    <li><a href="#contact">お問い合わせ</a></li>
+  </ul>
+  <p class="mk-mobile-nav__tel">
+    電話：025-000-0000（8:00〜18:00・日曜定休）
+  </p>
+</nav>
+
+<main id="mk-main">
+
+  <!-- HERO -->
+  <section class="mk-hero" id="top" aria-label="深雪工務店 住まいの困ったに、まっすぐ応える。">
+    <div class="mk-hero__media">
+      <img
+        src="./assets/image/hero-repair-work.png"
+        alt="雪山を背景に、住宅の雨どいを修理する深雪工務店の職人"
+        width="1536" height="1024"
+        fetchpriority="high"
+      >
+      <div class="mk-hero__scrim"></div>
+    </div>
+    <div class="mk-hero__content">
+      <p class="mk-hero__eyebrow">MIYUKI KOMUTEN</p>
+      <h1 class="mk-hero__title">住まいの困ったに、<br>まっすぐ応える。</h1>
+      <p class="mk-hero__copy">
+        リフォーム・修繕から、草刈り、除雪まで。<br>
+        地域の暮らしに必要な仕事を、ひとつひとつ丁寧に。
+      </p>
+      <div class="mk-hero__actions">
+        <button type="button" class="mk-button mk-button--fill" data-mk-demo>電話で相談</button>
+        <a class="mk-button mk-button--line" href="#works">施工事例を見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE -->
+  <section class="mk-section" id="service" aria-labelledby="service-title">
+    <div class="mk-inner">
+      <div class="mk-section__head mk-reveal">
+        <p class="mk-eyebrow">SERVICE</p>
+        <h2 id="service-title">私たちの仕事</h2>
+      </div>
+
+      <ul class="mk-service__grid mk-reveal">
+        <li class="mk-service__item">
+          <svg class="mk-service__icon" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M4 16 16 6l12 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7 14v12h18V14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M16 26v-7h4v7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M7 20h6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <h3>リフォーム・リノベーション</h3>
+          <p>間取り変更、内装、水回りなど。</p>
+        </li>
+        <li class="mk-service__item">
+          <svg class="mk-service__icon" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M21.5 6.5a5 5 0 0 0-6.9 6l-9 9 3 3 9-9a5 5 0 0 0 6-6.9l-3.4 3.4-2.6-.6-.6-2.6 3.5-3.3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+          </svg>
+          <h3>住まいの修繕</h3>
+          <p>外壁、屋根、雨どい、建具など。</p>
+        </li>
+        <li class="mk-service__item">
+          <svg class="mk-service__icon" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M16 27V13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M16 13c0-5-3-8-8-9 0 5 2.5 8.5 8 9z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M16 17c0-4.5 3-7.5 7.5-8.5C23.5 13 21 16.5 16 17z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M11 27h10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <h3>庭・外まわり</h3>
+          <p>草刈り、剪定、片付けなど。</p>
+        </li>
+        <li class="mk-service__item">
+          <svg class="mk-service__icon" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M16 4v24M6 9l20 14M26 9 6 23" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M16 4l-2.3 2.3M16 4l2.3 2.3M16 28l-2.3-2.3M16 28l2.3-2.3M6 9l3.1.6M6 9l.6 3.1M26 9l-3.1.6M26 9l-.6 3.1M6 23l.6-3.1M6 23l3.1-.6M26 23l-.6-3.1M26 23l-3.1-.6" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+          </svg>
+          <h3>除雪・雪対策</h3>
+          <p>除雪、雪下ろし、冬支度など。</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="mk-section mk-section--alt" id="about" aria-labelledby="about-title">
+    <div class="mk-inner mk-about">
+      <div class="mk-about__body mk-reveal">
+        <p class="mk-eyebrow">ABOUT</p>
+        <h2 id="about-title">地域の暮らしを、<br>長く支える。</h2>
+        <p class="mk-about__text">
+          家は、長く住むほど少しずつ手が必要になります。<br>
+          大きな工事だけではなく、<br>
+          雨どいの修理、建具の調整、草刈り、冬の除雪まで。<br><br>
+          深雪工務店では、地域で暮らすうえで必要になる仕事を、
+          ひとつひとつ丁寧にお引き受けしています。<br><br>
+          「こんなこと頼んでいいのかな」と迷うようなことでも、
+          まずはお気軽にご相談ください。
+        </p>
+      </div>
+      <dl class="mk-about__facts mk-reveal">
+        <div>
+          <dt>創業からの想い</dt>
+          <dd>新築の工事だけでなく、日々の暮らしに関わる仕事を大切にしています。</dd>
+        </div>
+        <div>
+          <dt>対応の幅</dt>
+          <dd>大きな工事から、小さな修繕、庭・除雪まで一括してご相談いただけます。</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- WORKS -->
+  <section class="mk-section" id="works" aria-labelledby="works-title">
+    <div class="mk-inner">
+      <div class="mk-section__head mk-reveal">
+        <p class="mk-eyebrow">WORKS</p>
+        <h2 id="works-title">施工事例</h2>
+      </div>
+
+      <div class="mk-works__list">
+
+        <article class="mk-work mk-work--ba mk-reveal">
+          <div class="mk-work__media mk-work__media--ba">
+            <img
+              src="./assets/image/renovation-before-after.png"
+              alt="和室中心だった居間（上）を、明るいLDKへ改修した様子（下）"
+              loading="lazy" width="1536" height="1024"
+            >
+            <span class="mk-work__badge mk-work__badge--before">Before</span>
+            <span class="mk-work__badge mk-work__badge--after">After</span>
+            <span class="mk-work__divider" aria-hidden="true"></span>
+          </div>
+          <div class="mk-work__body">
+            <p class="mk-work__tag">施工事例 01</p>
+            <h3>和室中心の住まいを、明るいLDKへ</h3>
+            <p>
+              築年数の経った住宅の居間・和室を一体化し、
+              家族が集まりやすい明るいLDKへ改修。
+            </p>
+          </div>
+        </article>
+
+        <article class="mk-work mk-reveal">
+          <div class="mk-work__media">
+            <img
+              src="./assets/image/renovation-kitchen.png"
+              alt="収納と作業動線を見直したキッチンの施工事例"
+              loading="lazy" width="1536" height="1024"
+            >
+          </div>
+          <div class="mk-work__body">
+            <p class="mk-work__tag">施工事例 02</p>
+            <h3>使いやすさを見直したキッチン改修</h3>
+            <p>収納や作業動線を見直し、毎日の家事がしやすいキッチンへ。</p>
+          </div>
+        </article>
+
+        <article class="mk-work mk-work--reverse mk-reveal">
+          <div class="mk-work__media">
+            <img
+              src="./assets/image/renovation-bathroom.png"
+              alt="清掃性と使いやすさを重視して更新した浴室・洗面まわり"
+              loading="lazy" width="1536" height="1024"
+            >
+          </div>
+          <div class="mk-work__body">
+            <p class="mk-work__tag">施工事例 03</p>
+            <h3>浴室・洗面まわりをまとめて更新</h3>
+            <p>寒さや使いにくさを改善し、清掃性と使いやすさを重視した水回りへ。</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SMALL JOBS -->
+  <section class="mk-section mk-section--alt" id="small-jobs" aria-labelledby="small-jobs-title">
+    <div class="mk-inner mk-small">
+      <figure class="mk-small__media mk-reveal">
+        <img
+          src="./assets/image/small-repair.png"
+          alt="ドアの丁番を工具で調整する職人の手元"
+          loading="lazy" width="1536" height="1024"
+        >
+      </figure>
+      <div class="mk-small__body mk-reveal">
+        <p class="mk-eyebrow">SMALL JOBS</p>
+        <h2 id="small-jobs-title">こんな小さなことでも、<br>ご相談ください。</h2>
+        <p class="mk-small__lead">
+          「これくらいの内容で頼んでいいのか分からない」——<br>
+          そんな小さな修繕も、私たちにとって大切な仕事のひとつです。
+        </p>
+        <ul class="mk-small__list">
+          <li>ドアが閉まりにくい</li>
+          <li>網戸を張り替えたい</li>
+          <li>手すりを付けたい</li>
+          <li>雨どいが外れた</li>
+          <li>棚を取り付けたい</li>
+          <li>建具を直したい</li>
+          <li>物置を補修したい</li>
+          <li>空き家を一度見てほしい</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- GARDEN / SNOW -->
+  <section class="mk-section" id="garden-snow" aria-labelledby="garden-snow-title">
+    <div class="mk-inner">
+      <div class="mk-section__head mk-reveal">
+        <p class="mk-eyebrow">GARDEN / SNOW</p>
+        <h2 id="garden-snow-title">庭の仕事も、冬の仕事も。</h2>
+        <p class="mk-section__lead">
+          上越・妙高エリアの暮らしでは、庭仕事も冬の雪かきも欠かせません。
+          深雪工務店では、住まいの修繕と同じ体制で、庭と雪の仕事にも力を入れています。
+        </p>
+      </div>
+
+      <div class="mk-gs__list">
+        <article class="mk-gs__item mk-reveal">
+          <div class="mk-gs__media">
+            <img
+              src="./assets/image/garden-work.png"
+              alt="庭で草刈り機を使って作業する深雪工務店の職人"
+              loading="lazy" width="1536" height="1024"
+            >
+          </div>
+          <div class="mk-gs__body">
+            <h3>庭も、家のまわりも。</h3>
+            <p>
+              草刈り、簡単な剪定、庭まわりの片付けなど、
+              住宅の外まわりの仕事も承ります。
+            </p>
+          </div>
+        </article>
+
+        <article class="mk-gs__item mk-reveal">
+          <div class="mk-gs__media">
+            <img
+              src="./assets/image/snow-removal.png"
+              alt="雪の積もった駐車場を除雪機で除雪する職人"
+              loading="lazy" width="1536" height="1024"
+            >
+          </div>
+          <div class="mk-gs__body">
+            <h3>雪国の冬も、お任せください。</h3>
+            <p>
+              玄関・駐車場まわりの除雪、
+              雪下ろし、冬前の点検などにも対応します。
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- STAFF -->
+  <section class="mk-section mk-section--alt" id="staff" aria-labelledby="staff-title">
+    <div class="mk-inner">
+      <div class="mk-section__head mk-reveal">
+        <p class="mk-eyebrow">STAFF</p>
+        <h2 id="staff-title">私たちが伺います。</h2>
+      </div>
+
+      <figure class="mk-staff__photo mk-reveal">
+        <img
+          src="./assets/image/staff.png"
+          alt="深雪工務店の代表と職人2名。住宅の前に並んで立つ様子"
+          loading="lazy" width="1536" height="1024"
+        >
+      </figure>
+
+      <ul class="mk-staff__list mk-reveal">
+        <li class="mk-staff__member">
+          <p class="mk-staff__role">代表 / 職人</p>
+          <h3 class="mk-staff__name">深雪 和夫</h3>
+          <p class="mk-staff__desc">
+            地域で住まいの仕事に携わって30年。
+            大きな工事も、小さな修繕も、変わらず丁寧に対応します。
+          </p>
+        </li>
+        <li class="mk-staff__member">
+          <p class="mk-staff__role">職人</p>
+          <h3 class="mk-staff__name">深雪 健太</h3>
+          <p class="mk-staff__desc">
+            内装・木工・住宅修繕を中心に担当。
+            細かな仕事も柔軟に対応します。
+          </p>
+        </li>
+        <li class="mk-staff__member">
+          <p class="mk-staff__role">職人</p>
+          <h3 class="mk-staff__name">佐藤 直樹</h3>
+          <p class="mk-staff__desc">
+            外まわりの修繕や庭仕事、除雪などを担当。
+            安全第一で丁寧に作業します。
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- AREA -->
+  <section class="mk-section" id="area" aria-labelledby="area-title">
+    <div class="mk-inner mk-area">
+      <div class="mk-area__main mk-reveal">
+        <p class="mk-eyebrow">AREA</p>
+        <h2 id="area-title">対応エリア</h2>
+        <ul class="mk-area__tags">
+          <li>上越市</li>
+          <li>妙高市</li>
+          <li>糸魚川市</li>
+        </ul>
+        <p class="mk-area__text">
+          周辺地域についてもご相談いただけます。<br>
+          地域密着だからこそ、すぐ動ける距離を大切にしています。
+        </p>
+      </div>
+
+      <div class="mk-area__info mk-reveal">
+        <p class="mk-area__info-title">会社概要</p>
+        <dl class="mk-area__facts">
+          <div><dt>会社名</dt><dd>深雪工務店</dd></div>
+          <div><dt>所在地</dt><dd>〒943-0000<br>新潟県上越市本町 3-4-10</dd></div>
+          <div><dt>電話</dt><dd>025-000-0000</dd></div>
+          <div><dt>営業時間</dt><dd>8:00〜18:00</dd></div>
+          <div><dt>定休日</dt><dd>日曜日</dd></div>
+          <div><dt>対応エリア</dt><dd>上越市・妙高市・糸魚川市周辺</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="mk-section mk-contact" id="contact" aria-labelledby="contact-title">
+    <div class="mk-inner mk-contact__inner">
+      <p class="mk-eyebrow">CONTACT</p>
+      <h2 id="contact-title">まずはご相談ください。</h2>
+      <p class="mk-contact__text">
+        修理ひとつから、リフォーム、草刈り、除雪まで。<br>
+        「こんなこと頼める？」という内容でもお気軽にご相談ください。
+      </p>
+      <div class="mk-contact__actions">
+        <button type="button" class="mk-button mk-button--fill mk-button--lg" data-mk-demo>電話で相談</button>
+        <button type="button" class="mk-button mk-button--line mk-button--lg mk-button--on-dark" data-mk-demo>お問い合わせ</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="mk-footer">
+  <div class="mk-inner mk-footer__inner">
+    <div class="mk-footer__brand-block">
+      <p class="mk-footer__brand">
+        深雪工務店
+        <span>MIYUKI KOMUTEN</span>
+      </p>
+      <dl class="mk-footer__facts">
+        <div><dt>所在地</dt><dd>〒943-0000 新潟県上越市本町 3-4-10</dd></div>
+        <div><dt>営業時間</dt><dd>8:00〜18:00</dd></div>
+        <div><dt>定休日</dt><dd>日曜日</dd></div>
+        <div><dt>対応エリア</dt><dd>上越市・妙高市・糸魚川市周辺</dd></div>
+      </dl>
+    </div>
+
+    <div class="mk-footer__bottom">
+      <p class="mk-footer__copy">© MIYUKI KOMUTEN</p>
+      <p class="mk-footer__disclaimer">
+        ※このWebサイトはWeb制作サービスのデザインサンプルです。掲載されている会社・人物・住所・電話番号・施工内容等は架空のものです。
+      </p>
+      <a class="mk-footer__back" href="../index.html">← Webサンプル一覧へ戻る</a>
+    </div>
+  </div>
+</footer>
+
+<div class="mk-mobile-bar" aria-label="電話・お問い合わせ（デモ）">
+  <button type="button" class="mk-mobile-bar__tel" data-mk-demo>
+    <svg class="mk-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5h3.1l1.4 4-2 1.6a12 12 0 0 0 5.8 5.8l1.6-2 4 1.4v3.1c0 1-.9 1.8-1.9 1.6C11.7 18.2 5.8 12.3 5 5.4 4.8 4.4 5.6 3.5 6.6 3.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+    電話で相談
+  </button>
+  <a class="mk-mobile-bar__contact" href="#contact">
+    <svg class="mk-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M4.5 6.5 12 13l7.5-6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+    お問い合わせ
+  </a>
+</div>
+
+<div class="mk-toast" id="mk-toast" role="status" aria-live="polite"></div>
+
+<script src="./script.js"></script>
+</body>
+</html>

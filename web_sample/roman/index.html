@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>純喫茶 ロマン ― 珈琲を、ゆっくりと。｜Web制作デザインサンプル</title>
+<meta name="description" content="架空の純喫茶「ロマン」をテーマにしたWeb制作デザインサンプルです。長年珈琲を淹れ続けてきた小さな喫茶店の、静かな世界観をご覧いただけます。">
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="純喫茶 ロマン ― 珈琲を、ゆっくりと。｜Web制作デザインサンプル">
+<meta property="og:description" content="架空の純喫茶「ロマン」をテーマにしたWeb制作デザインサンプルです。長年珈琲を淹れ続けてきた小さな喫茶店の、静かな世界観をご覧いただけます。">
+<meta property="og:image" content="./assets/image/cafe-interior.png">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="stylesheet" href="./style.css">
+</head>
+<body class="rm">
+
+<a class="rm-visually-hidden" href="#rm-main">本文へスキップ</a>
+
+<header class="rm-header" id="rm-header">
+  <div class="rm-header__inner">
+    <a class="rm-brand" href="#top">純喫茶 ロマン</a>
+
+    <nav class="rm-nav" aria-label="サイト内ナビゲーション">
+      <ul class="rm-nav__list">
+        <li><a href="#about">ロマンについて</a></li>
+        <li><a href="#coffee">珈琲</a></li>
+        <li><a href="#menu">お品書き</a></li>
+        <li><a href="#store">店のこと</a></li>
+        <li><a href="#access">アクセス</a></li>
+      </ul>
+    </nav>
+
+    <button
+      class="rm-menu-toggle"
+      id="rm-menu-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="rm-mobile-nav"
+      aria-label="メニューを開く"
+    >
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="rm-mobile-nav" id="rm-mobile-nav" aria-label="モバイルナビゲーション">
+  <ul class="rm-mobile-nav__list">
+    <li><a href="#about">ロマンについて</a></li>
+    <li><a href="#coffee">珈琲</a></li>
+    <li><a href="#menu">お品書き</a></li>
+    <li><a href="#store">店のこと</a></li>
+    <li><a href="#access">アクセス</a></li>
+  </ul>
+</nav>
+
+<main id="rm-main">
+
+  <!-- HERO -->
+  <section class="rm-hero" id="top" aria-label="純喫茶 ロマン 珈琲を、ゆっくりと。">
+    <div class="rm-hero__media">
+      <img
+        src="./assets/image/cafe-interior.png"
+        alt="ステンドグラスの窓と無垢材のテーブルが並ぶ、純喫茶ロマンの店内"
+        width="1536" height="1024"
+        fetchpriority="high"
+      >
+      <div class="rm-hero__scrim"></div>
+    </div>
+    <div class="rm-hero__content">
+      <h1 class="rm-hero__title">純喫茶 ロマン</h1>
+      <p class="rm-hero__copy">珈琲を、ゆっくりと。</p>
+    </div>
+  </section>
+
+  <!-- ロマンについて -->
+  <section class="rm-section" id="about" aria-labelledby="about-title">
+    <div class="rm-inner rm-about">
+      <figure class="rm-about__media rm-reveal">
+        <img
+          src="./assets/image/cafe-counter.png"
+          alt="カウンターの奥で珈琲を淹れる、純喫茶ロマンの店主"
+          loading="lazy" width="1536" height="1024"
+        >
+      </figure>
+      <div class="rm-about__body rm-reveal">
+        <span class="rm-vertical" aria-hidden="true">珈琲を、ゆっくりと。</span>
+        <p class="rm-eyebrow">ロマンについて</p>
+        <h2 id="about-title">変わらず、<br>一杯ずつ。</h2>
+        <p class="rm-about__text">
+          昭和の頃、この街の片隅に生まれた小さな喫茶店。<br>
+          珈琲が好きだった店主が集めた照明や家具とともに、<br>
+          今日も変わらず、一杯ずつ珈琲を淹れています。
+        </p>
+        <p class="rm-about__text">
+          新しいものは、ほとんどありません。<br>
+          使い込まれた椅子も、<br>
+          カウンターの傷も、<br>
+          少しずつ増えていった店の時間です。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 珈琲 -->
+  <section class="rm-section rm-section--alt" id="coffee" aria-labelledby="coffee-title">
+    <figure class="rm-banner rm-reveal">
+      <img
+        src="./assets/image/coffee-drip.png"
+        alt="ネルドリップで珈琲を淹れる店主の手元"
+        loading="lazy" width="1536" height="1024"
+      >
+    </figure>
+    <div class="rm-inner">
+      <div class="rm-coffee__body rm-reveal">
+        <p class="rm-eyebrow">珈琲</p>
+        <h2 id="coffee-title">一杯の珈琲</h2>
+        <p class="rm-coffee__lead">豆によって、淹れ方を変える。</p>
+        <p class="rm-coffee__text">
+          産地も、焙煎も、豆の個性もそれぞれ。<br>
+          ロマンでは注文をいただいてから豆を挽き、
+          その日の豆の状態を見ながら、一杯ずつ抽出します。<br><br>
+          ネルドリップをはじめ、豆に合わせた方法で、
+          急がず、丁寧に。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 豆と道具 -->
+  <section class="rm-section" id="beans" aria-labelledby="beans-title">
+    <div class="rm-inner rm-beans">
+      <div class="rm-beans__body rm-reveal">
+        <p class="rm-eyebrow">豆と道具</p>
+        <h2 id="beans-title">豆と道具</h2>
+        <p class="rm-beans__text">
+          ミルもドリッパーも、ケトルも。<br>
+          長年使い込んできた道具を、大切に手入れしながら使っています。
+        </p>
+        <ul class="rm-beans__list">
+          <li>ロマンブレンド</li>
+          <li>マンデリン</li>
+          <li>グァテマラ</li>
+          <li>ブラジル</li>
+          <li>モカ</li>
+          <li>本日の珈琲</li>
+        </ul>
+        <p class="rm-beans__note">
+          ※豆は仕入れの状況により、取り扱いが変わることがあります。
+        </p>
+      </div>
+      <figure class="rm-beans__media rm-reveal">
+        <img
+          src="./assets/image/coffee-beans-tools.png"
+          alt="産地ごとに並んだ珈琲豆の瓶と、ドリッパーやケトルなどの道具"
+          loading="lazy" width="1536" height="1024"
+        >
+      </figure>
+    </div>
+  </section>
+
+  <!-- お品書き -->
+  <section class="rm-section rm-section--alt" id="menu" aria-labelledby="menu-title">
+    <div class="rm-inner rm-inner--narrow">
+      <div class="rm-section__head rm-reveal">
+        <p class="rm-eyebrow">お品書き</p>
+        <h2 id="menu-title">お品書き</h2>
+      </div>
+
+      <div class="rm-menu rm-reveal">
+        <div class="rm-menu__group">
+          <h3 class="rm-menu__group-title">珈琲</h3>
+          <div class="rm-menu__row">
+            <span class="rm-menu__name">ロマンブレンド</span>
+            <span class="rm-menu__leader" aria-hidden="true"></span>
+            <span class="rm-menu__price">¥850</span>
+          </div>
+          <div class="rm-menu__row">
+            <span class="rm-menu__name">マンデリン</span>
+            <span class="rm-menu__leader" aria-hidden="true"></span>
+            <span class="rm-menu__price">¥950</span>
+          </div>
+          <div class="rm-menu__row">
+            <span class="rm-menu__name">グァテマラ</span>
+            <span class="rm-menu__leader" aria-hidden="true"></span>
+            <span class="rm-menu__price">¥900</span>
+          </div>
+          <div class="rm-menu__row">
+            <span class="rm-menu__name">ブラジル</span>
+            <span class="rm-menu__leader" aria-hidden="true"></span>
+            <span class="rm-menu__price">¥900</span>
+          </div>
+          <div class="rm-menu__row">
+            <span class="rm-menu__name">モカ</span>
+            <span class="rm-menu__leader" aria-hidden="true"></span>
+            <span class="rm-menu__price">¥1,000</span>
+          </div>
+          <div class="rm-menu__row">
+            <span class="rm-menu__name">本日の珈琲</span>
+            <span class="rm-menu__leader" aria-hidden="true"></span>
+            <span class="rm-menu__price">¥900〜</span>
+          </div>
+        </div>
+
+        <div class="rm-menu__group">
+          <h3 class="rm-menu__group-title">甘味</h3>
+          <div class="rm-menu__row">
+            <span class="rm-menu__name">本日のお菓子</span>
+            <span class="rm-menu__leader" aria-hidden="true"></span>
+            <span class="rm-menu__price">¥400〜</span>
+          </div>
+          <div class="rm-menu__row">
+            <span class="rm-menu__name">本日のケーキ</span>
+            <span class="rm-menu__leader" aria-hidden="true"></span>
+            <span class="rm-menu__price">¥650〜</span>
+          </div>
+          <p class="rm-menu__note">
+            甘味は、近所の菓子店から届くものを数種類ご用意しています。
+            内容は日によって変わります。
+          </p>
+        </div>
+      </div>
+
+      <p class="rm-menu__footnote">※価格はすべて税込です。</p>
+    </div>
+  </section>
+
+  <!-- 珈琲と甘味 -->
+  <section class="rm-section" id="sweets" aria-labelledby="sweets-title">
+    <figure class="rm-banner rm-reveal">
+      <img
+        src="./assets/image/coffee-sweets.png"
+        alt="珈琲と、近所の菓子店から届いた甘味"
+        loading="lazy" width="1536" height="1024"
+      >
+    </figure>
+    <div class="rm-inner">
+      <div class="rm-sweets__body rm-reveal">
+        <p class="rm-eyebrow">珈琲と甘味</p>
+        <h2 id="sweets-title">珈琲と、少し甘いもの。</h2>
+        <p class="rm-sweets__text">
+          珈琲のお供に、<br>
+          近所の菓子店から届いた甘味を少しだけ。<br><br>
+          その日に届いたものから、
+          珈琲に合うものをご用意しています。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 店のこと -->
+  <section class="rm-section rm-section--alt" id="store" aria-labelledby="store-title">
+    <div class="rm-inner rm-inner--narrow rm-store">
+      <div class="rm-section__head rm-reveal">
+        <p class="rm-eyebrow">店のこと</p>
+        <h2 id="store-title">店のこと</h2>
+        <p class="rm-store__text">
+          店内の照明や家具の多くは、<br>
+          店主が若い頃から少しずつ集めてきたものです。<br><br>
+          長い時間を過ごした家具や照明とともに、
+          ゆっくりと珈琲をお楽しみください。
+        </p>
+      </div>
+
+      <dl class="rm-store__facts rm-reveal">
+        <div><dt>店名</dt><dd>純喫茶 ロマン</dd></div>
+        <div><dt>営業時間</dt><dd>11:00 – 18:00</dd></div>
+        <div><dt>定休日</dt><dd>水曜日・木曜日</dd></div>
+        <div><dt>席数</dt><dd>カウンター 5席 ／ テーブル 4卓</dd></div>
+        <div><dt>珈琲豆</dt><dd>100gから販売しております</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ACCESS -->
+  <section class="rm-section" id="access" aria-labelledby="access-title">
+    <div class="rm-inner rm-access">
+      <div class="rm-access__body rm-reveal">
+        <p class="rm-eyebrow">アクセス</p>
+        <h2 id="access-title">アクセス</h2>
+        <dl class="rm-access__list">
+          <div>
+            <dt>住所</dt>
+            <dd>〒943-0000<br>新潟県上越市本町 3-4-7</dd>
+          </div>
+          <div>
+            <dt>電話</dt>
+            <dd>
+              <button type="button" class="rm-tel" data-rm-demo>025-000-0000</button>
+            </dd>
+          </div>
+        </dl>
+        <p class="rm-access__note">
+          ※お電話でのお問い合わせは承っておりません（デモサイトのため）。
+        </p>
+      </div>
+
+      <div class="rm-access__map rm-reveal" role="img" aria-label="架空の地図イメージ（実在の地図ではありません）">
+        <span class="rm-access__road rm-access__road--h"></span>
+        <span class="rm-access__road rm-access__road--v"></span>
+        <span class="rm-access__pin">純喫茶 ロマン</span>
+        <span class="rm-access__caption">MAP（イメージ）</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="rm-footer">
+  <div class="rm-inner rm-footer__inner">
+    <p class="rm-footer__brand">純喫茶 ロマン</p>
+
+    <div class="rm-footer__sns" aria-label="SNS（サンプルのため実際には接続されません）">
+      <button type="button" data-rm-demo>Instagram</button>
+      <button type="button" data-rm-demo>Facebook</button>
+    </div>
+
+    <div class="rm-footer__bottom">
+      <p class="rm-footer__disclaimer">
+        ※このWebサイトはWeb制作サービスのデザインサンプルです。掲載されている店舗・人物・住所・料金等は架空のものです。
+      </p>
+      <div class="rm-footer__bottom-row">
+        <p class="rm-footer__copy">© 純喫茶 ロマン</p>
+        <a class="rm-footer__back" href="../index.html">← Webサンプル一覧へ戻る</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="rm-toast" id="rm-toast" role="status" aria-live="polite">
+  <p class="rm-toast__title">こちらはデモサイトです</p>
+  <p class="rm-toast__text">このリンクはWeb制作サンプルのため、実際のサービスには接続されていません。</p>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>
