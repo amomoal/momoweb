@@ -322,60 +322,102 @@ body {
 .webdev-panel {
   display: flex;
   flex-direction: column;
-  gap: var(--space-12);
+  gap: var(--space-16);
+  padding: var(--space-20) var(--space-16);
+}
+
+.webdev-panel__catch {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.webdev-panel__sub {
+  margin: 0;
+  font-size: var(--font-sub);
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.webdev-panel__desc {
+  margin: 0;
+  font-size: var(--font-note);
+  line-height: 1.9;
+  color: rgba(43, 36, 31, 0.78);
+}
+
+.webdev-panel__price-box {
+  margin-top: var(--space-8);
+  padding: var(--space-16);
+  background: var(--card);
+  border-radius: var(--radius-16);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .webdev-panel__price {
   margin: 0;
-  font-size: var(--font-sub);
-  font-weight: 700;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
 }
 
-.webdev-panel__price strong {
+.webdev-panel__price-value {
+  font-size: 30px;
+  font-weight: 800;
   color: var(--accent);
+  line-height: 1.2;
 }
 
-.webdev-panel__note {
+.webdev-panel__price-unit {
+  font-size: var(--font-note);
+  color: rgba(43, 36, 31, 0.7);
+}
+
+.webdev-panel__price-note {
   margin: 0;
   font-size: var(--font-note);
+  font-weight: 600;
   color: rgba(43, 36, 31, 0.78);
 }
 
-.webdev-features {
-  display: grid;
+.webdev-chips {
+  display: flex;
+  flex-wrap: wrap;
   gap: var(--space-8);
 }
 
-.webdev-features li {
-  position: relative;
-  padding-left: 18px;
-  font-size: var(--font-note);
-  line-height: 1.7;
-  color: rgba(43, 36, 31, 0.85);
-}
-
-.webdev-features li::before {
-  content: "";
-  position: absolute;
-  left: 2px;
-  top: 10px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--accent);
-}
-
-/* 🍀 詳細ページ公開までの仮表示。正式公開時にHTML側の該当要素ごと削除する。 */
-.notice-badge {
+.chip {
   display: inline-flex;
-  align-self: flex-start;
+  align-items: center;
   padding: 4px 12px;
   border-radius: var(--radius-pill);
-  font-size: var(--font-note);
+  font-size: 12px;
   font-weight: 700;
-  background: #FBE8D3;
-  color: #8A5A1F;
-  border: 1px solid #ECC894;
+  background: #ffffff;
+  color: var(--accent);
+  border: 1px solid var(--line);
+}
+
+.webdev-panel__actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  margin-top: var(--space-8);
+}
+
+.webdev-panel__actions .button {
+  width: 100%;
+}
+
+.button--cta {
+  min-height: 52px;
+  font-size: 17px;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(110, 106, 154, 0.35);
 }
 
 /* 🌷 #100 App Card */
