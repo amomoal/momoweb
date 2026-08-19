@@ -1,5 +1,5 @@
 /* 📌 web/style.css */
-/* 📄 Web制作についてページ専用のスタイル。準備中表示と戻るリンクのみを定義する。 */
+/* 📄 Web制作ランディングページ・料金詳細ページ共通のスタイル。 */
 
 .back-link {
   display: inline-flex;
@@ -14,25 +14,34 @@
   opacity: 0.85;
 }
 
-.prep-panel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-16);
+/* 🌷 #05 求人検索の例 ストーリー */
+.story-flow {
   text-align: center;
-  padding: var(--space-32) var(--space-16);
 }
 
-.prep-box {
+.story-flow__line {
   margin: 0;
-  padding: var(--space-12) var(--space-32);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-16);
-  background: var(--card);
-  color: var(--text);
-  font-size: var(--font-sub);
+  font-size: var(--font-body);
+  line-height: 1.7;
+}
+
+.story-flow__line--quote {
   font-weight: 700;
-  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+.story-flow__arrow {
+  margin: var(--space-8) 0;
+  color: rgba(43, 36, 31, 0.4);
+}
+
+.quote-line {
+  margin: 0;
+  font-weight: 700;
+}
+
+.quote-line + .quote-line {
+  margin-top: var(--space-8);
 }
 
 /* 🌷 #10 Shared small heading used inside panels on this page */
@@ -215,4 +224,66 @@
   font-size: var(--font-note);
   line-height: 1.7;
   color: rgba(43, 36, 31, 0.78);
+}
+
+/* 🌷 #70 Works カード */
+.work-list {
+  display: grid;
+  gap: var(--space-16);
+}
+
+.work-card {
+  display: block;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-20);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(43, 36, 31, 0.12);
+}
+
+.work-card__thumb {
+  aspect-ratio: 16 / 9;
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.work-card__thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.work-card__body {
+  padding: var(--space-16);
+}
+
+.work-card__eyebrow {
+  margin: 0 0 6px;
+  font-size: var(--font-note);
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+
+.work-card__title {
+  margin: 0;
+  font-size: var(--font-sub);
+  font-weight: 700;
+}
+
+.work-card__link {
+  display: inline-block;
+  margin-top: var(--space-8);
+  font-size: var(--font-note);
+  font-weight: 600;
+  color: var(--accent);
 }
