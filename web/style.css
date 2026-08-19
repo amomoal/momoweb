@@ -135,6 +135,27 @@
   border-bottom: 1px solid var(--line);
 }
 
+.addon-table__row--with-note {
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-8);
+}
+
+.addon-table__row-main {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-8) var(--space-16);
+}
+
+.addon-table__desc {
+  margin: 0;
+  font-size: var(--font-note);
+  line-height: 1.7;
+  color: rgba(43, 36, 31, 0.72);
+}
+
 .addon-table__label {
   font-size: var(--font-body);
   color: var(--text);
@@ -224,6 +245,52 @@
   font-size: var(--font-note);
   line-height: 1.7;
   color: rgba(43, 36, 31, 0.78);
+}
+
+/* 🌷 #65 公開・サーバーについて アコーディオン */
+.disclosure {
+  margin-top: var(--space-16);
+}
+
+.disclosure__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 var(--space-16);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  color: var(--accent);
+  font-size: var(--font-body);
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  transition: opacity 0.2s ease;
+}
+
+.disclosure__toggle:hover {
+  opacity: 0.85;
+}
+
+.disclosure__toggle::-webkit-details-marker {
+  display: none;
+}
+
+.disclosure__toggle::after {
+  content: "▾";
+  font-size: 11px;
+  transition: transform 0.2s ease;
+}
+
+.disclosure[open] .disclosure__toggle::after {
+  transform: rotate(180deg);
+}
+
+.disclosure__body {
+  margin-top: var(--space-16);
+  padding-top: var(--space-16);
+  border-top: 1px solid var(--line);
 }
 
 /* 🌷 #70 Works カード */
