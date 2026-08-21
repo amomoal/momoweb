@@ -9,6 +9,9 @@
     content="小規模店舗・個人事業者向けのシンプルなWebサイト制作。Web制作20,000円〜、月額管理費0円。制作サンプルや料金の詳細をご案内します。"
   >
 
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-32.png">
+  <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
   <link rel="stylesheet" href="../reset.css">
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="./style.css">
@@ -33,10 +36,27 @@
         <p class="hero__price-note">月額管理費 0円</p>
       </div>
 
-      <div class="hero__actions">
-        <a class="button button--secondary" href="../web_sample/index.html">制作サンプルを見る</a>
-        <a class="button button--primary" href="#about">Web制作について</a>
-      </div>
+      <nav class="guide-menu" aria-label="Web制作ページの目次">
+        <p class="guide-menu__title">気になるところから見る</p>
+        <div class="guide-menu__links">
+          <a class="guide-menu__link" href="../web_sample/index.html">
+            <span class="guide-menu__label">制作サンプル</span>
+            <span class="guide-menu__arrow">→</span>
+          </a>
+          <a class="guide-menu__link" href="./tips.html">
+            <span class="guide-menu__label">効果アップのポイント</span>
+            <span class="guide-menu__arrow">→</span>
+          </a>
+          <a class="guide-menu__link" href="./price.html">
+            <span class="guide-menu__label">料金・制作内容</span>
+            <span class="guide-menu__arrow">→</span>
+          </a>
+          <a class="guide-menu__link" href="#contact">
+            <span class="guide-menu__label">お問い合わせ</span>
+            <span class="guide-menu__arrow">→</span>
+          </a>
+        </div>
+      </nav>
     </header>
 
     <!-- 🌷 なぜ必要? -->
@@ -159,6 +179,20 @@
           </div>
         </a>
 
+      </div>
+    </section>
+
+    <!-- 🌷 Tips -->
+    <section class="section" id="tips">
+      <div class="panel tips-entry">
+        <p class="tips-entry__label">Before price</p>
+        <h2 class="tips-entry__title">せっかく作るなら、何を載せる？</h2>
+        <p class="body-text">
+          写真や料金例、よくある質問など、少し載せるだけで安心感が伝わりやすくなる内容があります。
+        </p>
+        <div class="hero__actions">
+          <a class="button button--secondary" href="./tips.html">効果アップのポイントを見る →</a>
+        </div>
       </div>
     </section>
 

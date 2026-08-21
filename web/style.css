@@ -44,6 +44,58 @@
   margin-top: var(--space-8);
 }
 
+/* 🌷 #08 ヒーロー下の目次 */
+.guide-menu {
+  margin-top: var(--space-20);
+}
+
+.guide-menu__title {
+  margin: 0 0 var(--space-8);
+  font-size: var(--font-note);
+  font-weight: 700;
+  color: rgba(43, 36, 31, 0.72);
+}
+
+.guide-menu__links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+}
+
+.guide-menu__link {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+  padding: 10px var(--space-12);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-16);
+  background: rgba(255, 255, 255, 0.58);
+  color: inherit;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.guide-menu__link:hover {
+  transform: translateY(-2px);
+  background: #ffffff;
+}
+
+.guide-menu__label {
+  min-width: 0;
+  font-size: var(--font-note);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.guide-menu__arrow {
+  flex: 0 0 auto;
+  color: var(--accent);
+  font-weight: 700;
+}
+
 /* 🌷 #10 Shared small heading used inside panels on this page */
 .body-sub-title {
   font-size: var(--font-sub);
@@ -353,4 +405,119 @@
   font-size: var(--font-note);
   font-weight: 600;
   color: var(--accent);
+}
+
+/* 🌷 #80 効果アップページ */
+.tips-entry {
+  background: linear-gradient(135deg, #ffffff 0%, var(--surface) 100%);
+}
+
+.tips-entry__label,
+.tips-cta__label {
+  margin: 0 0 4px;
+  font-size: var(--font-note);
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+
+.tips-entry__title,
+.tips-cta__title {
+  margin: 0 0 var(--space-8);
+  font-size: var(--font-sub);
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+.tips-hero__note {
+  margin-top: var(--space-20);
+}
+
+.tips-grid {
+  display: grid;
+  gap: var(--space-12);
+}
+
+.tip-card {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: var(--space-12);
+  padding: var(--space-16);
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-20);
+  box-shadow: var(--shadow-soft);
+}
+
+.tip-card:nth-child(even) {
+  background: var(--surface);
+}
+
+.tip-card__icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: var(--card);
+  font-size: 22px;
+  line-height: 1;
+}
+
+.tip-card__body {
+  min-width: 0;
+}
+
+.tip-card__title {
+  margin: 0 0 6px;
+  font-size: var(--font-sub);
+  line-height: 1.45;
+  font-weight: 700;
+}
+
+.tip-card__text,
+.tip-card__note {
+  margin: 0;
+  font-size: var(--font-note);
+  line-height: 1.75;
+  color: rgba(43, 36, 31, 0.8);
+}
+
+.tip-card__note {
+  margin-top: var(--space-8);
+  padding-top: var(--space-8);
+  border-top: 1px solid rgba(216, 206, 198, 0.8);
+  color: rgba(43, 36, 31, 0.68);
+}
+
+.tip-card__examples {
+  display: grid;
+  gap: 4px;
+  margin-top: var(--space-8);
+  padding-left: 1.1em;
+  font-size: var(--font-note);
+  line-height: 1.7;
+  color: rgba(43, 36, 31, 0.72);
+}
+
+.tips-cta {
+  background: var(--card);
+}
+
+@media (max-width: 375px) {
+  .guide-menu__links {
+    grid-template-columns: 1fr;
+  }
+
+  .tip-card {
+    grid-template-columns: 40px 1fr;
+    gap: var(--space-8);
+  }
+
+  .tip-card__icon {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
 }
