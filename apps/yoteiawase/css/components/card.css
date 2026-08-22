@@ -1,0 +1,91 @@
+/* 📌 web_support/css/components/card.css */
+/* 📄 アプリカード専用のスタイル。アイコン、説明、特徴一覧、スクリーンショット、カード内ボタン群をまとめて管理する。 */
+
+/* 🌷 #10 Card Base */
+/* 🍀 カード全体の背景、角丸、枠線、影、内側余白を定義する。アプリ画面のやわらかい世界観を踏まえて、強すぎない面表現にする。 */
+.app-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-20);
+  padding: var(--space-16);
+  box-shadow: var(--shadow-soft);
+}
+
+/* 🌷 #20 Card Header */
+/* 🍀 アイコンとタイトル周りの並びを定義する。小さなアイコンとテキスト群を横並びにし、初見でも何のカードか伝わるようにする。 */
+.app-card__top {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.app-card__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.app-card__heading {
+  min-width: 0;
+}
+
+.app-card__title {
+  font-size: var(--font-sub);
+  line-height: 1.35;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+/* 🌷 #30 Card Content */
+/* 🍀 説明文、特徴一覧、スクリーンショット群の余白と見え方を整える。情報を詰め込みすぎず、読みやすさを優先する。 */
+.app-card__description {
+  margin-top: var(--space-16);
+  color: rgba(43, 36, 31, 0.88);
+}
+
+.app-card__features {
+  margin-top: var(--space-16);
+  display: grid;
+  gap: var(--space-8);
+}
+
+.app-card__features li {
+  position: relative;
+  padding-left: 18px;
+  font-size: var(--font-note);
+  line-height: 1.6;
+}
+
+.app-card__features li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.68em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.app-card__shots {
+  display: grid;
+  gap: var(--space-12);
+  margin-top: var(--space-16);
+}
+
+.app-card__shots img {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: var(--shadow-soft);
+}
+
+/* 🌷 #40 Card Actions */
+/* 🍀 カード内のボタン配置を制御する。スマホで押しやすいよう縦並びを基本とし、余白を揃える。 */
+.app-card__actions {
+  display: grid;
+  gap: var(--space-12);
+  margin-top: var(--space-20);
+}

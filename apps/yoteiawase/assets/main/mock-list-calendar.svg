@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 690" width="320" height="690">
+  <defs>
+    <linearGradient id="barSelf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#e9d8fd"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="690" rx="28" fill="#faf6f0"/>
+
+  <text x="24" y="52" font-family="sans-serif" font-size="22" font-weight="700" fill="#1f1b18">ホーム</text>
+  <circle cx="288" cy="46" r="14" fill="none" stroke="#1f1b18" stroke-width="2"/>
+  <circle cx="288" cy="34" r="5" fill="#db2777"/>
+
+  <rect x="24" y="78" width="272" height="36" rx="18" fill="#ffffff" stroke="#e5dad4"/>
+  <rect x="27" y="81" width="88" height="30" rx="15" fill="#ded7ee"/>
+  <text x="45" y="101" font-family="sans-serif" font-size="12" font-weight="700" fill="#3c3489">予定</text>
+  <text x="140" y="101" font-family="sans-serif" font-size="12" fill="#5f5e5a">シフト</text>
+  <text x="230" y="101" font-family="sans-serif" font-size="12" fill="#5f5e5a">シフト</text>
+
+  <text x="24" y="138" font-family="sans-serif" font-size="13" fill="#5f5e5a">自分の予定・参加予定</text>
+
+  <!-- day card 1 -->
+  <rect x="24" y="152" width="272" height="150" rx="10" fill="#ffffff" stroke="#e5dad4"/>
+  <text x="38" y="176" font-family="sans-serif" font-size="14" font-weight="800" fill="#1f1b18">8/22(土)</text>
+  <text x="260" y="176" font-family="sans-serif" font-size="11" fill="#5f5e5a">2件</text>
+
+  <rect x="38" y="188" width="244" height="46" rx="10" fill="#ffffff" stroke="#e5dad4"/>
+  <rect x="46" y="196" width="4" height="24" rx="2" fill="url(#barSelf)"/>
+  <text x="58" y="207" font-family="sans-serif" font-size="12" font-weight="700" fill="#1f1b18">自分</text>
+  <rect x="58" y="212" width="150" height="16" rx="6" fill="#f1e9e4"/>
+  <text x="64" y="224" font-family="sans-serif" font-size="10" fill="#5f5e5a">友達とランチ 12:00-13:00</text>
+
+  <rect x="38" y="242" width="244" height="46" rx="10" fill="#ffffff" stroke="#e5dad4"/>
+  <text x="46" y="261" font-family="sans-serif" font-size="12" font-weight="700" fill="#1f1b18">みゆき</text>
+  <rect x="46" y="266" width="150" height="16" rx="6" fill="#f1e9e4"/>
+  <text x="52" y="278" font-family="sans-serif" font-size="10" fill="#5f5e5a">予定あり</text>
+
+  <!-- day card 2 -->
+  <rect x="24" y="312" width="272" height="112" rx="10" fill="#ffffff" stroke="#e5dad4"/>
+  <text x="38" y="336" font-family="sans-serif" font-size="14" font-weight="800" fill="#1f1b18">8/23(日)</text>
+  <text x="260" y="336" font-family="sans-serif" font-size="11" fill="#5f5e5a">1件</text>
+
+  <rect x="38" y="348" width="244" height="46" rx="10" fill="#ffffff" stroke="#e5dad4"/>
+  <rect x="46" y="356" width="4" height="24" rx="2" fill="url(#barSelf)"/>
+  <text x="58" y="367" font-family="sans-serif" font-size="12" font-weight="700" fill="#1f1b18">自分　休み</text>
+  <rect x="58" y="372" width="130" height="16" rx="6" fill="#f1e9e4"/>
+  <text x="64" y="384" font-family="sans-serif" font-size="10" fill="#5f5e5a">通院 10:00-</text>
+
+  <text x="24" y="450" font-family="sans-serif" font-size="12" fill="#8b756d">もっと見る ▼</text>
+</svg>

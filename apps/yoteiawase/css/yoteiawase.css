@@ -1,0 +1,126 @@
+:root {
+  --bg: #faf6f0;
+  --surface: #f1e9e4;
+  --card: #fffcf8;
+  --text: #1f1b18;
+  --accent: #74699a;
+  --line: #e5dad4;
+  --shadow-soft: 0 10px 28px rgba(75, 60, 90, 0.1);
+}
+
+.skip-link {
+  position: absolute;
+  top: -80px;
+  left: 16px;
+  z-index: 20;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+.button--secondary {
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.button--disabled {
+  cursor: default;
+  opacity: 0.7;
+}
+
+.feature-grid,
+.faq-grid {
+  display: grid;
+  gap: var(--space-16);
+}
+
+.feature-card,
+.faq-card {
+  padding: var(--space-16);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-20);
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+.feature-card__title,
+.faq-card__title {
+  margin: 0 0 var(--space-8);
+  color: var(--text);
+  font-size: var(--font-sub);
+  line-height: 1.45;
+  font-weight: 700;
+}
+
+.feature-card__text,
+.faq-card__text,
+.note-list {
+  margin: 0;
+  color: rgba(31, 27, 24, 0.78);
+  font-size: var(--font-body);
+  line-height: 1.8;
+}
+
+.note-list {
+  padding-left: 1.25em;
+}
+
+.note-list li + li {
+  margin-top: 8px;
+}
+
+/* A row of dots in the app's own shift-color palette — a small nod to the
+   real product (shift entries are color-coded per friend) rather than a
+   generic decorative flourish. */
+.yoteiawase-dots {
+  display: flex;
+  gap: 8px;
+  margin: 18px 0 0;
+}
+
+.yoteiawase-dots span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.yoteiawase-dots span:nth-child(1) {
+  background: #059669;
+}
+
+.yoteiawase-dots span:nth-child(2) {
+  background: #0284c7;
+}
+
+.yoteiawase-dots span:nth-child(3) {
+  background: #ca8a04;
+}
+
+.yoteiawase-dots span:nth-child(4) {
+  background: #7c3aed;
+}
+
+.yoteiawase-dots span:nth-child(5) {
+  background: #db2777;
+}
+
+.carousel__item img {
+  background: var(--bg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

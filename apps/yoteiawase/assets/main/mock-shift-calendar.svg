@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 690" width="320" height="690">
+  <defs>
+    <linearGradient id="barNight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0284c7"/>
+      <stop offset="1" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="barOff" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#059669"/>
+      <stop offset="1" stop-color="#ecfdf5"/>
+    </linearGradient>
+    <linearGradient id="barMorning" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#db2777"/>
+      <stop offset="1" stop-color="#fce7f3"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="690" rx="28" fill="#faf6f0"/>
+
+  <text x="24" y="52" font-family="sans-serif" font-size="22" font-weight="700" fill="#1f1b18">ホーム</text>
+
+  <rect x="24" y="76" width="272" height="360" rx="14" fill="#ffffff" stroke="#e5dad4"/>
+  <text x="160" y="106" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1f1b18">2026年8月</text>
+
+  <g font-family="sans-serif" font-size="11" fill="#5f5e5a" text-anchor="middle">
+    <text x="52" y="132" fill="#c0392b">日</text>
+    <text x="90" y="132">月</text>
+    <text x="128" y="132">火</text>
+    <text x="166" y="132">水</text>
+    <text x="204" y="132">木</text>
+    <text x="242" y="132">金</text>
+    <text x="278" y="132" fill="#2563eb">土</text>
+  </g>
+
+  <!-- week rows of day cells, some with a shift bar + label -->
+  <g font-family="sans-serif" font-size="11" font-weight="700">
+    <!-- row 1 -->
+    <rect x="34" y="144" width="34" height="40" rx="6" fill="#ffffff" stroke="#eee6df"/>
+    <text x="46" y="158" fill="#1f1b18">2</text>
+    <rect x="72" y="144" width="34" height="40" rx="6" fill="#ffffff" stroke="#eee6df"/>
+    <text x="84" y="158" fill="#1f1b18">3</text>
+    <rect x="110" y="144" width="34" height="40" rx="6" fill="#ffffff" stroke="#eee6df"/>
+    <rect x="115" y="163" width="3" height="12" fill="url(#barMorning)"/>
+    <text x="120" y="158" fill="#1f1b18">4</text>
+    <text x="121" y="173" font-size="9" fill="#993556">明け</text>
+    <rect x="148" y="144" width="34" height="40" rx="6" fill="#ffffff" stroke="#eee6df"/>
+    <rect x="153" y="163" width="3" height="12" fill="url(#barOff)"/>
+    <text x="158" y="158" fill="#1f1b18">5</text>
+    <text x="159" y="173" font-size="9" fill="#0f6e56">休み</text>
+    <rect x="186" y="144" width="34" height="40" rx="6" fill="#ffffff" stroke="#eee6df"/>
+    <rect x="191" y="163" width="3" height="12" fill="url(#barNight)"/>
+    <text x="196" y="158" fill="#1f1b18">6</text>
+    <text x="195" y="173" font-size="9" fill="#185fa5">夜勤</text>
+    <rect x="224" y="144" width="34" height="40" rx="6" fill="#ffffff" stroke="#eee6df"/>
+    <text x="236" y="158" fill="#1f1b18">7</text>
+    <rect x="262" y="144" width="34" height="40" rx="6" fill="#f1e9e4" stroke="#ded7ee"/>
+    <text x="274" y="158" fill="#2563eb">8</text>
+
+    <!-- row 2 -->
+    <rect x="34" y="188" width="34" height="40" rx="6" fill="#ffffff" stroke="#eee6df"/>
+    <rect x="39" y="207" width="3" height="12" fill="url(#barMorning)"/>
+    <text x="46" y="202" fill="#1f1b18">9</text>
+    <text x="45" y="217" font-size="9" fill="#993556">明け</text>
+    <rect x="72" y="188" width="34" height="40" rx="6" fill="#ffffff" stroke="#eee6df"/>
+    <rect x="77" y="207" width="3" height="12" fill="url(#barOff)"/>
+    <text x="82" y="202" fill="#1f1b18">10</text>
+    <text x="83" y="217" font-size="9" fill="#0f6e56">休み</text>
+    <rect x="110" y="188" width="34" height="40" rx="6" fill="#ffffff" stroke="#eee6df"/>
+    <rect x="115" y="207" width="3" height="12" fill="url(#barNight)"/>
+    <text x="120" y="202" fill="#1f1b18">11</text>
+    <text x="119" y="217" font-size="9" fill="#185fa5">夜勤</text>
+    <rect x="148" y="188" width="34" height="40" rx="6" fill="#ded7ee" stroke="#b7a8d6"/>
+    <rect x="153" y="207" width="3" height="12" fill="url(#barMorning)"/>
+    <text x="160" y="202" fill="#3c3489">12</text>
+    <text x="159" y="217" font-size="9" fill="#72243e">明け</text>
+    <rect x="186" y="188" width="34" height="40" rx="6" fill="#ffffff" stroke="#eee6df"/>
+    <text x="198" y="202" fill="#1f1b18">13</text>
+    <rect x="224" y="188" width="34" height="40" rx="6" fill="#ffffff" stroke="#eee6df"/>
+    <text x="236" y="202" fill="#1f1b18">14</text>
+    <rect x="262" y="188" width="34" height="40" rx="6" fill="#f1e9e4" stroke="#ded7ee"/>
+    <text x="274" y="202" fill="#2563eb">15</text>
+  </g>
+
+  <rect x="24" y="452" width="272" height="46" rx="23" fill="#74699a"/>
+  <text x="160" y="480" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#ffffff">＋ シフトを入力</text>
+
+  <text x="24" y="524" font-family="sans-serif" font-size="13" font-weight="700" fill="#1f1b18">プリセット</text>
+</svg>

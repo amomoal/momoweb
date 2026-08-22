@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 690" width="320" height="690">
+  <rect width="320" height="690" rx="28" fill="#faf6f0"/>
+
+  <text x="24" y="52" font-family="sans-serif" font-size="22" font-weight="700" fill="#1f1b18">みんな</text>
+
+  <text x="24" y="88" font-family="sans-serif" font-size="13" fill="#5f5e5a">2026年8月 / シフト合わせ</text>
+
+  <rect x="24" y="102" width="272" height="360" rx="14" fill="#ffffff" stroke="#e5dad4"/>
+
+  <g font-family="sans-serif" font-size="10" fill="#5f5e5a" text-anchor="middle">
+    <text x="106" y="130">18</text>
+    <text x="146" y="130">19</text>
+    <text x="186" y="130">20</text>
+    <text x="226" y="130">21</text>
+    <text x="266" y="130">22</text>
+  </g>
+
+  <!-- row: self -->
+  <circle cx="46" cy="158" r="4" fill="#7c3aed"/>
+  <text x="56" y="162" font-family="sans-serif" font-size="12" font-weight="700" fill="#1f1b18">自分</text>
+  <rect x="90" y="150" width="32" height="20" rx="5" fill="#ede9fe"/>
+  <text x="106" y="163" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#3c3489">明け</text>
+  <rect x="130" y="150" width="32" height="20" rx="5" fill="#ecfdf5"/>
+  <text x="146" y="163" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#0f6e56">休み</text>
+  <rect x="170" y="150" width="32" height="20" rx="5" fill="#e0f2fe"/>
+  <text x="186" y="163" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#185fa5">夜勤</text>
+  <rect x="210" y="150" width="32" height="20" rx="5" fill="#ede9fe"/>
+  <text x="226" y="163" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#3c3489">明け</text>
+  <rect x="250" y="150" width="32" height="20" rx="5" fill="#e0f2fe"/>
+  <text x="266" y="163" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#185fa5">夜勤</text>
+
+  <!-- row: friend A -->
+  <circle cx="46" cy="200" r="4" fill="#db2777"/>
+  <text x="56" y="204" font-family="sans-serif" font-size="12" font-weight="700" fill="#1f1b18">みゆき</text>
+  <rect x="90" y="192" width="32" height="20" rx="5" fill="#fce7f3"/>
+  <text x="106" y="205" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#72243e">休み</text>
+  <rect x="130" y="192" width="32" height="20" rx="5" fill="#fce7f3"/>
+  <text x="146" y="205" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#72243e">休み</text>
+  <rect x="170" y="192" width="32" height="20" rx="5" fill="#fefce8"/>
+  <text x="186" y="205" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#854f0b">早番</text>
+  <rect x="210" y="192" width="32" height="20" rx="5" fill="#fefce8"/>
+  <text x="226" y="205" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#854f0b">早番</text>
+  <rect x="250" y="192" width="32" height="20" rx="5" fill="#f3f4f6"/>
+  <text x="266" y="205" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#444441">-</text>
+
+  <!-- row: friend B -->
+  <circle cx="46" cy="242" r="4" fill="#0284c7"/>
+  <text x="56" y="246" font-family="sans-serif" font-size="12" font-weight="700" fill="#1f1b18">そら</text>
+  <rect x="90" y="234" width="32" height="20" rx="5" fill="#e0f2fe"/>
+  <text x="106" y="247" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#185fa5">夜勤</text>
+  <rect x="130" y="234" width="32" height="20" rx="5" fill="#ede9fe"/>
+  <text x="146" y="247" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#3c3489">明け</text>
+  <rect x="170" y="234" width="32" height="20" rx="5" fill="#fce7f3"/>
+  <text x="186" y="247" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#72243e">休み</text>
+  <rect x="210" y="234" width="32" height="20" rx="5" fill="#e0f2fe"/>
+  <text x="226" y="247" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#185fa5">夜勤</text>
+  <rect x="250" y="234" width="32" height="20" rx="5" fill="#ede9fe"/>
+  <text x="266" y="247" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#3c3489">明け</text>
+
+  <rect x="40" y="286" width="240" height="1" fill="#e5dad4"/>
+  <text x="40" y="314" font-family="sans-serif" font-size="11" fill="#8b756d">全員が休みの日: 8/19</text>
+</svg>

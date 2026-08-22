@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>予定合わせ | フレンドと遊べる日を見つけるスケジュール共有アプリ</title>
+  <meta name="description" content="予定合わせ は、フレンドと予定・シフトを見比べて、一緒に遊べる日をサクッと見つけられるスケジュール共有アプリです。">
+  <meta property="og:title" content="予定合わせ">
+  <meta property="og:description" content="フレンドと予定・シフトを見比べて、遊べる日を見つける。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./assets/icon.png">
+
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/components/card.css">
+  <link rel="stylesheet" href="./css/components/carousel/carousel.css">
+  <link rel="stylesheet" href="./css/yoteiawase.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <div class="site-shell">
+    <header class="hero">
+      <div class="hero__top">
+        <div class="hero__icon-wrap">
+          <img class="hero__icon" src="./assets/icon.png" alt="予定合わせ アイコン">
+        </div>
+
+        <div class="hero__heading">
+          <p class="hero__eyebrow">Shift &amp; Schedule Sharing</p>
+          <h1 class="hero__title">予定合わせ</h1>
+        </div>
+      </div>
+
+      <p class="lead">
+        予定とシフトを見比べて、<br>
+        遊べる日をサクッと発見。
+      </p>
+
+      <p class="subtext">
+        予定合わせ は、自分の予定・シフトとフレンドの予定・シフトをひとつのカレンダーでまとめて確認できるアプリです。
+        公開範囲は予定ごとに選べるので、見せたい相手にだけ見せたい内容を共有できます。
+      </p>
+
+      <div class="yoteiawase-dots" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <div class="hero__actions">
+        <span class="button button--primary button--disabled" aria-disabled="true">近日公開</span>
+        <a class="button button--secondary" href="./pages/support.html">サポート</a>
+        <a class="button button--secondary" href="../../index.html">トップへ戻る</a>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="section__header">
+        <p class="section__label">About</p>
+        <h2 class="section__title">このページについて</h2>
+      </div>
+
+      <div class="panel">
+        <p class="body-text">
+          このページでは、予定合わせ のアプリ情報、スクリーンショット、サポート、プライバシーポリシーをまとめています。
+          リリース準備中のため、掲載内容は今後アップデートされる場合があります。
+        </p>
+      </div>
+    </section>
+
+    <main id="main" class="section">
+      <div class="section__header">
+        <p class="section__label">App</p>
+        <h2 class="section__title">予定合わせ</h2>
+      </div>
+
+      <div class="app-list">
+        <article class="app-card">
+          <div class="app-card__top">
+            <img class="app-card__icon" src="./assets/icon.png" alt="予定合わせ アイコン">
+            <div class="app-card__heading">
+              <p class="app-card__eyebrow">Calendar / Friends</p>
+              <h3 class="app-card__title">予定合わせ</h3>
+            </div>
+          </div>
+
+          <p class="lead">
+            自分とフレンドの予定・シフトを、ひとつのカレンダーで。
+          </p>
+
+          <p class="app-card__description">
+            予定やシフトを入力すると、リストカレンダーでフレンドの分もまとめて確認できます。
+            予定ごとに「予定を共有する」「予定あり（内容は伏せる）」「表示しない」を選べるので、
+            見せる相手や内容を自分でコントロールできます。
+            「シフト合わせ」画面では選んだフレンドのシフトを横に並べて比較でき、みんなが休みの日を見つけやすくなっています。
+          </p>
+
+          <ul class="app-card__features">
+            <li>予定・シフトをまとめて確認できるリストカレンダー</li>
+            <li>予定ごとに公開範囲（共有 / 予定ありのみ / 非公開）を選択</li>
+            <li>フレンドのシフトを並べて比較できる「シフト合わせ」</li>
+            <li>シフトの連続入力・プリセット・色分け表示に対応</li>
+            <li>フレンド申請・承認、ブロックなどの公開範囲管理</li>
+          </ul>
+
+          <div class="carousel" aria-label="予定合わせ スクリーンショット（イメージ）">
+            <div class="carousel__track">
+              <figure class="carousel__item">
+                <img src="./assets/main/mock-list-calendar.svg" alt="予定合わせ リストカレンダーのイメージ画面">
+              </figure>
+              <figure class="carousel__item">
+                <img src="./assets/main/mock-shift-calendar.svg" alt="予定合わせ シフトカレンダーのイメージ画面">
+              </figure>
+              <figure class="carousel__item">
+                <img src="./assets/main/mock-shift-comparison.svg" alt="予定合わせ シフト合わせ画面のイメージ画面">
+              </figure>
+            </div>
+
+            <div class="carousel__controls">
+              <button class="carousel__button carousel__button--prev" type="button" aria-label="前の画像へ">‹</button>
+              <div class="carousel__dots" aria-label="スライド選択"></div>
+              <button class="carousel__button carousel__button--next" type="button" aria-label="次の画像へ">›</button>
+            </div>
+          </div>
+          <p class="app-card__description" style="margin-top: 8px; font-size: var(--font-note);">
+            ※ 上記画像はアプリの雰囲気を伝えるためのイメージ画面です。実際の画面とは異なる場合があります。
+          </p>
+
+          <div class="app-card__actions">
+            <span class="button button--primary button--disabled" aria-disabled="true">App Storeで近日公開</span>
+            <a class="button button--secondary" href="./pages/support.html">使い方とサポートを見る</a>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <section class="section">
+      <div class="section__header">
+        <p class="section__label">Features</p>
+        <h2 class="section__title">主な特徴</h2>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h3 class="feature-card__title">予定とシフトをひとつのカレンダーに</h3>
+          <p class="feature-card__text">自分の予定・シフトと、フレンドの予定・シフトをリストカレンダーでまとめて確認できます。</p>
+        </article>
+        <article class="feature-card">
+          <h3 class="feature-card__title">公開範囲は予定ごとに選べる</h3>
+          <p class="feature-card__text">「共有する」「予定あり（内容は伏せる）」「表示しない」から、予定ごとに公開範囲を選べます。</p>
+        </article>
+        <article class="feature-card">
+          <h3 class="feature-card__title">シフト合わせでみんなの空きを一目で</h3>
+          <p class="feature-card__text">選んだフレンドのシフトを横に並べて比較し、一緒に遊べる日を探しやすくします。</p>
+        </article>
+        <article class="feature-card">
+          <h3 class="feature-card__title">フレンドの公開範囲もしっかり管理</h3>
+          <p class="feature-card__text">フレンド申請・承認、ブロックなど、安心して使える公開範囲管理を用意しています。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section__header">
+        <p class="section__label">Links</p>
+        <h2 class="section__title">ご案内</h2>
+      </div>
+
+      <div class="link-grid">
+        <a class="info-link" href="./pages/support.html">
+          <span class="info-link__title">使い方とサポート</span>
+          <span class="info-link__text">基本の使い方やお問い合わせ方法を確認できます。</span>
+        </a>
+        <a class="info-link" href="./pages/privacy.html">
+          <span class="info-link__title">プライバシーポリシー</span>
+          <span class="info-link__text">アプリ内データや外部通信について確認できます。</span>
+        </a>
+        <a class="info-link" href="./pages/terms.html">
+          <span class="info-link__title">利用規約・免責事項</span>
+          <span class="info-link__text">ご利用条件や免責事項について確認できます。</span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="footer__title">予定合わせ</p>
+      <div class="footer__links">
+        <a href="./pages/privacy.html">Privacy</a>
+        <a href="./pages/terms.html">Terms</a>
+        <a href="./pages/support.html">Support</a>
+      </div>
+      <p class="footer__copy">© 予定合わせ</p>
+    </footer>
+  </div>
+
+  <script src="./css/components/carousel/carousel.js" defer></script>
+</body>
+</html>
