@@ -76,6 +76,27 @@
     </div>
   </section>
 
+  <!-- INFO -->
+  <section class="rm-update" aria-labelledby="rm-info-title">
+    <div class="rm-inner rm-update__inner">
+      <div class="rm-update__info rm-reveal">
+        <p class="rm-eyebrow">INFO</p>
+        <h2 id="rm-info-title">お知らせ</h2>
+        <p class="rm-update__text" data-update-info>
+          本日は通常通り営業しています。
+        </p>
+      </div>
+      <figure class="rm-update__media rm-reveal">
+        <img
+          data-update-image
+          src="./assets/image/coffee-sweets.png"
+          alt="純喫茶ロマンからのお知らせ画像"
+          loading="lazy" width="1536" height="1024"
+        >
+      </figure>
+    </div>
+  </section>
+
   <!-- ロマンについて -->
   <section class="rm-section" id="about" aria-labelledby="about-title">
     <div class="rm-inner rm-about">
@@ -336,5 +357,12 @@
 </div>
 
 <script src="./script.js"></script>
+<script
+  src="../../shared/web_update_widget/site-content.js"
+  data-api-base="https://momoweb-update-api.adadashifuso.workers.dev"
+  data-site-id="roman-demo"
+  data-info-target="[data-update-info]"
+  data-image-target="[data-update-image]"
+></script>
 </body>
 </html>
