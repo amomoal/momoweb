@@ -1,7 +1,7 @@
 import 'dart:convert';
-import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:image_picker/image_picker.dart';
 
@@ -435,9 +435,10 @@ class _AdminHomePageState extends State<AdminHomePage> {
   }
 
   String _messageFor(Object error) {
-    return error is ContentApiException
-        ? error.message
-        : '通信に失敗しました。時間をおいて再度お試しください。';
+    if (error is ContentApiException) {
+      return error.message;
+    }
+    return '通信に失敗しました。詳細: $error';
   }
 
   @override
@@ -747,14 +748,40 @@ class ErrorBanner extends StatelessWidget {
       ),
       child: Padding(
         padding: const EdgeInsets.all(12),
-        child: Row(
-          children: [
-            const Icon(Icons.error_outline, color: Color(0xffb3261e)),
-            const SizedBox(width: 8),
-            Expanded(child: Text(message)),
-          ],
-        ),
+        child: ErrorMessageContent(message: message),
       ),
+    );
+  }
+}
+
+class ErrorMessageContent extends StatelessWidget {
+  const ErrorMessageContent({required this.message, super.key});
+
+  final String message;
+
+  Future<void> _copy(BuildContext context) async {
+    await Clipboard.setData(ClipboardData(text: message));
+    if (!context.mounted) return;
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(const SnackBar(content: Text('コピーしました')));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Icon(Icons.error_outline, color: Color(0xffb3261e)),
+        const SizedBox(width: 8),
+        Expanded(child: SelectableText(message)),
+        const SizedBox(width: 8),
+        IconButton.outlined(
+          tooltip: 'コピー',
+          onPressed: () => _copy(context),
+          icon: const Icon(Icons.copy),
+        ),
+      ],
     );
   }
 }
@@ -773,7 +800,17 @@ class ErrorView extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(message, textAlign: TextAlign.center),
+            DecoratedBox(
+              decoration: BoxDecoration(
+                color: const Color(0xfffff0ed),
+                borderRadius: BorderRadius.circular(8),
+                border: Border.all(color: const Color(0xffffc7bd)),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(12),
+                child: ErrorMessageContent(message: message),
+              ),
+            ),
             const SizedBox(height: 16),
             FilledButton.icon(
               onPressed: onRetry,
