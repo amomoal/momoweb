@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
+import 'package:http_parser/http_parser.dart';
 import 'package:image_picker/image_picker.dart';
 
 void main() {
@@ -134,7 +135,12 @@ class ContentApi {
     );
     request.headers.addAll(_headers());
     request.files.add(
-      http.MultipartFile.fromBytes('image', image.bytes, filename: image.name),
+      http.MultipartFile.fromBytes(
+        'image',
+        image.bytes,
+        filename: image.name,
+        contentType: MediaType.parse(image.mimeType),
+      ),
     );
 
     final streamedResponse = await request.send();
@@ -146,7 +152,11 @@ class ContentApi {
   }
 
   Map<String, String> _headers({String? contentType}) {
-    return {'Authorization': 'Bearer $authToken', ?contentType: contentType};
+    final headers = {'Authorization': 'Bearer $authToken'};
+    if (contentType != null) {
+      headers['Content-Type'] = contentType;
+    }
+    return headers;
   }
 
   void _throwIfFailed(http.Response response) {
