@@ -1,0 +1,35 @@
+{
+    "name": "サイト更新",
+    "short_name": "サイト更新",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#faf8f3",
+    "theme_color": "#5d6f5f",
+    "description": "お知らせと指定画像を更新する管理アプリです。",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}

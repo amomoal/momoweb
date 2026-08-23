@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web更新アプリ デモ | momo web</title>
+  <meta
+    name="description"
+    content="お知らせと指定画像だけを簡単に更新できる、Web更新アプリ初期版のデモページです。"
+  >
+
+  <link rel="stylesheet" href="../../reset.css">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="site-shell">
+    <a class="back-link" href="../index.html">← サンプル一覧へ戻る</a>
+
+    <main>
+      <section class="section admin-demo-hero">
+        <div class="section__header">
+          <p class="section__label">Update App</p>
+          <h1 class="section__title">Web更新アプリ</h1>
+        </div>
+
+        <div class="admin-demo-layout">
+          <div class="admin-demo-copy">
+            <p class="body-text">
+              制作したWebサイトの「お知らせ」と「指定画像1枚」だけを、お客様自身で更新できる管理アプリです。
+              サイト全体を編集するCMSではなく、必要な箇所だけを安全に更新する初期版です。
+            </p>
+            <div class="admin-demo-plan-list">
+              <span>INFO更新</span>
+              <span>INFO + 画像1枚更新</span>
+            </div>
+          </div>
+
+          <div class="admin-demo-phone" aria-label="管理アプリ画面イメージ">
+            <div class="admin-demo-appbar">サイト更新</div>
+            <div class="admin-demo-panel">
+              <p class="admin-demo-site">純喫茶 ロマン</p>
+              <p class="admin-demo-note">お知らせと画像を更新できます</p>
+            </div>
+            <div class="admin-demo-panel">
+              <p class="admin-demo-label">お知らせ</p>
+              <p class="admin-demo-input">本日は通常通り営業しています。<br>季節限定のプリンセットをご用意しています。</p>
+            </div>
+            <div class="admin-demo-panel">
+              <p class="admin-demo-label">画像</p>
+              <div class="admin-demo-image">画像プレビュー</div>
+              <button class="admin-demo-button" type="button">内容を確認して更新</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__header">
+          <p class="section__label">Scope</p>
+          <h2 class="section__title">初期版でできること</h2>
+        </div>
+
+        <div class="sample-list">
+          <div class="sample-card">
+            <div class="sample-card__body">
+              <p class="sample-card__eyebrow">Plan 1</p>
+              <h3 class="sample-card__title">INFO更新</h3>
+              <p class="sample-card__desc">
+                現在のお知らせを表示し、編集後に確認してから更新します。
+              </p>
+            </div>
+          </div>
+
+          <div class="sample-card">
+            <div class="sample-card__body">
+              <p class="sample-card__eyebrow">Plan 2</p>
+              <h3 class="sample-card__title">INFO + 画像1枚更新</h3>
+              <p class="sample-card__desc">
+                お知らせ更新に加えて、指定された画像枠を1枚だけ差し替えます。
+              </p>
+            </div>
+          </div>
+
+          <div class="sample-card">
+            <div class="sample-card__body">
+              <p class="sample-card__eyebrow">Security</p>
+              <h3 class="sample-card__title">プランとサイトをAPI側で確認</h3>
+              <p class="sample-card__desc">
+                画面表示だけでなく、更新API側でもユーザー・サイト・契約プランを確認します。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__copy">© momo web</p>
+    </footer>
+  </div>
+</body>
+</html>

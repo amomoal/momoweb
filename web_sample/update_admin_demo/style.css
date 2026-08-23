@@ -1,0 +1,124 @@
+.admin-demo-hero {
+  margin-top: 20px;
+}
+
+.admin-demo-layout {
+  display: grid;
+  gap: var(--space-20);
+}
+
+.admin-demo-copy {
+  display: grid;
+  gap: var(--space-16);
+}
+
+.admin-demo-plan-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+}
+
+.admin-demo-plan-list span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 6px 12px;
+  border: 1px solid rgba(113, 93, 133, 0.25);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--accent);
+  font-size: var(--font-note);
+  font-weight: 700;
+}
+
+.admin-demo-phone {
+  width: min(100%, 360px);
+  margin: 0 auto;
+  padding: 14px;
+  border: 1px solid rgba(43, 36, 31, 0.14);
+  border-radius: 28px;
+  background: #2b241f;
+  box-shadow: 0 18px 40px rgba(43, 36, 31, 0.16);
+}
+
+.admin-demo-appbar {
+  padding: 12px 14px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.admin-demo-panel {
+  margin-top: 10px;
+  padding: 14px;
+  border-radius: 8px;
+  background: #faf8f3;
+}
+
+.admin-demo-site,
+.admin-demo-label {
+  margin: 0;
+  font-weight: 700;
+  color: #2b241f;
+}
+
+.admin-demo-note {
+  margin: 8px 0 0;
+  color: rgba(43, 36, 31, 0.72);
+  font-size: var(--font-note);
+}
+
+.admin-demo-input {
+  min-height: 96px;
+  margin: 10px 0 0;
+  padding: 12px;
+  border: 1px solid rgba(43, 36, 31, 0.14);
+  border-radius: 8px;
+  background: #ffffff;
+  color: rgba(43, 36, 31, 0.82);
+  font-size: var(--font-note);
+  line-height: 1.7;
+}
+
+.admin-demo-image {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  margin-top: 10px;
+  border-radius: 8px;
+  background:
+    linear-gradient(rgba(43, 36, 31, 0.08), rgba(43, 36, 31, 0.08)),
+    repeating-linear-gradient(
+      45deg,
+      #f1eee8,
+      #f1eee8 12px,
+      #faf8f3 12px,
+      #faf8f3 24px
+    );
+  color: rgba(43, 36, 31, 0.55);
+  font-size: var(--font-note);
+  font-weight: 700;
+}
+
+.admin-demo-button {
+  width: 100%;
+  min-height: 44px;
+  margin-top: 12px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #ffffff;
+  font: inherit;
+  font-weight: 700;
+}
+
+@media (min-width: 760px) {
+  .admin-demo-layout {
+    grid-template-columns: minmax(0, 1fr) 360px;
+    align-items: center;
+  }
+
+  .admin-demo-phone {
+    margin: 0;
+  }
+}

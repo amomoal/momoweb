@@ -1,0 +1,12 @@
+name = "momoweb-update-api"
+main = "src/index.js"
+compatibility_date = "2026-08-23"
+
+[[d1_databases]]
+binding = "UPDATE_DB"
+database_name = "momoweb-update-db"
+database_id = "c46eca6b-0485-44ca-9b7f-b38e4acccca2"
+
+[[r2_buckets]]
+binding = "UPDATE_IMAGES"
+bucket_name = "momoweb-update-images"
