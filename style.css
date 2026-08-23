@@ -206,6 +206,19 @@ body {
 
 /* 🌷 #70 App List / Links */
 /* 🍀 アプリ一覧ブロックと案内リンク群のレイアウトを定義する。今回は1カラム前提で扱う。 */
+.app-group + .app-group {
+  margin-top: var(--space-32);
+}
+
+.app-group__title {
+  margin: 0 0 var(--space-16);
+  padding-bottom: var(--space-8);
+  border-bottom: 1px solid var(--line);
+  font-size: var(--font-sub);
+  font-weight: 700;
+  color: var(--text);
+}
+
 .app-list {
   display: grid;
   gap: var(--space-16);
