@@ -26,6 +26,10 @@ export default {
         return json(await updateImage(request, env, url.origin));
       }
 
+      if (url.pathname === '/admin/image-position' && request.method === 'PUT') {
+        return json(await updateImagePosition(request, env, url.origin));
+      }
+
       const publicContentMatch = url.pathname.match(/^\/public\/sites\/([^/]+)\/content$/);
       if (publicContentMatch && request.method === 'GET') {
         return json(await getPublicContent(env, publicContentMatch[1], url.origin));
@@ -84,6 +88,7 @@ async function updateImage(request, env, origin) {
 
   const formData = await request.formData();
   const image = formData.get('image');
+  const imageCrop = parseCrop(formData);
 
   if (!(image instanceof File)) {
     throw new ApiError('画像を選択してください。', 400);
@@ -99,6 +104,7 @@ async function updateImage(request, env, origin) {
 
   const extension = extensionFor(image.type);
   const imageKey = `${context.site.id}/${crypto.randomUUID()}${extension}`;
+  const previousImageKey = context.site.image_key;
 
   await env.UPDATE_IMAGES.put(imageKey, image.stream(), {
     httpMetadata: {
@@ -107,17 +113,90 @@ async function updateImage(request, env, origin) {
   });
 
   await env.UPDATE_DB.prepare(
-    'UPDATE sites SET image_key = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ? AND customer_id = ?',
+    `UPDATE sites
+     SET image_key = ?,
+         image_crop_scale = ?,
+         image_crop_offset_x = ?,
+         image_crop_offset_y = ?,
+         image_position_x = 50,
+         image_position_y = 50,
+         updated_at = CURRENT_TIMESTAMP
+     WHERE id = ? AND customer_id = ?`,
   )
-    .bind(imageKey, context.site.id, context.user.customer_id)
+    .bind(
+      imageKey,
+      imageCrop.scale,
+      imageCrop.offsetX,
+      imageCrop.offsetY,
+      context.site.id,
+      context.user.customer_id,
+    )
     .run();
 
-  return siteResponse({ ...context.site, image_key: imageKey }, origin);
+  // The DB now points at the new image, so the old object (if any) is
+  // unreachable — delete it so replacing an image doesn't leak storage.
+  if (previousImageKey && previousImageKey !== imageKey) {
+    await env.UPDATE_IMAGES.delete(previousImageKey);
+  }
+
+  return siteResponse({
+    ...context.site,
+    image_key: imageKey,
+    image_crop_scale: imageCrop.scale,
+    image_crop_offset_x: imageCrop.offsetX,
+    image_crop_offset_y: imageCrop.offsetY,
+    image_position_x: 50,
+    image_position_y: 50,
+  }, origin);
+}
+
+async function updateImagePosition(request, env, origin) {
+  const context = await requireUserSite(request, env);
+
+  if (context.site.plan !== 'info_image') {
+    throw new ApiError('このプランでは画像を更新できません。', 403);
+  }
+
+  const body = await request.json().catch(() => null);
+  const imageCrop = parseCrop(body);
+
+  await env.UPDATE_DB.prepare(
+    `UPDATE sites
+     SET image_crop_scale = ?,
+         image_crop_offset_x = ?,
+         image_crop_offset_y = ?,
+         image_position_x = 50,
+         image_position_y = 50,
+         updated_at = CURRENT_TIMESTAMP
+     WHERE id = ? AND customer_id = ?`,
+  )
+    .bind(
+      imageCrop.scale,
+      imageCrop.offsetX,
+      imageCrop.offsetY,
+      context.site.id,
+      context.user.customer_id,
+    )
+    .run();
+
+  return siteResponse({
+    ...context.site,
+    image_crop_scale: imageCrop.scale,
+    image_crop_offset_x: imageCrop.offsetX,
+    image_crop_offset_y: imageCrop.offsetY,
+    image_position_x: 50,
+    image_position_y: 50,
+  }, origin);
 }
 
 async function getPublicContent(env, siteId, origin) {
   const site = await env.UPDATE_DB.prepare(
-    'SELECT id, name, slug, plan, info, image_key, updated_at FROM sites WHERE id = ?',
+    `SELECT id, name, slug, plan, info, image_key, image_position_x, image_position_y,
+            image_aspect_width, image_aspect_height,
+            image_crop_scale, image_crop_offset_x, image_crop_offset_y,
+            updated_at
+     FROM sites
+     WHERE id = ?`,
   )
     .bind(siteId)
     .first();
@@ -169,7 +248,10 @@ async function requireUserSite(request, env) {
   }
 
   const site = await env.UPDATE_DB.prepare(
-    `SELECT id, customer_id, name, slug, plan, info, image_key, updated_at
+    `SELECT id, customer_id, name, slug, plan, info, image_key, image_position_x, image_position_y,
+            image_aspect_width, image_aspect_height,
+            image_crop_scale, image_crop_offset_x, image_crop_offset_y,
+            updated_at
      FROM sites
      WHERE id = ? AND customer_id = ?
      LIMIT 1`,
@@ -209,8 +291,72 @@ function siteResponse(site, origin = '') {
     plan: site.plan,
     info: site.info,
     imageUrl: site.image_key ? `${origin}/public/sites/${site.id}/image` : null,
+    imagePositionX: normalizePosition(site.image_position_x),
+    imagePositionY: normalizePosition(site.image_position_y),
+    imageAspectWidth: normalizeAspectPart(site.image_aspect_width, 16),
+    imageAspectHeight: normalizeAspectPart(site.image_aspect_height, 9),
+    imageCropScale: normalizeScale(site.image_crop_scale),
+    imageCropOffsetX: normalizeOffset(site.image_crop_offset_x),
+    imageCropOffsetY: normalizeOffset(site.image_crop_offset_y),
     updatedAt: site.updated_at,
   };
+}
+
+function parsePosition(value) {
+  const number = Number(value);
+  if (!Number.isFinite(number)) {
+    return 50;
+  }
+  return Math.min(100, Math.max(0, Math.round(number)));
+}
+
+function normalizePosition(value) {
+  return parsePosition(value ?? 50);
+}
+
+function normalizeAspectPart(value, fallback) {
+  const number = Number(value);
+  if (!Number.isFinite(number) || number <= 0) {
+    return fallback;
+  }
+  return Math.min(100, Math.max(1, Math.round(number)));
+}
+
+function parseCrop(source) {
+  const scale = normalizeScale(valueFrom(source, 'imageCropScale'));
+  const offsetLimit = cropOffsetLimit(scale);
+  return {
+    scale,
+    offsetX: normalizeOffset(valueFrom(source, 'imageCropOffsetX'), offsetLimit),
+    offsetY: normalizeOffset(valueFrom(source, 'imageCropOffsetY'), offsetLimit),
+  };
+}
+
+function valueFrom(source, key) {
+  if (source instanceof FormData) {
+    return source.get(key);
+  }
+  return source?.[key];
+}
+
+function normalizeScale(value) {
+  const number = Number(value);
+  if (!Number.isFinite(number)) {
+    return 1;
+  }
+  return Math.min(4, Math.max(1, Math.round(number * 1000) / 1000));
+}
+
+function normalizeOffset(value, limit = cropOffsetLimit(4)) {
+  const number = Number(value);
+  if (!Number.isFinite(number)) {
+    return 0;
+  }
+  return Math.min(limit, Math.max(-limit, Math.round(number * 1000) / 1000));
+}
+
+function cropOffsetLimit(scale) {
+  return Math.max(0, (normalizeScale(scale) - 1) * 50);
 }
 
 function extensionFor(contentType) {

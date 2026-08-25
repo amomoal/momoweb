@@ -48,6 +48,9 @@ test('allows image updates for info_image plan users', async () => {
   const env = createEnv();
   const formData = new FormData();
   formData.set('image', new File(['image'], 'image.png', { type: 'image/png' }));
+  formData.set('imageCropScale', '1.75');
+  formData.set('imageCropOffsetX', '12.5');
+  formData.set('imageCropOffsetY', '-8.25');
 
   const response = await worker.fetch(
     authedRequest('https://api.test/admin/image', 'image-token', {
@@ -62,7 +65,67 @@ test('allows image updates for info_image plan users', async () => {
   assert.equal(body.siteId, 'image-site');
   assert.equal(body.plan, 'info_image');
   assert.match(body.imageUrl, /^https:\/\/api\.test\/public\/sites\/image-site\/image$/);
+  assert.equal(body.imageCropScale, 1.75);
+  assert.equal(body.imageCropOffsetX, 12.5);
+  assert.equal(body.imageCropOffsetY, -8.25);
+  assert.equal(body.imageAspectWidth, 3);
+  assert.equal(body.imageAspectHeight, 4);
   assert.equal(env.UPDATE_IMAGES.objects.size, 1);
+  assert.equal(env.UPDATE_DB.sites.get('image-site').image_crop_scale, 1.75);
+  assert.equal(env.UPDATE_DB.sites.get('image-site').image_crop_offset_x, 12.5);
+  assert.equal(env.UPDATE_DB.sites.get('image-site').image_crop_offset_y, -8.25);
+});
+
+test('replacing an image deletes the previous one from storage', async () => {
+  const env = createEnv();
+  const previousKey = 'image-site/old.jpg';
+  await env.UPDATE_IMAGES.put(previousKey, new ReadableStream());
+  env.UPDATE_DB.sites.get('image-site').image_key = previousKey;
+
+  const formData = new FormData();
+  formData.set('image', new File(['image'], 'image.png', { type: 'image/png' }));
+
+  const response = await worker.fetch(
+    authedRequest('https://api.test/admin/image', 'image-token', {
+      method: 'PUT',
+      body: formData,
+    }),
+    env,
+  );
+  const body = await response.json();
+
+  assert.equal(response.status, 200);
+  assert.equal(env.UPDATE_IMAGES.objects.size, 1);
+  assert.equal(env.UPDATE_IMAGES.objects.has(previousKey), false);
+  assert.notEqual(env.UPDATE_DB.sites.get('image-site').image_key, previousKey);
+  assert.match(body.imageUrl, /^https:\/\/api\.test\/public\/sites\/image-site\/image$/);
+});
+
+test('updates image crop without replacing the image', async () => {
+  const env = createEnv();
+  env.UPDATE_DB.sites.get('image-site').image_key = 'image-site/current.jpg';
+
+  const response = await worker.fetch(
+    authedRequest('https://api.test/admin/image-position', 'image-token', {
+      method: 'PUT',
+      body: JSON.stringify({
+        imageCropScale: 2,
+        imageCropOffsetX: 40,
+        imageCropOffsetY: -35,
+      }),
+      headers: { 'Content-Type': 'application/json' },
+    }),
+    env,
+  );
+  const body = await response.json();
+
+  assert.equal(response.status, 200);
+  assert.equal(body.imageCropScale, 2);
+  assert.equal(body.imageCropOffsetX, 40);
+  assert.equal(body.imageCropOffsetY, -35);
+  assert.equal(body.imageUrl, 'https://api.test/public/sites/image-site/image');
+  assert.equal(env.UPDATE_IMAGES.objects.size, 0);
+  assert.equal(env.UPDATE_DB.sites.get('image-site').image_key, 'image-site/current.jpg');
 });
 
 test('updates info for the authenticated customer site', async () => {
@@ -94,6 +157,11 @@ test('returns public content without auth', async () => {
   assert.equal(response.status, 200);
   assert.equal(body.siteName, '画像つきサイト');
   assert.equal(body.plan, 'info_image');
+  assert.equal(body.imageCropScale, 1);
+  assert.equal(body.imageCropOffsetX, 0);
+  assert.equal(body.imageCropOffsetY, 0);
+  assert.equal(body.imageAspectWidth, 3);
+  assert.equal(body.imageAspectHeight, 4);
 });
 
 test('supports HEAD for public images', async () => {
@@ -161,6 +229,13 @@ class MockD1Database {
           plan: 'info',
           info: 'INFOプランのお知らせ',
           image_key: null,
+          image_position_x: 50,
+          image_position_y: 50,
+          image_aspect_width: 16,
+          image_aspect_height: 9,
+          image_crop_scale: 1,
+          image_crop_offset_x: 0,
+          image_crop_offset_y: 0,
           updated_at: '2026-08-23 00:00:00',
         },
       ],
@@ -174,6 +249,13 @@ class MockD1Database {
           plan: 'info_image',
           info: '画像プランのお知らせ',
           image_key: null,
+          image_position_x: 50,
+          image_position_y: 50,
+          image_aspect_width: 3,
+          image_aspect_height: 4,
+          image_crop_scale: 1,
+          image_crop_offset_x: 0,
+          image_crop_offset_y: 0,
           updated_at: '2026-08-23 00:00:00',
         },
       ],
@@ -230,11 +312,25 @@ class MockD1Statement {
       return { success: true };
     }
 
-    if (this.sql.includes('UPDATE sites SET image_key')) {
-      const [imageKey, siteId, customerId] = this.values;
+    if (this.sql.includes('UPDATE sites') && this.sql.includes('image_key')) {
+      const [imageKey, cropScale, cropOffsetX, cropOffsetY, siteId, customerId] = this.values;
       const site = this.db.sites.get(siteId);
       if (site?.customer_id === customerId) {
         site.image_key = imageKey;
+        site.image_crop_scale = cropScale;
+        site.image_crop_offset_x = cropOffsetX;
+        site.image_crop_offset_y = cropOffsetY;
+      }
+      return { success: true };
+    }
+
+    if (this.sql.includes('UPDATE sites') && this.sql.includes('image_crop_scale')) {
+      const [cropScale, cropOffsetX, cropOffsetY, siteId, customerId] = this.values;
+      const site = this.db.sites.get(siteId);
+      if (site?.customer_id === customerId) {
+        site.image_crop_scale = cropScale;
+        site.image_crop_offset_x = cropOffsetX;
+        site.image_crop_offset_y = cropOffsetY;
       }
       return { success: true };
     }
@@ -257,5 +353,9 @@ class MockR2Bucket {
 
   async get(key) {
     return this.objects.get(key) ?? null;
+  }
+
+  async delete(key) {
+    this.objects.delete(key);
   }
 }

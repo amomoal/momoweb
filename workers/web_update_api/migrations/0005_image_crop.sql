@@ -1,0 +1,3 @@
+ALTER TABLE sites ADD COLUMN image_crop_scale REAL NOT NULL DEFAULT 1;
+ALTER TABLE sites ADD COLUMN image_crop_offset_x REAL NOT NULL DEFAULT 0;
+ALTER TABLE sites ADD COLUMN image_crop_offset_y REAL NOT NULL DEFAULT 0;

@@ -30,7 +30,8 @@ flutter run -d web-server --web-hostname 127.0.0.1 --web-port 8080
 flutter run -d web-server \
   --web-hostname 127.0.0.1 \
   --web-port 8080 \
-  --dart-define=API_BASE_URL=https://momoweb-update-api.adadashifuso.workers.dev
+  --dart-define=API_BASE_URL=https://momoweb-update-api.adadashifuso.workers.dev \
+  --dart-define=PUBLIC_SITE_URL=https://momoweb.pages.dev
 ```
 
 API接続ありの場合、画面で更新キーを入力する。

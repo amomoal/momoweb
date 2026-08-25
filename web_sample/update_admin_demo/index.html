@@ -45,41 +45,23 @@
             </div>
             <div class="admin-demo-panel">
               <p class="admin-demo-label">お知らせ</p>
-              <p class="admin-demo-input">本日は通常通り営業しています。<br>季節限定のプリンセットをご用意しています。</p>
+              <p class="admin-demo-input" data-update-info>本日は通常通り営業しています。<br>季節限定のプリンセットをご用意しています。</p>
             </div>
             <div class="admin-demo-panel">
               <p class="admin-demo-label">画像</p>
-              <div class="admin-demo-image">画像プレビュー</div>
+              <figure class="admin-demo-image">
+                <img
+                  data-update-image
+                  src="../roman/assets/image/coffee-sweets.png"
+                  alt="管理アプリで更新した画像のプレビュー"
+                  loading="lazy"
+                  width="1536"
+                  height="1024"
+                >
+              </figure>
               <button class="admin-demo-button" type="button">内容を確認して更新</button>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section__header">
-          <p class="section__label">Live Preview</p>
-          <h2 class="section__title">更新結果プレビュー</h2>
-        </div>
-
-        <div class="admin-live-preview">
-          <div class="admin-live-preview__body">
-            <p class="sample-card__eyebrow">INFO</p>
-            <h3 class="admin-live-preview__title">お知らせ</h3>
-            <p class="admin-live-preview__text" data-update-info>
-              管理アプリで更新したお知らせがここに表示されます。
-            </p>
-          </div>
-          <figure class="admin-live-preview__media">
-            <img
-              data-update-image
-              src="../roman/assets/image/coffee-sweets.png"
-              alt="管理アプリで更新した画像のプレビュー"
-              loading="lazy"
-              width="1536"
-              height="1024"
-            >
-          </figure>
         </div>
       </section>
 

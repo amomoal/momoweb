@@ -13,6 +13,7 @@ https://momoweb-update-api.adadashifuso.workers.dev
 - `GET /admin/content`: ログインユーザーに紐付くサイトの現在内容
 - `PUT /admin/info`: お知らせ更新
 - `PUT /admin/image`: 画像1枚更新。`info_image` プランのみ許可
+- `PUT /admin/image-position`: 画像の表示位置・拡大率更新。`info_image` プランのみ許可
 - `GET /public/sites/:siteId/content`: 顧客サイト表示用の公開取得
 - `GET /public/sites/:siteId/image`: 顧客サイト表示用の公開画像
 
@@ -47,6 +48,35 @@ demo-info-image-token
 ```
 
 実運用では顧客ごとに別トークンを発行し、平文ではなくSHA-256ハッシュを `users.token_hash` に保存する。
+
+## 画像枠比率
+
+画像枠の比率はお客様には変更させず、サイト設定として固定する。
+管理アプリではこの比率を固定フレームとして表示し、ユーザーは画像側をドラッグ・ピンチして表示位置と拡大率を調整する。
+
+例: 3:4
+
+```sql
+UPDATE sites
+SET image_aspect_width = 3,
+    image_aspect_height = 4
+WHERE id = 'roman-demo';
+```
+
+画像の表示調整値は以下を保存する。
+
+- `image_crop_scale`: 固定フレームに対する拡大率
+- `image_crop_offset_x`: 固定フレーム幅に対する左右移動率
+- `image_crop_offset_y`: 固定フレーム高さに対する上下移動率
+
+例: 正方形
+
+```sql
+UPDATE sites
+SET image_aspect_width = 1,
+    image_aspect_height = 1
+WHERE id = 'roman-demo';
+```
 
 ## 管理アプリとの接続
 
