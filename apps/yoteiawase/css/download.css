@@ -1,0 +1,97 @@
+/* 📌 apps/yoteiawase/css/download.css */
+/* 📄 共有用URL（/apps/yoteiawase/dl/）専用のCSS。
+      端末や公開状態に応じた出し分けは <html> の data 属性で行う。
+      属性が付いていない状態（JS無効時）は「近日公開」の案内表示になる。 */
+
+/* 🌷 #10 Layout */
+.dl-shell {
+  text-align: center;
+}
+
+.dl-icon {
+  display: block;
+  margin: 0 auto;
+  width: 84px;
+  height: 84px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-soft);
+}
+
+.dl-title {
+  font-size: var(--font-title);
+  margin: var(--space-16) 0 var(--space-8);
+}
+
+.dl-lead {
+  margin: 0 0 var(--space-20);
+  color: var(--text);
+}
+
+/* 🌷 #20 Store Actions */
+.dl-actions {
+  display: grid;
+  gap: var(--space-12);
+  justify-items: center;
+  margin-bottom: var(--space-16);
+}
+
+.dl-actions .button {
+  width: 100%;
+  max-width: 320px;
+}
+
+.dl-note {
+  margin: 0;
+  font-size: var(--font-note);
+  color: var(--accent);
+}
+
+/* 🌷 #30 State Switching */
+/* 🍀 iOS: 未公開なら「近日公開」、公開後は「ダウンロード」だけを表示する。 */
+.js-ios-released,
+.js-android-released,
+.js-platform-note,
+.dl-redirect-note {
+  display: none;
+}
+
+html[data-ios="released"] .js-ios-coming {
+  display: none;
+}
+
+html[data-ios="released"] .js-ios-released {
+  display: inline-flex;
+}
+
+html[data-android="released"] .js-android-coming {
+  display: none;
+}
+
+html[data-android="released"] .js-android-released {
+  display: inline-flex;
+}
+
+/* 🍀 端末別の補足文。JS無効時（data-platform無し）はPC向けの案内を出す。 */
+html[data-platform="android"] .js-note-android,
+html[data-platform="other"] .js-note-other,
+html:not([data-platform]) .js-note-other {
+  display: block;
+}
+
+/* 🍀 ストアへ自動遷移するときだけ出る、遷移中の案内。 */
+html[data-redirecting] .dl-redirect-note {
+  display: block;
+}
+
+/* 🌷 #40 Links */
+.dl-links {
+  display: grid;
+  gap: var(--space-12);
+  justify-items: center;
+  margin-top: var(--space-32);
+}
+
+.dl-links .button {
+  width: 100%;
+  max-width: 320px;
+}

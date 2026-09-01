@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>予定合わせ をダウンロード</title>
+  <meta name="description" content="予定合わせ のダウンロードページ。iPhone・iPad からアクセスすると App Store へ移動します。">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="予定合わせ">
+  <meta property="og:description" content="フレンドと予定・シフトを見比べて、遊べる日を見つける。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="../assets/icon.png">
+
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/yoteiawase.css">
+  <link rel="stylesheet" href="../css/download.css">
+
+  <!-- 🍀 設定はこの app-links.js だけを書き換える。表示のちらつきを防ぐため <head> で読み込む。 -->
+  <script src="./app-links.js"></script>
+  <script src="./dl.js"></script>
+</head>
+<body>
+  <div class="site-shell dl-shell">
+    <header>
+      <img class="dl-icon" src="../assets/icon.png" alt="予定合わせ アイコン">
+      <h1 class="dl-title">予定合わせ</h1>
+      <p class="dl-lead">
+        予定とシフトを見比べて、<br>
+        遊べる日をサクッと発見。
+      </p>
+    </header>
+
+    <main id="main">
+      <div class="dl-actions">
+        <!-- 🍀 iOS: 未公開＝近日公開の表示 / 公開後＝App Storeへのボタン -->
+        <span class="button button--primary button--disabled js-ios-coming" aria-disabled="true">iOS版 近日公開</span>
+        <a class="button button--primary js-ios-released" data-store-link="ios" href="#">iOS版をダウンロード</a>
+
+        <!-- 🍀 Android: 公開までは案内文のみ。公開時は app-links.js を書き換えるとボタンに変わる -->
+        <p class="dl-note js-android-coming">Android版は今後公開予定です</p>
+        <a class="button button--secondary js-android-released" data-store-link="android" href="#">Android版をダウンロード</a>
+      </div>
+
+      <p class="dl-note dl-redirect-note">ストアを開いています。開かない場合は上のボタンを押してください。</p>
+
+      <p class="dl-note js-platform-note js-note-android">
+        Android版の公開までは、iPhone・iPad でこのページを開くとアプリを入手できます。
+      </p>
+      <p class="dl-note js-platform-note js-note-other">
+        アプリは iPhone・iPad 向けです。お使いのスマートフォンでこのページを開いてください。
+      </p>
+
+      <noscript>
+        <p class="dl-note">
+          JavaScript が無効のため自動で移動できません。アプリの最新の公開状況は紹介ページをご確認ください。
+        </p>
+      </noscript>
+
+      <nav class="dl-links">
+        <a class="button button--secondary" href="../index.html">アプリの紹介ページ</a>
+        <a class="button button--secondary" href="../pages/support.html">使い方とサポート</a>
+      </nav>
+    </main>
+  </div>
+</body>
+</html>
