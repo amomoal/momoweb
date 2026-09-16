@@ -119,6 +119,25 @@
   margin-top: 8px;
 }
 
+/* 🌷 #35 Legal Pages */
+/* 🍀 規約ページ内の小見出し（「ユーザー名」「Epic Online Services」など）。セクション見出しより一段控えめにする。 */
+.legal-subtitle {
+  margin: var(--space-16) 0 var(--space-8);
+  color: var(--text);
+  font-size: var(--font-body);
+  line-height: 1.6;
+  font-weight: 700;
+}
+
+.support-block .note-list {
+  margin: var(--space-8) 0;
+  list-style: disc;
+}
+
+.support-block .note-list li + li {
+  margin-top: 4px;
+}
+
 /* 🌷 #40 Placeholder */
 /* 🍀 スクショ・ストアリンク未確定時の「準備中」表示。確定後は該当ブロックごと差し替える。 */
 .placeholder-note {
