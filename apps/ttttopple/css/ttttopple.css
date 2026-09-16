@@ -77,12 +77,14 @@
 
 /* 🌷 #30 Feature / Rule Cards */
 /* 🍀 Iromizu と同じカード表現。ルール概要はここに並べる。 */
-.feature-grid {
+.feature-grid,
+.faq-grid {
   display: grid;
   gap: var(--space-16);
 }
 
-.feature-card {
+.feature-card,
+.faq-card {
   padding: var(--space-16);
   border: 1px solid var(--line);
   border-radius: var(--radius-20);
@@ -90,7 +92,8 @@
   box-shadow: var(--shadow-soft);
 }
 
-.feature-card__title {
+.feature-card__title,
+.faq-card__title {
   margin: 0 0 var(--space-8);
   color: var(--text);
   font-size: var(--font-sub);
@@ -98,7 +101,8 @@
   font-weight: 700;
 }
 
-.feature-card__text {
+.feature-card__text,
+.faq-card__text {
   margin: 0;
   color: rgba(42, 36, 28, 0.78);
   font-size: var(--font-body);
