@@ -38,44 +38,41 @@
   background: rgba(255, 255, 255, 0.72);
 }
 
-/* 🌷 #20 Title Plate */
-/* 🍀 ヒーロー内だけ、アプリのタイトル画面に寄せた暗色プレートを置く。ページ全体は暗くしない。 */
-.ttt-plate {
-  margin: 20px 0 0;
-  padding: 28px 16px 24px;
-  border: 1px solid rgba(216, 179, 106, 0.45);
-  border-radius: var(--radius-20);
-  background:
-    radial-gradient(120% 80% at 50% 0%, rgba(216, 179, 106, 0.16), transparent 60%),
-    var(--ttt-plate);
-  box-shadow: var(--shadow-soft);
-  text-align: center;
+.button--disabled {
+  cursor: default;
+  opacity: 0.88;
 }
 
-.ttt-plate__rule {
+/* 🌷 #20 Accent Bar */
+/* 🍀 Iromizu の色バーと同じ構造。TTTTOPPLE は駒と盤の色（金・黒・白・木目）で4本並べる。 */
+.ttt-splash {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 18px 0 0;
+}
+
+.ttt-splash span {
   display: block;
-  height: 1px;
-  margin: 0 auto;
-  width: min(260px, 80%);
-  background: linear-gradient(90deg, transparent, var(--ttt-gold), transparent);
+  height: 10px;
+  border-radius: 999px;
 }
 
-.ttt-plate__title {
-  margin: 14px 0;
-  color: var(--ttt-gold);
-  font-family: "Times New Roman", "Hiragino Mincho ProN", "Yu Mincho", serif;
-  font-size: clamp(28px, 9vw, 44px);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  line-height: 1.1;
-  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.6);
+.ttt-splash span:nth-child(1) {
+  background: var(--ttt-gold);
 }
 
-.ttt-plate__tagline {
-  margin: 14px 0 0;
-  color: rgba(216, 179, 106, 0.85);
-  font-size: 12px;
-  letter-spacing: 0.3em;
+.ttt-splash span:nth-child(2) {
+  background: var(--ttt-plate);
+}
+
+.ttt-splash span:nth-child(3) {
+  background: #e9e3d8;
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.ttt-splash span:nth-child(4) {
+  background: #7a4a26;
 }
 
 /* 🌷 #30 Feature / Rule Cards */
@@ -136,15 +133,6 @@
 
 .support-block .note-list li + li {
   margin-top: 4px;
-}
-
-/* 🌷 #40 Placeholder */
-/* 🍀 スクショ・ストアリンク未確定時の「準備中」表示。確定後は該当ブロックごと差し替える。 */
-.placeholder-note {
-  margin: 0;
-  color: rgba(42, 36, 28, 0.7);
-  font-size: var(--font-note);
-  line-height: 1.7;
 }
 
 /* 🌷 #50 Carousel Tweaks */
