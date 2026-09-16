@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TTTTOPPLE | Stacking Battle Game</title>
+  <meta name="description" content="TTTTOPPLE は、物理演算を使った3×3の対戦型スタッキングゲームです。駒を積み上げ、盤面を奪い合い、ラインの完成を目指します。">
+  <meta property="og:title" content="TTTTOPPLE">
+  <meta property="og:description" content="積む。崩す。奪い取る。物理演算を使った3×3の対戦型スタッキングゲーム。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./assets/icon.png">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="./assets/icon.png">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/components/card.css">
+  <link rel="stylesheet" href="./css/components/carousel/carousel.css">
+  <link rel="stylesheet" href="./css/ttttopple.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <div class="site-shell">
+
+    <!-- 🌷 1. Title / Main Visual -->
+    <header class="hero">
+      <div class="hero__top">
+        <div class="hero__icon-wrap">
+          <img class="hero__icon" src="./assets/icon.png" alt="TTTTOPPLE アイコン">
+        </div>
+
+        <div class="hero__heading">
+          <p class="hero__eyebrow">Stacking Battle Game</p>
+          <h1 class="hero__title">TTTTOPPLE</h1>
+        </div>
+      </div>
+
+      <!-- 🌷 2. 一言紹介（文言差し替え可） -->
+      <p class="lead">
+        積む。崩す。奪い取る。
+      </p>
+
+      <p class="subtext">
+        TTTTOPPLEは、物理演算を使った3×3の対戦型スタッキングゲームです。
+        駒を積み上げ、盤面を奪い合い、2ラインの完成を目指します。
+      </p>
+
+      <div class="ttt-plate" aria-hidden="true">
+        <span class="ttt-plate__rule"></span>
+        <p class="ttt-plate__title">TTTTOPPLE</p>
+        <span class="ttt-plate__rule"></span>
+        <p class="ttt-plate__tagline">STACK. TILT. TAKE.</p>
+      </div>
+
+      <div class="hero__actions">
+        <a
+          class="button button--primary"
+          href="https://forms.gle/vmekyAqwYA2vh1pw7"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          SUPPORT
+        </a>
+        <a class="button button--secondary" href="../../index.html">トップへ戻る</a>
+      </div>
+    </header>
+
+    <!-- 🌷 3. ゲーム概要 -->
+    <main id="main" class="section">
+      <div class="section__header">
+        <p class="section__label">About</p>
+        <h2 class="section__title">ゲーム概要</h2>
+      </div>
+
+      <div class="app-list">
+        <article class="app-card">
+          <div class="app-card__top">
+            <img class="app-card__icon" src="./assets/icon.png" alt="TTTTOPPLE アイコン">
+            <div class="app-card__heading">
+              <p class="app-card__eyebrow">Board Game / Online &amp; Local</p>
+              <h3 class="app-card__title">TTTTOPPLE</h3>
+            </div>
+          </div>
+
+          <p class="app-card__description">
+            3×3の盤面に駒を積み上げてマスを奪い合う、対戦型のスタッキングゲームです。
+            積み方ひとつで盤面が変わり、ときには積んだ駒が崩れて形勢が逆転します。
+          </p>
+
+          <ul class="app-card__features">
+            <li>物理演算で駒が積み上がり、崩れる</li>
+            <li>1台で遊べるローカル対戦・CPU対戦</li>
+            <li>ランダムマッチ・ルームマッチによるオンライン対戦</li>
+            <li>ルールごとに異なる駆け引き</li>
+          </ul>
+        </article>
+      </div>
+    </main>
+
+    <!-- 🌷 4. スクリーンショット -->
+    <section id="screenshots" class="section">
+      <div class="section__header">
+        <p class="section__label">Screenshots</p>
+        <h2 class="section__title">スクリーンショット</h2>
+      </div>
+
+      <div class="carousel" aria-label="TTTTOPPLE スクリーンショット">
+        <div class="carousel__track">
+          <figure class="carousel__item">
+            <img src="./assets/main/ttttopple01.jpg" alt="TTTTOPPLE タイトル画面の紹介">
+          </figure>
+          <figure class="carousel__item">
+            <img src="./assets/main/ttttopple02.jpg" alt="TTTTOPPLE ルール選択画面">
+          </figure>
+          <figure class="carousel__item">
+            <img src="./assets/main/ttttopple03.jpg" alt="TTTTOPPLE 駒を積み上げる対戦画面">
+          </figure>
+          <figure class="carousel__item">
+            <img src="./assets/main/ttttopple04.jpg" alt="TTTTOPPLE マッチング待ちのミニゲームとスタンプ">
+          </figure>
+          <figure class="carousel__item">
+            <img src="./assets/main/ttttopple05.jpg" alt="TTTTOPPLE メインメニュー画面">
+          </figure>
+        </div>
+
+        <div class="carousel__controls">
+          <button class="carousel__button carousel__button--prev" type="button" aria-label="前の画像へ">‹</button>
+          <div class="carousel__dots" aria-label="スライド選択"></div>
+          <button class="carousel__button carousel__button--next" type="button" aria-label="次の画像へ">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🌷 5. 遊び方 / ルール概要 -->
+    <section id="rules" class="section">
+      <div class="section__header">
+        <p class="section__label">How to Play</p>
+        <h2 class="section__title">遊び方・ルール概要</h2>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h3 class="feature-card__title">3×3の盤面で対戦</h3>
+          <p class="feature-card__text">2人のプレイヤーが交互に、3×3の盤面へ駒を置いていきます。</p>
+        </article>
+        <article class="feature-card">
+          <h3 class="feature-card__title">駒を積んでマスを獲得</h3>
+          <p class="feature-card__text">駒は相手の駒の上にも積み上げられます。積み上げてマスを自分のものにしましょう。</p>
+        </article>
+        <article class="feature-card">
+          <h3 class="feature-card__title">崩れたら形勢逆転も</h3>
+          <p class="feature-card__text">積みすぎて駒が崩れると、相手側に有利な結果になる場合があります。</p>
+        </article>
+        <article class="feature-card">
+          <h3 class="feature-card__title">2ライン獲得で勝利</h3>
+          <p class="feature-card__text">獲得したマスで先にラインを2本完成させたプレイヤーの勝ちです。</p>
+        </article>
+        <article class="feature-card">
+          <h3 class="feature-card__title">ルールごとの違い</h3>
+          <p class="feature-card__text">EAST / WEST / SOUTH などのルールごとに、勝利条件やマスのロックなどの仕組みが少しずつ異なります。詳しくはアプリ内のルール説明をご確認ください。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 🌷 6. ストアリンク -->
+    <section id="download" class="section">
+      <div class="section__header">
+        <p class="section__label">Download</p>
+        <h2 class="section__title">ダウンロード</h2>
+      </div>
+
+      <div class="panel">
+        <!-- ストアURL確定前の表示。公開後はこの p を削除し、下のボタンのコメントを外して URL を差し替える -->
+        <p class="placeholder-note">App Store / Google Play での配信は準備中です。</p>
+
+        <!--
+        <div class="app-card__actions">
+          <a
+            class="button button--primary"
+            href="APP_STORE_URL"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            App Storeで見る
+          </a>
+          <a
+            class="button button--secondary"
+            href="GOOGLE_PLAY_URL"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google Playで見る
+          </a>
+        </div>
+        -->
+      </div>
+    </section>
+
+    <!-- 🌷 7. SUPPORT -->
+    <section id="support" class="section">
+      <div class="section__header">
+        <p class="section__label">Support</p>
+        <h2 class="section__title">サポート</h2>
+      </div>
+
+      <div class="panel">
+        <p class="body-text">
+          不具合報告やご要望は、お問い合わせフォームから送信できます。
+          ご利用の端末、OSのバージョン、アプリのバージョン、発生した内容をあわせてお知らせください。
+        </p>
+
+        <div class="app-card__actions">
+          <a
+            class="button button--primary"
+            href="https://forms.gle/vmekyAqwYA2vh1pw7"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            SUPPORT（お問い合わせフォーム）
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🌷 8. Privacy Policy / Terms -->
+    <section id="legal" class="section">
+      <div class="section__header">
+        <p class="section__label">Legal</p>
+        <h2 class="section__title">ご案内</h2>
+      </div>
+
+      <div class="link-grid">
+        <a class="info-link" href="./pages/privacy.html">
+          <span class="info-link__title">プライバシーポリシー</span>
+          <span class="info-link__text">情報の取り扱いについて確認できます。</span>
+        </a>
+        <a class="info-link" href="./pages/terms.html">
+          <span class="info-link__title">利用規約</span>
+          <span class="info-link__text">ご利用条件について確認できます。</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 🌷 9. Footer -->
+    <footer class="footer">
+      <p class="footer__title">TTTTOPPLE</p>
+      <div class="footer__links">
+        <a href="./pages/privacy.html">Privacy</a>
+        <a href="./pages/terms.html">Terms</a>
+        <a href="https://forms.gle/vmekyAqwYA2vh1pw7" target="_blank" rel="noopener noreferrer">Support</a>
+        <a href="../../index.html">Top</a>
+      </div>
+      <p class="footer__copy">運営: momo lab</p>
+      <p class="footer__copy">© momo lab</p>
+    </footer>
+  </div>
+
+  <script src="./css/components/carousel/carousel.js" defer></script>
+</body>
+</html>

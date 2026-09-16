@@ -1,0 +1,150 @@
+/* 📌 apps/ttttopple/css/ttttopple.css */
+/* 📄 TTTTOPPLE 専用の上書きCSS。共通デザイン（style.css / card.css / support.css）はそのまま使い、配色と小さなゲーム演出だけを足す。 */
+
+/* 🌷 #10 Theme Colors */
+/* 🍀 サイト共通の明るい背景は維持し、アクセントだけアプリのアンティークゴールドに寄せる。 */
+:root {
+  --bg: #fbf7f0;
+  --surface: #f3ede3;
+  --card: #ffffff;
+  --text: #2a241c;
+  --accent: #8a6424;
+  --line: #e0d4c0;
+  --shadow-soft: 0 10px 28px rgba(60, 44, 18, 0.1);
+
+  --ttt-plate: #16130f;
+  --ttt-gold: #d8b36a;
+  --ttt-gold-deep: #a47a34;
+}
+
+.skip-link {
+  position: absolute;
+  top: -80px;
+  left: 16px;
+  z-index: 20;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+.button--secondary {
+  background: rgba(255, 255, 255, 0.72);
+}
+
+/* 🌷 #20 Title Plate */
+/* 🍀 ヒーロー内だけ、アプリのタイトル画面に寄せた暗色プレートを置く。ページ全体は暗くしない。 */
+.ttt-plate {
+  margin: 20px 0 0;
+  padding: 28px 16px 24px;
+  border: 1px solid rgba(216, 179, 106, 0.45);
+  border-radius: var(--radius-20);
+  background:
+    radial-gradient(120% 80% at 50% 0%, rgba(216, 179, 106, 0.16), transparent 60%),
+    var(--ttt-plate);
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+}
+
+.ttt-plate__rule {
+  display: block;
+  height: 1px;
+  margin: 0 auto;
+  width: min(260px, 80%);
+  background: linear-gradient(90deg, transparent, var(--ttt-gold), transparent);
+}
+
+.ttt-plate__title {
+  margin: 14px 0;
+  color: var(--ttt-gold);
+  font-family: "Times New Roman", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  font-size: clamp(28px, 9vw, 44px);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.6);
+}
+
+.ttt-plate__tagline {
+  margin: 14px 0 0;
+  color: rgba(216, 179, 106, 0.85);
+  font-size: 12px;
+  letter-spacing: 0.3em;
+}
+
+/* 🌷 #30 Feature / Rule Cards */
+/* 🍀 Iromizu と同じカード表現。ルール概要はここに並べる。 */
+.feature-grid {
+  display: grid;
+  gap: var(--space-16);
+}
+
+.feature-card {
+  padding: var(--space-16);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-20);
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+.feature-card__title {
+  margin: 0 0 var(--space-8);
+  color: var(--text);
+  font-size: var(--font-sub);
+  line-height: 1.45;
+  font-weight: 700;
+}
+
+.feature-card__text {
+  margin: 0;
+  color: rgba(42, 36, 28, 0.78);
+  font-size: var(--font-body);
+  line-height: 1.8;
+}
+
+.note-list {
+  margin: 0;
+  padding-left: 1.25em;
+  color: rgba(42, 36, 28, 0.78);
+  line-height: 1.8;
+}
+
+.note-list li + li {
+  margin-top: 8px;
+}
+
+/* 🌷 #40 Placeholder */
+/* 🍀 スクショ・ストアリンク未確定時の「準備中」表示。確定後は該当ブロックごと差し替える。 */
+.placeholder-note {
+  margin: 0;
+  color: rgba(42, 36, 28, 0.7);
+  font-size: var(--font-note);
+  line-height: 1.7;
+}
+
+/* 🌷 #50 Carousel Tweaks */
+/* 🍀 縦横比は共通CSSの 1284×2778 のまま使い、暗い画像に合わせて背景だけ揃える。 */
+.carousel__item img {
+  background: var(--ttt-plate);
+  border-color: var(--line);
+}
+
+.footer__links {
+  flex-wrap: wrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
