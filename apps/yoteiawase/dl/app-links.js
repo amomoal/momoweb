@@ -12,8 +12,8 @@ window.YOTEIAWASE_APP_LINKS = {
         ・その他の端末 → 「iOS版をダウンロード」ボタン表示
         になる。 */
   ios: {
-    released: false,
-    storeUrl: ""
+    released: true,
+    storeUrl: "https://apps.apple.com/jp/app/%E3%82%88%E3%81%A6%E3%81%84%E3%81%82%E3%82%8F%E3%81%9B/id6801886519"
   },
 
   /* 🍀 Android版
